@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary":"#ffffff","inverse-primary":"#a6cfc1","secondary-fixed":"#b5efd7","primary-container":"#173f35","tertiary-fixed":"#cbef90","on-error-container":"#93000a","error-container":"#ffdad6","surface-container-highest":"#d6e6dd","surface-bright":"#edfdf3","surface-variant":"#d6e6dd","on-surface-variant":"#414845","on-primary-fixed":"#002019","on-primary":"#ffffff","secondary-container":"#b5efd7","on-tertiary-fixed":"#121f00","on-primary-fixed-variant":"#274e43","tertiary-fixed-dim":"#b0d277","primary":"#002920","surface-container":"#e2f2e8","on-tertiary-fixed-variant":"#344e00","on-secondary-fixed-variant":"#17503e","on-error":"#ffffff","surface-container-lowest":"#ffffff","tertiary-container":"#293f00","background":"#edfdf3","surface-tint":"#3f665a","on-background":"#111e19","on-secondary-fixed":"#002117","surface-dim":"#ceded4","inverse-on-surface":"#e5f5eb","surface-container-low":"#e7f7ee","on-surface":"#111e19","primary-fixed-dim":"#a6cfc1","on-tertiary":"#ffffff","error":"#ba1a1a","outline":"#717975","on-primary-container":"#82aa9d","primary-fixed":"#c1ecdd","on-secondary-container":"#386e5b","surface-container-high":"#dcece2","inverse-surface":"#26332d","on-tertiary-container":"#8cad56","secondary-fixed-dim":"#9ad2bb","outline-variant":"#c0c8c4","surface":"#edfdf3","secondary":"#326855","tertiary":"#182800"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"0.75rem","margin-mobile":"0.75rem","margin":"1.5rem","space-xs":"0.25rem","gutter-dense":"0.5rem","gutter":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","space-lg":"1rem"},"fontFamily":{"title-sm":["Inter"],"label-dense":["Inter"],"label-caption":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"],"label-numeric":["JetBrains Mono"],"headline-xl-mobile":["Inter"],"headline-lg":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"headline-xl":["Inter"],"label-code":["JetBrains Mono"]},"fontSize":{"title-sm":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-dense":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-caption":["10px",{"lineHeight":"12px","letterSpacing":"0.02em","fontWeight":"500"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-numeric":["12px",{"lineHeight":"16px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg-mobile":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-code":["11px",{"lineHeight":"14px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low flex flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container"><img alt="Pine OS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UzQXmfeY0ZgHp5KWNF3TcfswDWXortBjXfih0H8wJxIYAcOo_pHeQ1MekcVoloEv04-1whOHD-f78LEwLhIYOJXvA6352C46mJM592viYCD09QZdfJxdlQycRqr7yH5M_4P1ueUpCD-e2NJI5GEiYCTYYvkX8Z6ni4lEGZG1BkVP6WSRhJHVo_8ohTkpxQ_eR7TPi5Hf3NhyLenEJAG8zr891JtcwN837NSAkqtBRzdw"/><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md font-bold tracking-tight text-primary leading-tight truncate">PINE OS</span><span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-code text-label-code">v3.4</span></div><span class="font-label-caption text-label-caption text-on-surface-variant truncate uppercase tracking-wider">Industrial Wood Intelligence</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">Core Operations</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Overview</span></div><span class="font-label-code text-label-code text-on-surface-variant">01</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="intake" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span>Truck Intake &amp; Queue</span></div><span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-bold">12</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="studio" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">view_in_ar</span><span>AI Measurement Studio</span></div><span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code uppercase tracking-wider font-bold animate-pulse">LIVE CV</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="history" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">history</span><span>Measurement History</span></div></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">Intelligence &amp; Procurement</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="quality" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Quality Assessment</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="suppliers" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">verified</span><span>Suppliers &amp; Compliance</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="procurement" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">price_check</span><span>Procurement Intelligence</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Analytics &amp; Reports</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="disputes" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">gavel</span><span>Dispute Management</span></div><span class="px-1.5 py-0.2 rounded bg-error-container text-on-error-container font-label-code text-label-code font-bold">2</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">AI &amp; Infrastructure</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="calibration" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">tune</span><span>Camera &amp; Calibration</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="model-monitor" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">monitoring</span><span>AI Model Monitoring</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="integrations" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">hub</span><span>ERP &amp; Weighbridge</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings &amp; Admin</span></div></a></nav></div></div><div class="p-space-sm bg-surface-container space-y-space-xs"><button class="w-full flex items-center justify-between px-space-sm py-2 rounded bg-primary-container text-on-primary hover:bg-primary transition-colors" type="button"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed">psychology</span><span class="font-title-sm text-title-sm text-on-primary">Ask Pine OS</span></div><span class="material-symbols-outlined text-[16px] text-inverse-primary">arrow_forward</span></button><div class="px-space-sm py-1.5 rounded bg-surface-container-high flex items-center justify-between"><div class="flex items-center gap-1.5 min-w-0"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-caption text-label-caption text-on-surface truncate">Edge Node #08</span></div><span class="font-label-code text-label-code text-secondary font-semibold">14ms</span></div><div class="flex items-center gap-space-xs p-1.5 rounded bg-surface-container-lowest"><img alt="Marcus Lindqvist" class="w-8 h-8 rounded object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPIUyV7Rx3jw-mAhXLV3a3W5JI2fKW4RYifCu34JN1ecDHzg_qTKS3zBfd7RSxOqfo6oZ8RTHWXfPR1BoKqU_nUPs4OuEw3sYf5FkmCHba5vVYmBrwt8k1zHAJ24O6juRzfggLjtvNkAFjqX-jHVaYqptdV7OoGwngr-m1CYW3Fp_C1lR8mEsmQ3rrfpTPC7s1SVgfAw3_pWHxqyhaU7OgY3X9wclIUrzRShB-lcsX"/><div class="min-w-0 flex-1"><div class="font-title-sm text-title-sm text-on-surface truncate leading-none">Marcus Lindqvist</div><div class="font-label-caption text-label-caption text-on-surface-variant truncate mt-0.5">VP Operations</div></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">more_vert</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-md z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-shrink-0"><div class="flex items-center gap-space-xs px-2.5 py-1.5 bg-surface-container-high rounded cursor-pointer hover:bg-surface-container-highest transition-colors"><span class="material-symbols-outlined text-[18px] text-primary">factory</span><div class="flex flex-col text-left"><span class="font-label-caption text-label-caption text-on-surface-variant uppercase leading-none">Selected Mill</span><span class="font-title-sm text-title-sm text-on-surface leading-tight font-semibold">Mill 04 - Oulu Pulp &amp; Paper Complex</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant ml-1">expand_more</span></div><div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container-high"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-code text-label-code text-secondary font-medium">CV Pipeline: 60 FPS • Calibrated</span></div><div class="hidden 2xl:flex items-center gap-1.5 px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant"><span class="material-symbols-outlined text-[14px]">sensors</span><span class="font-label-code text-label-code font-semibold uppercase">Gate Intake Online</span></div></div><div class="flex-1 max-w-xl mx-space-sm hidden md:block"><div class="relative"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-9 pl-9 pr-14 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search trucks, log IDs, PO#, suppliers, certificates..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-code text-label-code">Ctrl+K</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="hidden lg:flex items-center gap-1 px-2 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-code text-label-code font-semibold"><span class="material-symbols-outlined text-[14px]">token</span><span>DEMO MODE</span></div><div class="flex items-center gap-1 px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface font-label-numeric text-label-numeric"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span><span class="hidden sm:inline">Today: Oct 24, 2024</span></div><div class="relative"><button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-error text-on-error font-label-code text-[9px] flex items-center justify-center font-bold">3</span></div><button class="w-8 h-8 rounded hidden sm:flex items-center justify-center bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Industrial Utility Bar / Recalibration Alert Banner -->
+<div class="px-margin pt-space-md pb-space-xs">
+<div class="bg-surface-container-high rounded p-space-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+<div class="flex flex-wrap items-center gap-x-space-sm gap-y-0.5">
+<span class="font-label-code text-label-code bg-primary text-on-primary px-1.5 py-0.5 rounded font-medium">RIG-TELEMETRY // SYNCED</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Mill 04 (Oulu Complex) Vision Rigs operating within ISO/DIS 20614 Metric Standards.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-auto shrink-0">
+<div class="flex items-center gap-1.5 bg-error-container text-on-error-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span class="font-label-code text-label-code font-bold">G-04 EXPIRES IN 48H</span>
+</div>
+<button class="flex items-center gap-1 px-2.5 py-1 bg-primary text-on-primary rounded font-label-dense text-label-dense uppercase tracking-wider hover:bg-primary-container transition-colors shadow-sm" id="quickRecalBtn">
+<span class="material-symbols-outlined text-[15px]">refresh</span>
+<span>Initiate Fast Recal</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Header & Meta Command Deck -->
+<div class="px-margin py-space-md flex flex-col xl:flex-row xl:items-end justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-label-code text-label-code text-secondary font-semibold uppercase tracking-wider">OPTICAL METROLOGY &amp; GEOMETRY ENGINE</span>
+<span class="text-on-surface-variant font-label-caption text-label-caption">•</span>
+<span class="font-label-code text-label-code text-on-surface-variant">NODE: OULU-GANTRY-CLUSTER-A</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">Camera Fleet &amp; Metric Calibration Workbench</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+        Industrial FLIR &amp; Basler 4K optical gantry rigs, lens unwarping, homography matrices, and pixel-to-millimeter metric calibration status across automated timber intake paths.
+      </p>
+</div>
+<!-- Quick Workbench Actions -->
+<div class="flex flex-wrap items-center gap-space-xs shrink-0">
+<button class="flex items-center gap-1.5 px-3 py-2 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded font-label-dense text-label-dense uppercase tracking-wider transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">videocam</span>
+<span>Test Pattern Stream</span>
+</button>
+<div class="relative inline-block">
+<button class="flex items-center gap-1.5 px-3 py-2 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded font-label-dense text-label-dense uppercase tracking-wider transition-colors shadow-sm" id="exportProfileBtn">
+<span class="material-symbols-outlined text-[16px] text-primary">download</span>
+<span>Export Profile (.JSON/.YAML)</span>
+</button>
+</div>
+<button class="flex items-center gap-1.5 px-3.5 py-2 bg-primary hover:bg-primary-container text-on-primary rounded font-label-dense text-label-dense uppercase tracking-wider transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">tune</span>
+<span>Open Rig Terminal</span>
+</button>
+</div>
+</div>
+<!-- Section 1: KPI Telemetry Matrix -->
+<div class="px-margin pb-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-sm">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface-variant font-semibold">Active Gantry Rigs</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-lg text-headline-lg font-bold text-primary font-label-numeric">4 / 4</div>
+<div class="font-label-dense text-label-dense text-secondary font-semibold uppercase tracking-wider mt-0.5">Online • 60.0 FPS Sync</div>
+</div>
+<div class="bg-surface-container-low rounded px-2 py-1 flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Jitter: ±0.12ms</span>
+<span class="text-secondary font-bold">LOCKED</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface-variant font-semibold">Calibration Status</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-lg text-headline-lg font-bold text-primary font-label-numeric">100%</div>
+<div class="font-label-dense text-label-dense text-secondary font-semibold uppercase tracking-wider mt-0.5">All 4 Rigs Calibrated</div>
+</div>
+<div class="bg-surface-container-low rounded px-2 py-1 flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Homography</span>
+<span class="text-secondary font-bold">PLANAR OK</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface-variant font-semibold">Pixel-to-Metric Baseline</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">straighten</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-lg text-headline-lg font-bold text-primary font-label-numeric">0.412 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">mm/px</span></div>
+<div class="font-label-dense text-label-dense text-on-surface-variant font-medium mt-0.5">Reference bar: 200.00 mm</div>
+</div>
+<div class="bg-surface-container-low rounded px-2 py-1 flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>G-01 / G-02 Norm</span>
+<span class="text-primary font-bold">485.4 px</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface-variant font-semibold">Optical Drift Margin</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">show_chart</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-lg text-headline-lg font-bold text-primary font-label-numeric">±0.04%</div>
+<div class="font-label-dense text-label-dense text-secondary font-semibold uppercase tracking-wider mt-0.5">Within ±0.15% limit</div>
+</div>
+<div class="bg-surface-container-low rounded px-2 py-1 flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Therm-drift compensation</span>
+<span class="text-secondary font-bold">AUTO</span>
+</div>
+</div>
+<!-- KPI 5 -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface-variant font-semibold">Fleet Calibration Window</span>
+<span class="material-symbols-outlined text-error text-[16px]">schedule</span>
+</div>
+<div class="my-space-xs">
+<div class="font-headline-lg text-headline-lg font-bold text-primary font-label-numeric">18 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">days</span></div>
+<div class="font-label-dense text-label-dense text-on-surface-variant font-medium mt-0.5">Fleet Mean Cycle (30d)</div>
+</div>
+<div class="bg-error-container text-on-error-container rounded px-2 py-1 flex items-center justify-between font-label-code text-label-code">
+<span>G-04 Service Lock</span>
+<span class="font-bold">48h DUE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Gantry Stations Topology & Live Health Cards -->
+<div class="px-margin pb-space-lg">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+<h2 class="font-headline-md text-headline-md font-bold text-primary">Gantry Station Camera Map &amp; Live Telemetry</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-code text-label-code text-on-surface-variant">Auto-Refresh 1s</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-sm">
+<!-- Station G-01 -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-bold rounded">STATION G-01</span>
+<span class="inline-flex items-center gap-1 font-label-code text-label-code text-secondary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> ONLINE
+            </span>
+</div>
+<div class="mt-1">
+<h3 class="font-title-sm text-title-sm font-bold text-primary">South Gate Gantry Primary</h3>
+<p class="font-label-caption text-label-caption text-on-surface-variant">FLIR Ladybug6 • 360/Stereo Rig</p>
+</div>
+</div>
+<div class="relative rounded overflow-hidden bg-surface-container-high aspect-video">
+<img class="w-full h-full object-cover" data-alt="Industrial computer vision overhead perspective of heavy forestry timber truck passing under a steel gantry scanner rig with digital green bounding reticles and laser scan line crosshair overlay in cold mill light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChZOuShq0IeBaeKfuCq_kAIac_x8xZR6WbnxnfIeDqTwqvZvYzz1eBM4ns1igd8BlDItNMlDcjue8wziB7wtI9TTlEva_AszA76JcX8I4m4dTVY0osB9tXvY0NquHlLkW0Vx8FN6n3kQIys-BZdFfiT9tNTJprQgcYNrjvdPbC89Wbec_aLXfM5CA_ASlJIgPPwj7-KQC5X2t3HpMhbGP18aI4w2tvOgerUDRwsE57"/>
+<div class="absolute top-2 left-2 px-1.5 py-0.5 bg-primary/90 text-on-primary rounded font-label-code text-[10px]">
+            REC 60 FPS • 4096x2160
+          </div>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-surface-container-lowest/90 text-on-surface rounded font-label-code text-[10px] font-semibold">
+            Δk1: -0.041
+          </div>
+</div>
+<div class="space-y-1.5 pt-1">
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Resolution</span>
+<span class="text-on-surface font-medium">4096 × 2160 (RAW12)</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Calibration Profile</span>
+<span class="text-primary font-bold">v4.2 (Valid - 24d)</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Lens Distortion</span>
+<span class="text-on-surface">k1=-0.04 • k2=0.002</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Reprojection RMS</span>
+<span class="text-secondary font-bold">0.12 px</span>
+</div>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs">
+<button class="flex-1 py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded font-label-dense text-label-dense uppercase tracking-wider transition-colors text-center">
+            Inspect Feed
+          </button>
+<button class="px-2.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded font-label-dense text-label-dense uppercase tracking-wider transition-colors" title="Trigger Recalibration">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Station G-02 -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-bold rounded">STATION G-02</span>
+<span class="inline-flex items-center gap-1 font-label-code text-label-code text-secondary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> ONLINE
+            </span>
+</div>
+<div class="mt-1">
+<h3 class="font-title-sm text-title-sm font-bold text-primary">North Gate Dual 4K Scanner</h3>
+<p class="font-label-caption text-label-caption text-on-surface-variant">Basler ace2 Pro 4K • Dual Optical Rig</p>
+</div>
+</div>
+<div class="relative rounded overflow-hidden bg-surface-container-high aspect-video">
+<img class="w-full h-full object-cover" data-alt="Industrial timber conveyor visual diagnostic showing side view of logs on conveyor under harsh green fluorescent workshop inspection illumination with precise geometric grid calibration overlay." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGkyON_tMrA_GtmSoPO2FHFWSmNdpURlaTIE6SQm3lfUWuvqo98GHrOL1_g-87etOZXODl_Oj9KY7xakxQInt7uUdQYEw0UxwbHGaNF_fmOoc33TEmniFZlnZEBb0X_mql-W0NrdMqrknrLTBBajOHLnSFGWXqgeKDwEutF-edIPRKTMW3U4MRfypUkFf4TFUM_w7STAz175fdAbMnFQKzYTgMkiZhdKpwjojX2JZ0"/>
+<div class="absolute top-2 left-2 px-1.5 py-0.5 bg-primary/90 text-on-primary rounded font-label-code text-[10px]">
+            DUAL-LENS • 3840x2160
+          </div>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-surface-container-lowest/90 text-on-surface rounded font-label-code text-[10px] font-semibold">
+            HOMOGRAPHY OK
+          </div>
+</div>
+<div class="space-y-1.5 pt-1">
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Resolution</span>
+<span class="text-on-surface font-medium">Dual 3840 × 2160 @ 60 FPS</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Calibration Profile</span>
+<span class="text-primary font-bold">v3.9 (Valid - 19d)</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Stereo Baseline</span>
+<span class="text-on-surface">1,420.0 mm (±0.05)</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Reprojection RMS</span>
+<span class="text-secondary font-bold">0.14 px</span>
+</div>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs">
+<button class="flex-1 py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded font-label-dense text-label-dense uppercase tracking-wider transition-colors text-center">
+            Inspect Feed
+          </button>
+<button class="px-2.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded font-label-dense text-label-dense uppercase tracking-wider transition-colors" title="Trigger Recalibration">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Station G-03 -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-bold rounded">STATION G-03</span>
+<span class="inline-flex items-center gap-1 font-label-code text-label-code text-secondary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> ONLINE
+            </span>
+</div>
+<div class="mt-1">
+<h3 class="font-title-sm text-title-sm font-bold text-primary">Weighbridge Infeed Ingest</h3>
+<p class="font-label-caption text-label-caption text-on-surface-variant">Allied Vision Alvium • NIR + Optical</p>
+</div>
+</div>
+<div class="relative rounded overflow-hidden bg-surface-container-high aspect-video">
+<img class="w-full h-full object-cover" data-alt="Multispectral near-infrared camera capture of stacked spruce and pine wood logs highlighting moisture gradient thermal spectrum and high-contrast timber bark textures inside automated mill bay." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY_yI_7kTN62-OxiKGHzIcYfia1_Vb5rURs_UwRGfUG9dWUL3oU8f2D4nEuLxM9KDkEdzy9LRRbFEyGsS5Jc5XwEuMJ9nzqq9FJsg8RrG6YFSLo-KNXLqUobG4-tO0CkDNwUEOnPNgxa-3ezO-rx-qkjjnGuk0k-8mTgGrC7rNmnDDVSqs0NPASzGWysS4iqq6phyiD3-dOServSh-rOXyy5h9jl_mQuSed5TbGAhM"/>
+<div class="absolute top-2 left-2 px-1.5 py-0.5 bg-primary/90 text-on-primary rounded font-label-code text-[10px]">
+            NIR-OPTICAL • 59.9 FPS
+          </div>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-surface-container-lowest/90 text-on-surface rounded font-label-code text-[10px] font-semibold">
+            PLANE SYNCED
+          </div>
+</div>
+<div class="space-y-1.5 pt-1">
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Resolution</span>
+<span class="text-on-surface font-medium">2464 × 2056 Spectral</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Calibration Profile</span>
+<span class="text-primary font-bold">v5.0 (Valid - 29d)</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">NIR-RGB Registration</span>
+<span class="text-on-surface">Δoffset &lt; 0.2 px</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Reprojection RMS</span>
+<span class="text-secondary font-bold">0.11 px</span>
+</div>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs">
+<button class="flex-1 py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded font-label-dense text-label-dense uppercase tracking-wider transition-colors text-center">
+            Inspect Feed
+          </button>
+<button class="px-2.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded font-label-dense text-label-dense uppercase tracking-wider transition-colors" title="Trigger Recalibration">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Station G-04 (Warning) -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="px-2 py-0.5 bg-error-container text-on-error-container font-label-code text-label-code font-bold rounded">STATION G-04</span>
+<span class="inline-flex items-center gap-1 font-label-code text-label-code text-error font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span> RECAL DUE
+            </span>
+</div>
+<div class="mt-1">
+<h3 class="font-title-sm text-title-sm font-bold text-primary">Discharge Rail Gantry</h3>
+<p class="font-label-caption text-label-caption text-on-surface-variant">FLIR Blackfly S • Single Gantry High-Speed</p>
+</div>
+</div>
+<div class="relative rounded overflow-hidden bg-surface-container-high aspect-video">
+<img class="w-full h-full object-cover" data-alt="Monochrome optical camera frame showing high speed log sorting ramp with slight barrel distortion calibration checkerboard pattern card visible at gantry margin in industrial factory lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKYw-6uNPzM63MoR1rhkWiw_UVjBNKpu28LhwV-hqfK0ntYU6PVFiQXqjjiLKK3vmh-uWmiFQpARlJQPF2r1hxWuT2IEBSbM9pLzcSBQaX4xL8v8gd5plHiXU_EsDWcFvY0mUW9u6SKpDz-S81uxIav6a4dUjCTs8iXIVAgPW6Qgy-AysIeWNewZhXGpZs9aZVdbqyRVId08gq4LRtUdK35GGc17LsGOaUbmEODXWr"/>
+<div class="absolute top-2 left-2 px-1.5 py-0.5 bg-error text-on-error rounded font-label-code text-[10px] font-bold">
+            DRIFT: +0.09% • EXPIRES 48H
+          </div>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-surface-container-lowest/90 text-on-surface rounded font-label-code text-[10px] font-semibold">
+            CAL v3.1 (STALE)
+          </div>
+</div>
+<div class="space-y-1.5 pt-1">
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Resolution</span>
+<span class="text-on-surface font-medium">4096 × 3000 @ 74 FPS</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Calibration Profile</span>
+<span class="text-error font-bold">v3.1 (48h Remaining)</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Focal Shift</span>
+<span class="text-error">Δfy = +3.8 px (Vibration)</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Reprojection RMS</span>
+<span class="text-on-surface font-medium">0.19 px (Near Lim)</span>
+</div>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs">
+<button class="flex-1 py-1.5 bg-error text-on-error hover:bg-error/90 rounded font-label-dense text-label-dense uppercase tracking-wider transition-colors text-center font-semibold">
+            Calibrate G-04
+          </button>
+<button class="px-2.5 py-1.5 bg-surface-container-high hover:bg-surface-container-highest rounded text-on-surface font-label-dense text-label-dense uppercase tracking-wider transition-colors" title="View Diagnostics">
+<span class="material-symbols-outlined text-[16px]">troubleshoot</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Interactive 4-Step Calibration Wizard & Verification Tool -->
+<div class="px-margin pb-space-lg">
+<div class="bg-surface-container-lowest rounded shadow-sm p-space-md xl:p-space-lg">
+<!-- Wizard Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm pb-space-md border-b-0">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code font-bold rounded">WIZARD TOOLKIT</span>
+<span class="font-label-code text-label-code text-secondary font-semibold">ACTIVE TARGET: GANTRY-01 (SOUTH GATE)</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-bold text-primary mt-1">4-Step Metric Homography &amp; Extrinsics Solver</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Compute camera matrix intrinsic unwarp, Brown-Conrady coefficients, and metric millimeter projection plane.</p>
+</div>
+<!-- Wizard Step Indicators -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+<button class="wizard-tab text-left px-3 py-2 rounded bg-primary text-on-primary transition-colors" data-step="1">
+<div class="font-label-caption text-label-caption uppercase tracking-wider text-tertiary-fixed">Step 01</div>
+<div class="font-title-sm text-title-sm font-semibold truncate">Target Ingest</div>
+</button>
+<button class="wizard-tab text-left px-3 py-2 rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors" data-step="2">
+<div class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface-variant">Step 02</div>
+<div class="font-title-sm text-title-sm font-semibold truncate">Intrinsics Solver</div>
+</button>
+<button class="wizard-tab text-left px-3 py-2 rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors" data-step="3">
+<div class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface-variant">Step 03</div>
+<div class="font-title-sm text-title-sm font-semibold truncate">Metric Projection</div>
+</button>
+<button class="wizard-tab text-left px-3 py-2 rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors" data-step="4">
+<div class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface-variant">Step 04</div>
+<div class="font-title-sm text-title-sm font-semibold truncate">Sim &amp; Sign-Off</div>
+</button>
+</div>
+</div>
+<!-- Main Step Workspace Container (Split Canvas: Left Viewport, Right Matrix & Math HUD) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md pt-space-md">
+<!-- Interactive Visualizer Panel (7 cols) -->
+<div class="lg:col-span-7 flex flex-col space-y-space-sm">
+<div class="bg-primary rounded p-space-sm flex items-center justify-between text-on-primary">
+<div class="flex items-center gap-space-xs font-label-code text-label-code">
+<span class="material-symbols-outlined text-tertiary-fixed text-[16px]">center_focus_strong</span>
+<span>CAL_FRAME_BUF #40882 • 60 FPS RAW</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-code text-label-code">
+<span class="text-tertiary-fixed">TARGET: ChArUco 12x9 (40mm)</span>
+<span class="px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed-variant rounded font-bold text-[10px]">CORNER LOCK: 108/108</span>
+</div>
+</div>
+<!-- Synthetic Calibration Canvas Simulation -->
+<div class="relative bg-inverse-surface rounded overflow-hidden aspect-[16/10] flex items-center justify-center group select-none">
+<!-- Simulated Camera Feed with Grid Overlay -->
+<div class="absolute inset-0 bg-cover bg-center opacity-80" data-alt="Optical camera feed inside automated sawmill gantry displaying high resolution precision black and white checkerboard calibration target plate positioned beneath heavy timber sorting mechanics." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAI_jMnbihdsSNSqJJCVOXAjzO5VosbH1XgAfaUaYv19ElW4MaSyBost9RtImlX-SNof2RYmBUXbzdPWJ-P8CISwl9g2Wh692UJkyD1wJFvlhZkyatAHS880yYHDcf-xcv8cHhIClo-PeCk9_4gxZBUmgaaTpckuvQbB-Q5EesrLQaddtJhfoTNO838qMwD15NatcNgY4ue-hxSuZGQe4Kji8iePage6TP9K5SMNH3Q')"></div>
+<!-- Reticle / Coordinate Overlay SVG -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" viewbox="0 0 800 500">
+<!-- Grid lines -->
+<defs>
+<pattern height="40" id="calibGrid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" opacity="0.3" stroke="#a4c66c" stroke-width="0.35"></path>
+</pattern>
+</defs>
+<rect fill="url(#calibGrid)" height="100%" width="100%"></rect>
+<!-- Crosshair Center (Principal Point) -->
+<circle cx="400" cy="250" fill="#a4c66c" r="4" stroke="#173f35" stroke-width="1.5"></circle>
+<line stroke="#a4c66c" stroke-dasharray="2,2" stroke-width="1.5" x1="370" x2="430" y1="250" y2="250"></line>
+<line stroke="#a4c66c" stroke-dasharray="2,2" stroke-width="1.5" x1="400" x2="400" y1="220" y2="280"></line>
+<!-- Simulated Bounding Target Box with Extended Corner Ticks -->
+<rect fill="#173f35" fill-opacity="0.15" height="260" stroke="#a4c66c" stroke-width="1.5" width="340" x="230" y="110"></rect>
+<!-- Corner ticks -->
+<path d="M 220 110 L 240 110 M 230 100 L 230 120" stroke="#a4c66c" stroke-width="2"></path>
+<path d="M 560 110 L 580 110 M 570 100 L 570 120" stroke="#a4c66c" stroke-width="2"></path>
+<path d="M 220 370 L 240 370 M 230 360 L 230 380" stroke="#a4c66c" stroke-width="2"></path>
+<path d="M 560 370 L 580 370 M 570 360 L 570 380" stroke="#a4c66c" stroke-width="2"></path>
+<!-- Metric Reference Scale Line (200mm = 485.4px) -->
+<line stroke="#cbef90" stroke-width="2.5" x1="160" x2="645.4" y1="430" y2="430"></line>
+<line stroke="#cbef90" stroke-width="2.5" x1="160" x2="160" y1="422" y2="438"></line>
+<line stroke="#cbef90" stroke-width="2.5" x1="645.4" x2="645.4" y1="422" y2="438"></line>
+<text fill="#cbef90" font-family="JetBrains Mono" font-size="12" font-weight="600" text-anchor="middle" x="402" y="420">METRIC REF BAR: 200.00 mm (485.4 px • 0.412 mm/px)</text>
+<!-- Reprojection Residual Vectors (visual indicators) -->
+<circle cx="280" cy="160" fill="#ffffff" r="3"></circle>
+<line stroke="#ba1a1a" stroke-width="1.5" x1="280" x2="282.1" y1="160" y2="161.4"></line>
+<circle cx="520" cy="320" fill="#ffffff" r="3"></circle>
+<line stroke="#ba1a1a" stroke-width="1.5" x1="520" x2="521.2" y1="320" y2="319.1"></line>
+</svg>
+<!-- Floating Top HUD Tag -->
+<div class="absolute top-3 left-3 bg-primary/95 text-on-primary px-2.5 py-1 rounded shadow-md font-label-code text-label-code flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-ping"></span>
+<span>ACTIVE HOMOGRAPHY PROJECTION [H_3x3]</span>
+</div>
+<!-- Distortion toggle interactive pill -->
+<div class="absolute bottom-3 left-3 bg-inverse-surface/90 text-inverse-on-surface px-2.5 py-1 rounded shadow-md font-label-code text-[11px] flex items-center gap-2">
+<span>UNWARP PREVIEW:</span>
+<button class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold hover:opacity-90" id="toggleUndistort">ENABLED</button>
+</div>
+</div>
+<!-- Bottom Viewport Micro-Controls -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs bg-surface-container rounded p-space-xs px-space-sm font-label-code text-label-code">
+<div class="flex items-center gap-space-sm">
+<span class="text-on-surface-variant">Pattern:</span>
+<span class="text-on-surface font-semibold">OpenCV ChArUco 9x12 40mm DIC</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-on-surface-variant">Detection Confidence:</span>
+<span class="text-secondary font-bold">99.84%</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-2 py-1 bg-surface-container-high hover:bg-surface-container-highest rounded text-on-surface transition-colors font-medium">Re-detect</button>
+<button class="px-2 py-1 bg-surface-container-high hover:bg-surface-container-highest rounded text-on-surface transition-colors font-medium">Snap Frame</button>
+</div>
+</div>
+</div>
+<!-- Mathematical Solver & Intrinsic Matrix Telemetry (5 cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between space-y-space-sm">
+<!-- Step Context Descriptor -->
+<div class="bg-surface-container rounded p-space-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-secondary font-bold">SOLVER PIPELINE • STEP 2 OF 4</span>
+<span class="font-label-code text-label-code text-on-surface-variant">Levenberg-Marquardt (LM)</span>
+</div>
+<h3 class="font-title-sm text-title-sm font-bold text-primary">Camera Matrix &amp; Brown-Conrady Parameters</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Nonlinear optimization solved against 48 calibration poses. Residual reprojection root mean square within acceptable bounds.</p>
+</div>
+<!-- 3x3 Intrinsic Matrix Display -->
+<div class="bg-surface-container-low rounded p-space-sm space-y-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-dense text-label-dense uppercase tracking-wider text-on-surface-variant font-semibold">Camera Intrinsic Matrix (K)</span>
+<span class="font-label-code text-label-code text-secondary font-semibold">Normalized Px</span>
+</div>
+<div class="bg-surface-container-lowest rounded p-2.5 font-label-code text-label-code text-on-surface space-y-1 shadow-sm">
+<div class="grid grid-cols-3 gap-2 text-right">
+<span class="text-primary font-bold">fx = 3284.18</span>
+<span class="text-on-surface-variant">0.000</span>
+<span class="text-primary font-bold">cx = 2048.12</span>
+</div>
+<div class="grid grid-cols-3 gap-2 text-right">
+<span class="text-on-surface-variant">0.000</span>
+<span class="text-primary font-bold">fy = 3285.91</span>
+<span class="text-primary font-bold">cy = 1081.44</span>
+</div>
+<div class="grid grid-cols-3 gap-2 text-right">
+<span class="text-on-surface-variant">0.000</span>
+<span class="text-on-surface-variant">0.000</span>
+<span class="text-secondary font-bold">1.000</span>
+</div>
+</div>
+</div>
+<!-- Radial & Tangential Distortion Coefficients -->
+<div class="bg-surface-container-low rounded p-space-sm space-y-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-dense text-label-dense uppercase tracking-wider text-on-surface-variant font-semibold">Distortion Vectors [k1, k2, p1, p2, k3]</span>
+<span class="font-label-code text-label-code text-on-surface-variant">Brown-Conrady</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-lowest rounded p-2 font-label-code text-label-code shadow-sm">
+<span class="text-on-surface-variant text-[10px] block">RADIAL (k1)</span>
+<span class="text-primary font-bold text-body-sm">-0.041829</span>
+</div>
+<div class="bg-surface-container-lowest rounded p-2 font-label-code text-label-code shadow-sm">
+<span class="text-on-surface-variant text-[10px] block">RADIAL (k2)</span>
+<span class="text-primary font-bold text-body-sm">+0.002148</span>
+</div>
+<div class="bg-surface-container-lowest rounded p-2 font-label-code text-label-code shadow-sm">
+<span class="text-on-surface-variant text-[10px] block">TANGENTIAL (p1)</span>
+<span class="text-primary font-bold text-body-sm">-0.000104</span>
+</div>
+<div class="bg-surface-container-lowest rounded p-2 font-label-code text-label-code shadow-sm">
+<span class="text-on-surface-variant text-[10px] block">TANGENTIAL (p2)</span>
+<span class="text-primary font-bold text-body-sm">+0.000088</span>
+</div>
+</div>
+</div>
+<!-- Solver Residual Gauge & Metric Validation -->
+<div class="bg-surface-container-high rounded p-space-sm space-y-space-xs">
+<div class="flex items-center justify-between font-label-dense text-label-dense">
+<span class="uppercase tracking-wider font-semibold text-on-surface">Reprojection RMS Error</span>
+<span class="font-label-code text-label-code font-bold text-secondary">0.124 px (Target &lt; 0.18 px)</span>
+</div>
+<!-- Meter bar -->
+<div class="w-full bg-surface-container-highest h-2 rounded overflow-hidden">
+<div class="bg-secondary h-full rounded" style="width: 42%;"></div>
+</div>
+<div class="flex justify-between font-label-caption text-label-caption text-on-surface-variant">
+<span>0.00 px (Optimal)</span>
+<span>Tolerance Limit: 0.18 px</span>
+</div>
+</div>
+<!-- Action Buttons / Next Step Trigger -->
+<div class="pt-space-xs flex items-center justify-between gap-space-sm">
+<button class="px-3 py-2 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded font-label-dense text-label-dense uppercase tracking-wider transition-colors">
+              Reset Captures
+            </button>
+<div class="flex items-center gap-space-xs">
+<button class="px-4 py-2 bg-secondary text-on-secondary hover:bg-secondary/90 rounded font-label-dense text-label-dense uppercase tracking-wider font-semibold transition-colors shadow-sm">
+                Solve Extrinsics
+              </button>
+<button class="flex items-center gap-1 px-4 py-2 bg-primary text-on-primary hover:bg-primary-container rounded font-label-dense text-label-dense uppercase tracking-wider font-semibold transition-colors shadow-sm" id="advanceWizardBtn">
+<span>Proceed to Step 3</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Optical Calibration Audit Trail Table -->
+<div class="px-margin pb-space-xl">
+<div class="bg-surface-container-lowest rounded shadow-sm p-space-md xl:p-space-lg space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">history_edu</span>
+<h2 class="font-headline-md text-headline-md font-bold text-primary">Calibration Certification Audit Trail</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Immutable metrology logs, ISO/DIS 20614 sign-offs, and field technician cryptographic certificate hashes.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<input class="h-8 pl-8 pr-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest" placeholder="Filter by station or cert..." type="text"/>
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px]">filter_list</span>
+</div>
+<button class="flex items-center gap-1 h-8 px-2.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded font-label-dense text-label-dense uppercase tracking-wider transition-colors">
+<span class="material-symbols-outlined text-[15px]">file_download</span>
+<span>CSV Export</span>
+</button>
+</div>
+</div>
+<!-- High-Density Telemetry Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-dense text-label-dense uppercase tracking-wider h-8">
+<th class="px-space-sm">Event ID • Timestamp</th>
+<th class="px-space-sm">Gantry Rig ID</th>
+<th class="px-space-sm">Camera Hardware</th>
+<th class="px-space-sm">Calibration Target Used</th>
+<th class="px-space-sm text-right">Reprojection RMS</th>
+<th class="px-space-sm text-right">Scale Ratio</th>
+<th class="px-space-sm">Lead Metrologist</th>
+<th class="px-space-sm text-center">Cert Lock</th>
+<th class="px-space-sm text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1 -->
+<tr class="h-10 hover:bg-surface-container-low transition-colors font-body-sm text-body-sm">
+<td class="px-space-sm font-label-code text-label-code text-on-surface">
+<span class="font-bold text-primary">EV-90218</span> • 2024-10-22 08:14
+              </td>
+<td class="px-space-sm font-label-code text-label-code font-bold text-primary">G-01 (South Gate)</td>
+<td class="px-space-sm text-on-surface">FLIR Ladybug6 360</td>
+<td class="px-space-sm">
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded font-label-code text-[11px] text-on-surface">ChArUco 12x9 40mm</span>
+</td>
+<td class="px-space-sm text-right font-label-numeric text-label-numeric font-bold text-secondary">0.124 px</td>
+<td class="px-space-sm text-right font-label-numeric text-label-numeric text-on-surface">0.412 mm/px</td>
+<td class="px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-code text-[10px] font-bold">ML</span>
+<span class="text-on-surface">M. Lindqvist (#802)</span>
+</div>
+</td>
+<td class="px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed-variant rounded font-label-code text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px]">lock</span> VERIFIED
+                </span>
+</td>
+<td class="px-space-sm text-right">
+<button class="font-label-code text-label-code text-secondary hover:underline font-semibold" title="View Certificate Document">CERT-SHA256</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="h-10 hover:bg-surface-container-low transition-colors font-body-sm text-body-sm">
+<td class="px-space-sm font-label-code text-label-code text-on-surface">
+<span class="font-bold text-primary">EV-90104</span> • 2024-10-17 14:32
+              </td>
+<td class="px-space-sm font-label-code text-label-code font-bold text-primary">G-03 (Weighbridge)</td>
+<td class="px-space-sm text-on-surface">Allied Vision Alvium NIR</td>
+<td class="px-space-sm">
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded font-label-code text-[11px] text-on-surface">Retro-Reflective Dot 15x15</span>
+</td>
+<td class="px-space-sm text-right font-label-numeric text-label-numeric font-bold text-secondary">0.112 px</td>
+<td class="px-space-sm text-right font-label-numeric text-label-numeric text-on-surface">0.398 mm/px</td>
+<td class="px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-code text-[10px] font-bold">TH</span>
+<span class="text-on-surface">T. Haataja (#419)</span>
+</div>
+</td>
+<td class="px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed-variant rounded font-label-code text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px]">lock</span> VERIFIED
+                </span>
+</td>
+<td class="px-space-sm text-right">
+<button class="font-label-code text-label-code text-secondary hover:underline font-semibold">CERT-SHA256</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="h-10 hover:bg-surface-container-low transition-colors font-body-sm text-body-sm">
+<td class="px-space-sm font-label-code text-label-code text-on-surface">
+<span class="font-bold text-primary">EV-89945</span> • 2024-10-12 09:05
+              </td>
+<td class="px-space-sm font-label-code text-label-code font-bold text-primary">G-02 (North Gate Dual)</td>
+<td class="px-space-sm text-on-surface">Basler ace2 Pro Dual 4K</td>
+<td class="px-space-sm">
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded font-label-code text-[11px] text-on-surface">Dual Checkerboard 30mm</span>
+</td>
+<td class="px-space-sm text-right font-label-numeric text-label-numeric font-bold text-secondary">0.141 px</td>
+<td class="px-space-sm text-right font-label-numeric text-label-numeric text-on-surface">0.415 mm/px</td>
+<td class="px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-code text-[10px] font-bold">ML</span>
+<span class="text-on-surface">M. Lindqvist (#802)</span>
+</div>
+</td>
+<td class="px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed-variant rounded font-label-code text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px]">lock</span> VERIFIED
+                </span>
+</td>
+<td class="px-space-sm text-right">
+<button class="font-label-code text-label-code text-secondary hover:underline font-semibold">CERT-SHA256</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="h-10 hover:bg-surface-container-low transition-colors font-body-sm text-body-sm">
+<td class="px-space-sm font-label-code text-label-code text-on-surface">
+<span class="font-bold text-primary">EV-88410</span> • 2024-09-24 16:50
+              </td>
+<td class="px-space-sm font-label-code text-label-code font-bold text-error">G-04 (Discharge Rail)</td>
+<td class="px-space-sm text-on-surface">FLIR Blackfly S 4K</td>
+<td class="px-space-sm">
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded font-label-code text-[11px] text-on-surface">ChArUco 10x7 50mm</span>
+</td>
+<td class="px-space-sm text-right font-label-numeric text-label-numeric font-bold text-on-surface">0.179 px</td>
+<td class="px-space-sm text-right font-label-numeric text-label-numeric text-on-surface">0.428 mm/px</td>
+<td class="px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-surface-variant text-on-surface flex items-center justify-center font-label-code text-[10px] font-bold">ER</span>
+<span class="text-on-surface">E. Rantala (#114)</span>
+</div>
+</td>
+<td class="px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-error-container text-on-error-container rounded font-label-code text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px]">history_toggle_off</span> EXPIRING
+                </span>
+</td>
+<td class="px-space-sm text-right">
+<button class="font-label-code text-label-code text-error hover:underline font-semibold">CAL-PENDING</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Metadata & Pagination -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs font-label-caption text-label-caption text-on-surface-variant">
+<div>Showing 4 of 24 logged calibration lifecycle events (Standard 30-day ISO Recertification Cycle)</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 bg-surface-container-high hover:bg-surface-container-highest rounded text-on-surface">Previous</button>
+<span class="px-2 font-label-code text-label-code text-on-surface font-bold">Page 1 / 6</span>
+<button class="px-2 py-1 bg-surface-container-high hover:bg-surface-container-highest rounded text-on-surface">Next</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Logic -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Undistort toggle simulation
+      const toggleUndistortBtn = document.getElementById('toggleUndistort');
+      let undistortState = true;
+      if (toggleUndistortBtn) {
+        toggleUndistortBtn.addEventListener('click', () => {
+          undistortState = !undistortState;
+          toggleUndistortBtn.textContent = undistortState ? 'ENABLED' : 'BYPASS';
+          toggleUndistortBtn.className = undistortState 
+            ? 'px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold hover:opacity-90'
+            : 'px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-bold hover:opacity-90';
+        });
+      }
+
+      // Calibration Wizard Step Navigators
+      const wizardTabs = document.querySelectorAll('.wizard-tab');
+      wizardTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          wizardTabs.forEach(t => {
+            t.classList.remove('bg-primary', 'text-on-primary');
+            t.classList.add('bg-surface-container-high', 'text-on-surface');
+            const sub = t.querySelector('.text-tertiary-fixed');
+            if (sub) {
+              sub.classList.remove('text-tertiary-fixed');
+              sub.classList.add('text-on-surface-variant');
+            }
+          });
+          tab.classList.remove('bg-surface-container-high', 'text-on-surface');
+          tab.classList.add('bg-primary', 'text-on-primary');
+          const sub = tab.querySelector('.text-on-surface-variant');
+          if (sub) {
+            sub.classList.remove('text-on-surface-variant');
+            sub.classList.add('text-tertiary-fixed');
+          }
+        });
+      });
+
+      // Advance Wizard Button
+      const advanceBtn = document.getElementById('advanceWizardBtn');
+      if (advanceBtn) {
+        advanceBtn.addEventListener('click', () => {
+          const activeStep = document.querySelector('.wizard-tab.bg-primary');
+          if (activeStep) {
+            const nextStep = activeStep.nextElementSibling;
+            if (nextStep && nextStep.classList.contains('wizard-tab')) {
+              nextStep.click();
+            }
+          }
+        });
+      }
+
+      // Quick Recal notification
+      const quickRecal = document.getElementById('quickRecalBtn');
+      if (quickRecal) {
+        quickRecal.addEventListener('click', () => {
+          alert('Auto-Calibration Routine initiated for Gantry RIG-04. Positioning reference phantom at Discharge Rail.');
+        });
+      }
+
+      // Export Profile JSON/YAML
+      const exportBtn = document.getElementById('exportProfileBtn');
+      if (exportBtn) {
+        exportBtn.addEventListener('click', () => {
+          const profile = {
+            station: "Gantry-01 South Gate",
+            mill: "Mill 04 Oulu Pulp & Paper Complex",
+            resolution: [4096, 2160],
+            pixel_scale_mm: 0.41203,
+            camera_matrix: [[3284.18, 0.0, 2048.12], [0.0, 3285.91, 1081.44], [0.0, 0.0, 1.0]],
+            distortion_k1_k2_p1_p2: [-0.041829, 0.002148, -0.000104, 0.000088],
+            rms_error_px: 0.124
+          };
+          const blob = new Blob([JSON.stringify(profile, null, 2)], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'pineos_calib_profile_G01.json';
+          a.click();
+          URL.revokeObjectURL(url);
+        });
+      }
+    });
+  </script>
+</div></main></div></body></html>

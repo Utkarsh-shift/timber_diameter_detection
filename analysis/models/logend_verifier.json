@@ -1,0 +1,177 @@
+{
+ "features": [
+  "a_rel",
+  "b_rel",
+  "axis_ratio",
+  "size_vs_ref",
+  "score",
+  "coverage",
+  "contrast",
+  "resid",
+  "h_in",
+  "s_in",
+  "v_in",
+  "v_std_in",
+  "s_out",
+  "v_out",
+  "dv",
+  "wood_in",
+  "wood_out",
+  "lap_in",
+  "dark_out",
+  "edge_ring"
+ ],
+ "threshold": 0.25,
+ "cv": {
+  "thr": 0.25,
+  "tp": 236,
+  "fp": 99,
+  "fn": 242,
+  "precision": 70.4,
+  "recall": 49.4,
+  "f1": 58.1,
+  "mean_iou": 72.5
+ },
+ "cv_sweep": [
+  {
+   "thr": 0.1,
+   "tp": 242,
+   "fp": 143,
+   "fn": 236,
+   "precision": 62.9,
+   "recall": 50.6,
+   "f1": 56.1,
+   "mean_iou": 72.5
+  },
+  {
+   "thr": 0.15,
+   "tp": 239,
+   "fp": 118,
+   "fn": 239,
+   "precision": 66.9,
+   "recall": 50.0,
+   "f1": 57.2,
+   "mean_iou": 72.4
+  },
+  {
+   "thr": 0.2,
+   "tp": 236,
+   "fp": 104,
+   "fn": 242,
+   "precision": 69.4,
+   "recall": 49.4,
+   "f1": 57.7,
+   "mean_iou": 72.5
+  },
+  {
+   "thr": 0.25,
+   "tp": 236,
+   "fp": 99,
+   "fn": 242,
+   "precision": 70.4,
+   "recall": 49.4,
+   "f1": 58.1,
+   "mean_iou": 72.5
+  },
+  {
+   "thr": 0.3,
+   "tp": 230,
+   "fp": 89,
+   "fn": 248,
+   "precision": 72.1,
+   "recall": 48.1,
+   "f1": 57.7,
+   "mean_iou": 72.8
+  },
+  {
+   "thr": 0.4,
+   "tp": 222,
+   "fp": 79,
+   "fn": 256,
+   "precision": 73.8,
+   "recall": 46.4,
+   "f1": 57.0,
+   "mean_iou": 73.1
+  },
+  {
+   "thr": 0.5,
+   "tp": 218,
+   "fp": 71,
+   "fn": 260,
+   "precision": 75.4,
+   "recall": 45.6,
+   "f1": 56.8,
+   "mean_iou": 73.1
+  },
+  {
+   "thr": 0.6,
+   "tp": 216,
+   "fp": 61,
+   "fn": 262,
+   "precision": 78.0,
+   "recall": 45.2,
+   "f1": 57.2,
+   "mean_iou": 73.3
+  },
+  {
+   "thr": 0.7,
+   "tp": 206,
+   "fp": 54,
+   "fn": 272,
+   "precision": 79.2,
+   "recall": 43.1,
+   "f1": 55.8,
+   "mean_iou": 73.5
+  },
+  {
+   "thr": 0.8,
+   "tp": 192,
+   "fp": 48,
+   "fn": 286,
+   "precision": 80.0,
+   "recall": 40.2,
+   "f1": 53.5,
+   "mean_iou": 73.9
+  }
+ ],
+ "images": 146,
+ "candidates": 11912,
+ "positives": 369,
+ "trained_on_splits": [
+  "train"
+ ],
+ "heldout_splits": [
+  "test",
+  "val"
+ ],
+ "heldout": {
+  "thr": 0.25,
+  "tp": 36,
+  "fp": 39,
+  "fn": 25,
+  "precision": 48.0,
+  "recall": 59.0,
+  "f1": 52.9,
+  "mean_iou": 71.4
+ },
+ "heldout_images": [
+  "IMG_5944",
+  "IMG_5992",
+  "IMG_5993",
+  "IMG_6005",
+  "IMG_6019",
+  "IMG_6034",
+  "IMG_6042",
+  "IMG_6054",
+  "IMG_6055",
+  "IMG_6063",
+  "IMG_6068",
+  "IMG_7158",
+  "IMG_8003",
+  "IMG_8005",
+  "IMG_8007",
+  "image18"
+ ],
+ "dataset": "DIIF log-end annotated dataset, Zenodo 10.5281/zenodo.22894169 (CC BY 4.0)",
+ "note": "cv = grouped 5-fold cross-validation over all images (held-out only); the shipped model is fit on the train split, heldout = its score on val+test photos"
+}

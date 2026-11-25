@@ -1,0 +1,48 @@
+# dependencies and Python environments
+node_modules/
+.venv*/
+__pycache__/
+*.pyc
+
+# builds
+frontend/dist/
+
+# data: photos, datasets, databases, uploads (not versioned)
+/Dataset1/
+/timbervision/
+*.zip
+backend/data/
+analysis/data/
+analysis/runs*/
+eval_out/
+
+# photos, images and video anywhere ...
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.png
+*.PNG
+*.webp
+*.bmp
+*.gif
+*.tif
+*.tiff
+*.mp4
+*.avi
+*.mov
+# ... except the UI assets the web app itself needs
+!frontend/public/**
+
+# model checkpoints / weights
+*.pt
+*.pth
+*.onnx
+*.joblib
+*.ckpt
+*.safetensors
+*.engine
+
+# logs and local secrets
+*.log
+.env

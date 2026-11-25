@@ -1,0 +1,12 @@
+[
+ {
+  "photo": "PHOTO-2026-11-11-10-03-49.jpg",
+  "sam_raw_masks": 149,
+  "sam_everything": 119,
+  "timbervision": 179,
+  "sam_boxed": 179,
+  "mean_iou_sam_vs_tv": 0.828,
+  "sec_everything": 127.1,
+  "sec_boxed": 21.4
+ }
+]

@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary":"#ffffff","inverse-primary":"#a6cfc1","secondary-fixed":"#b5efd7","primary-container":"#173f35","tertiary-fixed":"#cbef90","on-error-container":"#93000a","error-container":"#ffdad6","surface-container-highest":"#d6e6dd","surface-bright":"#edfdf3","surface-variant":"#d6e6dd","on-surface-variant":"#414845","on-primary-fixed":"#002019","on-primary":"#ffffff","secondary-container":"#b5efd7","on-tertiary-fixed":"#121f00","on-primary-fixed-variant":"#274e43","tertiary-fixed-dim":"#b0d277","primary":"#002920","surface-container":"#e2f2e8","on-tertiary-fixed-variant":"#344e00","on-secondary-fixed-variant":"#17503e","on-error":"#ffffff","surface-container-lowest":"#ffffff","tertiary-container":"#293f00","background":"#edfdf3","surface-tint":"#3f665a","on-background":"#111e19","on-secondary-fixed":"#002117","surface-dim":"#ceded4","inverse-on-surface":"#e5f5eb","surface-container-low":"#e7f7ee","on-surface":"#111e19","primary-fixed-dim":"#a6cfc1","on-tertiary":"#ffffff","error":"#ba1a1a","outline":"#717975","on-primary-container":"#82aa9d","primary-fixed":"#c1ecdd","on-secondary-container":"#386e5b","surface-container-high":"#dcece2","inverse-surface":"#26332d","on-tertiary-container":"#8cad56","secondary-fixed-dim":"#9ad2bb","outline-variant":"#c0c8c4","surface":"#edfdf3","secondary":"#326855","tertiary":"#182800"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"0.75rem","margin-mobile":"0.75rem","margin":"1.5rem","space-xs":"0.25rem","gutter-dense":"0.5rem","gutter":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","space-lg":"1rem"},"fontFamily":{"title-sm":["Inter"],"label-dense":["Inter"],"label-caption":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"],"label-numeric":["JetBrains Mono"],"headline-xl-mobile":["Inter"],"headline-lg":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"headline-xl":["Inter"],"label-code":["JetBrains Mono"]},"fontSize":{"title-sm":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-dense":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-caption":["10px",{"lineHeight":"12px","letterSpacing":"0.02em","fontWeight":"500"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-numeric":["12px",{"lineHeight":"16px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg-mobile":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-code":["11px",{"lineHeight":"14px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low flex flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container"><img alt="Pine OS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UzQXmfeY0ZgHp5KWNF3TcfswDWXortBjXfih0H8wJxIYAcOo_pHeQ1MekcVoloEv04-1whOHD-f78LEwLhIYOJXvA6352C46mJM592viYCD09QZdfJxdlQycRqr7yH5M_4P1ueUpCD-e2NJI5GEiYCTYYvkX8Z6ni4lEGZG1BkVP6WSRhJHVo_8ohTkpxQ_eR7TPi5Hf3NhyLenEJAG8zr891JtcwN837NSAkqtBRzdw"/><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md font-bold tracking-tight text-primary leading-tight truncate">PINE OS</span><span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-code text-label-code">v3.4</span></div><span class="font-label-caption text-label-caption text-on-surface-variant truncate uppercase tracking-wider">Industrial Wood Intelligence</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">Core Operations</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Overview</span></div><span class="font-label-code text-label-code text-on-surface-variant">01</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="intake" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span>Truck Intake &amp; Queue</span></div><span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-bold">12</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="studio" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">view_in_ar</span><span>AI Measurement Studio</span></div><span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code uppercase tracking-wider font-bold animate-pulse">LIVE CV</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="history" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">history</span><span>Measurement History</span></div></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">Intelligence &amp; Procurement</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="quality" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Quality Assessment</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="suppliers" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">verified</span><span>Suppliers &amp; Compliance</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="procurement" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">price_check</span><span>Procurement Intelligence</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Analytics &amp; Reports</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="disputes" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">gavel</span><span>Dispute Management</span></div><span class="px-1.5 py-0.2 rounded bg-error-container text-on-error-container font-label-code text-label-code font-bold">2</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">AI &amp; Infrastructure</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="calibration" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">tune</span><span>Camera &amp; Calibration</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="model-monitor" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">monitoring</span><span>AI Model Monitoring</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="integrations" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">hub</span><span>ERP &amp; Weighbridge</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings &amp; Admin</span></div></a></nav></div></div><div class="p-space-sm bg-surface-container space-y-space-xs"><button class="w-full flex items-center justify-between px-space-sm py-2 rounded bg-primary-container text-on-primary hover:bg-primary transition-colors" type="button"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed">psychology</span><span class="font-title-sm text-title-sm text-on-primary">Ask Pine OS</span></div><span class="material-symbols-outlined text-[16px] text-inverse-primary">arrow_forward</span></button><div class="px-space-sm py-1.5 rounded bg-surface-container-high flex items-center justify-between"><div class="flex items-center gap-1.5 min-w-0"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-caption text-label-caption text-on-surface truncate">Edge Node #08</span></div><span class="font-label-code text-label-code text-secondary font-semibold">14ms</span></div><div class="flex items-center gap-space-xs p-1.5 rounded bg-surface-container-lowest"><img alt="Marcus Lindqvist" class="w-8 h-8 rounded object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPIUyV7Rx3jw-mAhXLV3a3W5JI2fKW4RYifCu34JN1ecDHzg_qTKS3zBfd7RSxOqfo6oZ8RTHWXfPR1BoKqU_nUPs4OuEw3sYf5FkmCHba5vVYmBrwt8k1zHAJ24O6juRzfggLjtvNkAFjqX-jHVaYqptdV7OoGwngr-m1CYW3Fp_C1lR8mEsmQ3rrfpTPC7s1SVgfAw3_pWHxqyhaU7OgY3X9wclIUrzRShB-lcsX"/><div class="min-w-0 flex-1"><div class="font-title-sm text-title-sm text-on-surface truncate leading-none">Marcus Lindqvist</div><div class="font-label-caption text-label-caption text-on-surface-variant truncate mt-0.5">VP Operations</div></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">more_vert</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-md z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-shrink-0"><div class="flex items-center gap-space-xs px-2.5 py-1.5 bg-surface-container-high rounded cursor-pointer hover:bg-surface-container-highest transition-colors"><span class="material-symbols-outlined text-[18px] text-primary">factory</span><div class="flex flex-col text-left"><span class="font-label-caption text-label-caption text-on-surface-variant uppercase leading-none">Selected Mill</span><span class="font-title-sm text-title-sm text-on-surface leading-tight font-semibold">Mill 04 - Oulu Pulp &amp; Paper Complex</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant ml-1">expand_more</span></div><div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container-high"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-code text-label-code text-secondary font-medium">CV Pipeline: 60 FPS • Calibrated</span></div><div class="hidden 2xl:flex items-center gap-1.5 px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant"><span class="material-symbols-outlined text-[14px]">sensors</span><span class="font-label-code text-label-code font-semibold uppercase">Gate Intake Online</span></div></div><div class="flex-1 max-w-xl mx-space-sm hidden md:block"><div class="relative"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-9 pl-9 pr-14 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search trucks, log IDs, PO#, suppliers, certificates..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-code text-label-code">Ctrl+K</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="hidden lg:flex items-center gap-1 px-2 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-code text-label-code font-semibold"><span class="material-symbols-outlined text-[14px]">token</span><span>DEMO MODE</span></div><div class="flex items-center gap-1 px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface font-label-numeric text-label-numeric"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span><span class="hidden sm:inline">Today: Oct 24, 2024</span></div><div class="relative"><button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-error text-on-error font-label-code text-[9px] flex items-center justify-center font-bold">3</span></div><button class="w-8 h-8 rounded hidden sm:flex items-center justify-center bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-space-lg py-space-md space-y-space-md">
+<!-- Header Block -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md bg-surface-container-low p-space-lg rounded-xl shadow-sm">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-code text-label-code uppercase tracking-wider font-semibold">MOD-02 • GATE STREAM</span>
+<span class="flex items-center gap-1 font-label-numeric text-label-numeric text-secondary font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            ACTIVE CONCURRENCY: 12 TRANSPORTS
+          </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">Truck Intake Management &amp; Gate Queue</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Real-time intake stream, weighbridge integration &amp; digital chain of custody telemetry for Oulu Mill Gate Complex G-01 through G-04.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs flex-shrink-0">
+<div class="relative inline-block text-left">
+<button class="flex items-center gap-1.5 px-3 py-2 bg-surface-container-lowest text-on-surface font-title-sm text-title-sm rounded shadow-sm hover:bg-surface-container transition-colors" id="locationFilterBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">pin_drop</span>
+<span>G-Yard Oulu Complex</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
+</button>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-2 bg-surface-container-lowest text-on-surface font-title-sm text-title-sm rounded shadow-sm hover:bg-surface-container transition-colors" onclick="document.getElementById('gateStreamModal').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">videocam</span>
+<span>Gate Camera Stream</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-2 bg-surface-container-lowest text-on-surface font-title-sm text-title-sm rounded shadow-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">file_download</span>
+<span>Export Queue Log</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-on-primary font-title-sm text-title-sm rounded shadow-sm hover:bg-primary-container transition-colors" onclick="openRegistrationModal()" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">add_circle</span>
+<span>Register Inbound Truck</span>
+</button>
+</div>
+</div>
+<!-- Intake Funnel Status Bar -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-xs bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<!-- Stage Total -->
+<div class="p-3 bg-surface-container-low rounded flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-dense text-label-dense uppercase">Total In Yard</span>
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-primary font-label-numeric">12</span>
+<span class="font-label-code text-label-code text-on-surface-variant font-medium">TRUCKS</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<!-- Step 1 -->
+<div class="p-3 bg-surface-container-low rounded flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-dense text-label-dense uppercase">1. Gate Check-in</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-secondary font-label-numeric">02</span>
+<span class="font-label-code text-label-code text-on-surface-variant">QUEUED</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 25%"></div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-3 bg-surface-container-low rounded flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-dense text-label-dense uppercase">2. Gantry Imaging</span>
+<span class="material-symbols-outlined text-[16px] text-primary">camera_outdoor</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-primary font-label-numeric">03</span>
+<span class="font-label-code text-label-code text-on-surface-variant">IN RIG</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-3 bg-surface-container-high rounded flex flex-col justify-between">
+<div class="flex items-center justify-between text-primary">
+<span class="font-label-dense text-label-dense uppercase font-semibold">3. AI Inference</span>
+<span class="material-symbols-outlined text-[16px] animate-spin">sync</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-primary font-label-numeric">01</span>
+<span class="font-label-code text-label-code text-primary font-semibold">RUNNING CV</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full animate-pulse" style="width: 80%"></div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="p-3 bg-surface-container-low rounded flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-dense text-label-dense uppercase">4. Verification</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">assignment_turned_in</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface font-label-numeric">02</span>
+<span class="font-label-code text-label-code text-on-surface-variant">PENDING SUPV</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full rounded-full" style="width: 30%"></div>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="p-3 bg-secondary-fixed/30 rounded flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-secondary-fixed-variant">
+<span class="font-label-dense text-label-dense uppercase font-semibold">5. Scale Sync</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">done_all</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-secondary font-label-numeric">04</span>
+<span class="font-label-code text-label-code text-on-secondary-fixed-variant">CLEARED / 1H</span>
+</div>
+<div class="w-full bg-secondary-fixed h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</div>
+<!-- Active Camera Preview Drawer (collapsible) -->
+<div class="hidden bg-surface-container-lowest p-space-md rounded-xl shadow-md transition-all" id="gateStreamModal">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm bg-surface-container-low p-2 rounded">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-error/15 text-error font-label-code text-label-code font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+            LIVE 4K GANTRY FEED
+          </div>
+<span class="font-title-sm text-title-sm text-on-surface">Gate G-02 Stereo LiDAR &amp; Optical Rig</span>
+<span class="font-label-code text-label-code text-on-surface-variant">TRK-9842 (UPM Kymmene)</span>
+</div>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('gateStreamModal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<div class="lg:col-span-8 relative aspect-video bg-inverse-surface rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High-resolution industrial overhead vision camera capturing timber delivery truck trailer loaded with Nordic pine logs entering an automated scanning gantry with laser reticles and calibration marks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRfRJ7sBRD-7fDUncOWBBYfzd0g5n3sUkGTJn93wS8AQiDcWKoQ6ZBggJiAlxet4vbhLIvJSsJmPTNecO2oaHn9BAFExt2ZxzOyqxUq46bjlC9ymeq_B6-xkCGa438X0DaOYjy3Ye3xWRYeOas2FQIn08OXzVdby6H9_sni0PIBT-yO_0W-9Vd3HBrW-tVRFYg47VSiTHT9_cNMohzgA9_TiBsQiYD6m_gi1IhbBmw"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-2 pointer-events-none">
+<div class="px-2 py-1 bg-primary/90 text-on-primary font-label-code text-label-code rounded backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary-fixed">center_focus_strong</span>
+<span>INFERENCE FPS: 59.8</span>
+</div>
+<div class="px-2 py-1 bg-primary/90 text-on-primary font-label-code text-label-code rounded backdrop-blur-sm">
+              FOV: GANTRY-ORTHO-02
+            </div>
+<div class="px-2 py-1 bg-secondary text-on-secondary font-label-code text-label-code rounded">
+              BOUNDING BOXES: 326 LOG ENDS
+            </div>
+</div>
+<!-- CV Reticle simulation -->
+<div class="absolute inset-16 pointer-events-none flex items-center justify-center">
+<div class="w-full h-full rounded border-2 border-dashed border-tertiary-fixed/60 relative">
+<span class="absolute top-1 left-2 font-label-code text-label-code text-tertiary-fixed bg-primary/80 px-1 py-0.5 rounded">DETECTED LOAD AREA: 98.6% CONF</span>
+<span class="absolute bottom-1 right-2 font-label-code text-label-code text-on-primary bg-primary/80 px-1 py-0.5 rounded">STACK VOID RATIO: 14.2%</span>
+</div>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary font-label-code text-label-code bg-inverse-surface/80 p-2 rounded backdrop-blur-sm">
+<span>CALIBRATION PLANE: Z-2850mm</span>
+<span>SHUTTER: 1/1200s • ISO 200</span>
+<span>VOLUMETRIC FLUX: 42.4 m³ (EST)</span>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col justify-between space-y-space-sm bg-surface-container-low p-space-sm rounded">
+<div class="space-y-space-xs">
+<div class="font-title-sm text-title-sm text-primary font-bold">Real-time Gantry Telemetry</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dual-mode stereo vision active. 3D point cloud generation sync with weighbridge platform loadcell.</p>
+<div class="space-y-1.5 pt-2">
+<div class="flex justify-between items-center text-body-sm py-1 bg-surface-container-lowest px-2 rounded">
+<span class="text-on-surface-variant font-label-dense text-label-dense uppercase">Gate Position</span>
+<span class="font-label-numeric text-label-numeric font-semibold">Gantry Bay #02 (East)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm py-1 bg-surface-container-lowest px-2 rounded">
+<span class="text-on-surface-variant font-label-dense text-label-dense uppercase">Weighbridge Loadcell</span>
+<span class="font-label-numeric text-label-numeric font-semibold text-primary">48,220 kg (Gross)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm py-1 bg-surface-container-lowest px-2 rounded">
+<span class="text-on-surface-variant font-label-dense text-label-dense uppercase">Bark Infiltration Est.</span>
+<span class="font-label-numeric text-label-numeric font-semibold text-secondary">6.4% (Nominal)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm py-1 bg-surface-container-lowest px-2 rounded">
+<span class="text-on-surface-variant font-label-dense text-label-dense uppercase">Driver Clearance</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-bold">RFID BADGE VALID</span>
+</div>
+</div>
+</div>
+<div class="space-y-2 pt-2">
+<button class="w-full py-2 bg-primary text-on-primary rounded font-title-sm text-title-sm flex items-center justify-center gap-1.5 hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span>Trigger Manual Snapshot Calibration</span>
+</button>
+<button class="w-full py-1.5 bg-surface-container-lowest text-on-surface-variant hover:text-on-surface rounded font-body-sm text-body-sm transition-colors" type="button">
+              Switch to Gate G-01 Inbound
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Operational Queue Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Table Filters Header -->
+<div class="p-space-md bg-surface-container-low flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-2 flex-1">
+<!-- Search input -->
+<div class="relative min-w-[240px] flex-1 max-w-xs">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full h-8 pl-8 pr-3 bg-surface-container-lowest rounded text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-bright" id="queueSearch" placeholder="Filter by Truck ID, Plate, PO..." type="text"/>
+</div>
+<!-- Supplier Filter -->
+<select class="h-8 px-2.5 bg-surface-container-lowest rounded font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option value="">All Suppliers (Stora Enso, UPM, Metsä)</option>
+<option value="stora">Stora Enso Biomaterials</option>
+<option value="upm">UPM Forest &amp; Timber</option>
+<option value="metsa">Metsä Group Wood Supply</option>
+<option value="tornator">Tornator Oyj</option>
+</select>
+<!-- Status Filter -->
+<select class="h-8 px-2.5 bg-surface-container-lowest rounded font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option value="">All Workflow Stages</option>
+<option value="arrived">Stage 1: Gate Check-in</option>
+<option value="imaging">Stage 2: Gantry Imaging</option>
+<option value="ai">Stage 3: AI Inference</option>
+<option value="verification">Stage 4: Verification Pending</option>
+<option value="approved">Stage 5: ERP Sync &amp; Cleared</option>
+<option value="disputed">Flagged / Under Dispute</option>
+</select>
+<!-- Date Filter -->
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2.5 h-8 rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span class="font-label-numeric text-label-numeric text-on-surface">Oct 24, 2024</span>
+</div>
+</div>
+<div class="flex items-center justify-between lg:justify-end gap-space-sm flex-shrink-0">
+<div class="flex items-center gap-1 font-label-code text-label-code text-on-surface-variant">
+<span>QUEUE SYNC:</span>
+<span class="text-secondary font-semibold">100% REALTIME</span>
+</div>
+<button class="p-1.5 bg-surface-container-lowest rounded hover:bg-surface-container text-on-surface transition-colors" title="Refresh Table" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Queue Telemetry Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/60 text-on-surface-variant font-label-dense text-label-dense uppercase tracking-wider">
+<th class="py-2.5 px-space-md">Pos &amp; Truck ID</th>
+<th class="py-2.5 px-space-sm">Vehicle &amp; Haulier</th>
+<th class="py-2.5 px-space-sm">Supplier &amp; Contract PO</th>
+<th class="py-2.5 px-space-sm">Time / Wait</th>
+<th class="py-2.5 px-space-sm min-w-[200px]">Current Workflow Stage</th>
+<th class="py-2.5 px-space-sm text-right">Detected Logs</th>
+<th class="py-2.5 px-space-sm text-right">Avg Dia (mm)</th>
+<th class="py-2.5 px-space-sm">Quality Compliance</th>
+<th class="py-2.5 px-space-sm">Inspector</th>
+<th class="py-2.5 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Active In Rig -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code flex items-center justify-center font-bold">01</span>
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric font-bold text-primary">TRK-9844</span>
+<span class="font-label-code text-label-code text-on-surface-variant">GATE G-02</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-semibold text-primary">FIN-442-TG</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">Ahola Transport Oy</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-medium">Stora Enso Biomaterials</span>
+<span class="font-label-code text-label-code text-on-surface-variant">PO-2024-8841 • Class A</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col font-label-numeric text-label-numeric">
+<span class="text-on-surface">09:42:15</span>
+<span class="font-label-caption text-label-caption text-secondary font-medium">Wait: 4m 20s</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-code text-label-code">
+<span class="text-primary font-semibold">Gantry 3D Scan Active</span>
+<span class="text-secondary font-bold">88%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full animate-pulse" style="width: 88%"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-label-numeric text-label-numeric font-semibold text-primary">
+                326 <span class="text-on-surface-variant font-normal">/ 320</span>
+</td>
+<td class="py-3 px-space-sm text-right font-label-numeric text-label-numeric">
+                134.8
+              </td>
+<td class="py-3 px-space-sm">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-secondary-fixed/50 text-on-secondary-container font-label-code text-label-code font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  COMPLIANT
+                </div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-primary-container text-on-primary font-label-code text-[10px] flex items-center justify-center font-bold">ML</div>
+<span class="truncate max-w-[90px]">M. Lindqvist</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 bg-primary text-on-primary rounded font-label-code text-label-code hover:bg-primary-container transition-colors" title="Launch Visualizer" type="button">
+                    Studio
+                  </button>
+<button class="p-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors" title="Detailed Dossier" type="button">
+<span class="material-symbols-outlined text-[16px]">folder_open</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: AI Inference Running -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-surface-container text-on-surface-variant font-label-code text-label-code flex items-center justify-center font-bold">02</span>
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric font-bold text-primary">TRK-9843</span>
+<span class="font-label-code text-label-code text-on-surface-variant">GATE G-01</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-semibold text-primary">SWE-819-KP</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">Polar Nordic Logistics</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-medium">UPM Forest &amp; Timber</span>
+<span class="font-label-code text-label-code text-on-surface-variant">PO-2024-8839 • Class B</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col font-label-numeric text-label-numeric">
+<span class="text-on-surface">09:38:00</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">Wait: 8m 42s</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-code text-label-code">
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+                      AI Defect Classification
+                    </span>
+<span class="text-tertiary-container font-bold">54%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 54%"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-label-numeric text-label-numeric font-semibold text-primary">
+                284 <span class="text-on-surface-variant font-normal">/ 290</span>
+</td>
+<td class="py-3 px-space-sm text-right font-label-numeric text-label-numeric">
+                121.2
+              </td>
+<td class="py-3 px-space-sm">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-tertiary-fixed/60 text-on-tertiary-fixed-variant font-label-code text-label-code font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  SCANNING YIELD
+                </div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-secondary text-on-secondary font-label-code text-[10px] flex items-center justify-center font-bold">AK</div>
+<span class="truncate max-w-[90px]">A. Korhonen</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 bg-surface-container-high text-on-surface rounded font-label-code text-label-code hover:bg-surface-container-highest transition-colors" type="button">
+                    Studio
+                  </button>
+<button class="p-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Minor Deviation Flagged -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-surface-container text-on-surface-variant font-label-code text-label-code flex items-center justify-center font-bold">03</span>
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric font-bold text-primary">TRK-9842</span>
+<span class="font-label-code text-label-code text-on-surface-variant">GATE G-04</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-semibold text-primary">NOR-303-ZZ</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">Kautokeino Timber AS</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-medium">Metsä Group Wood Supply</span>
+<span class="font-label-code text-label-code text-on-surface-variant">PO-2024-8790 • Class A</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col font-label-numeric text-label-numeric">
+<span class="text-on-surface">09:25:40</span>
+<span class="font-label-caption text-label-caption text-error font-medium">Wait: 21m 00s</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-code text-label-code">
+<span class="text-on-surface-variant font-medium">Awaiting Supervisor Verification</span>
+<span class="text-error font-bold">FLAGGED</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-label-numeric text-label-numeric font-semibold text-error">
+                398 <span class="text-on-surface-variant font-normal">/ 330</span>
+</td>
+<td class="py-3 px-space-sm text-right font-label-numeric text-label-numeric">
+                98.4 <span class="text-error text-[10px]">(-11mm)</span>
+</td>
+<td class="py-3 px-space-sm">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-code text-label-code font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  UNDERSIZE SPEC
+                </div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-code text-[10px] flex items-center justify-center font-bold">JS</div>
+<span class="truncate max-w-[90px]">J. Saarinen</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 bg-surface-container-high text-primary hover:bg-secondary-fixed font-label-code text-label-code rounded transition-colors" type="button">
+                    Approve
+                  </button>
+<button class="px-2 py-1 bg-error-container text-on-error-container hover:bg-error hover:text-on-error font-label-code text-label-code rounded transition-colors" type="button">
+                    Dispute
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Approved & Weighbridge Out Synced -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-surface-container text-on-surface-variant font-label-code text-label-code flex items-center justify-center font-bold">04</span>
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric font-bold text-primary">TRK-9840</span>
+<span class="font-label-code text-label-code text-on-surface-variant">SCALE WB-02</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-semibold text-primary">FIN-991-LK</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">Kuljetus Heino Oy</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-medium">Tornator Oyj Forest</span>
+<span class="font-label-code text-label-code text-on-surface-variant">PO-2024-8702 • Class A</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col font-label-numeric text-label-numeric">
+<span class="text-on-surface">09:12:10</span>
+<span class="font-label-caption text-label-caption text-secondary font-medium">Total: 18m 10s</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-code text-label-code">
+<span class="text-secondary font-bold">Tare Scale Complete • ERP Synced</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-label-numeric text-label-numeric font-semibold text-primary">
+                312 <span class="text-on-surface-variant font-normal">/ 310</span>
+</td>
+<td class="py-3 px-space-sm text-right font-label-numeric text-label-numeric">
+                142.1
+              </td>
+<td class="py-3 px-space-sm">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-code text-label-code font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  DISCHARGED
+                </div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-primary-container text-on-primary font-label-code text-[10px] flex items-center justify-center font-bold">ML</div>
+<span class="truncate max-w-[90px]">M. Lindqvist</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded font-label-code text-label-code transition-colors" type="button">
+                    Receipt
+                  </button>
+<button class="p-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Gate Check-in -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-surface-container text-on-surface-variant font-label-code text-label-code flex items-center justify-center font-bold">05</span>
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric font-bold text-primary">TRK-9839</span>
+<span class="font-label-code text-label-code text-on-surface-variant">BARRIER B-01</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-semibold text-primary">FIN-722-EA</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">Savon Metsäkuljetus</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-medium">Stora Enso Biomaterials</span>
+<span class="font-label-code text-label-code text-on-surface-variant">PO-2024-8848 • Class A</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col font-label-numeric text-label-numeric">
+<span class="text-on-surface">09:44:02</span>
+<span class="font-label-caption text-label-caption text-secondary font-medium">Wait: 1m 05s</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-code text-label-code">
+<span class="text-on-surface-variant font-medium">ANPR Scan &amp; Driver App Auth</span>
+<span class="text-secondary font-bold">STEP 1</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full rounded-full" style="width: 20%"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-label-numeric text-label-numeric text-on-surface-variant">
+                -- <span class="text-[10px]">DECL: 340</span>
+</td>
+<td class="py-3 px-space-sm text-right font-label-numeric text-label-numeric text-on-surface-variant">
+                --
+              </td>
+<td class="py-3 px-space-sm">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-code text-label-code">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  QUEUED INBOUND
+                </div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-code text-label-code text-on-surface-variant">AUTO GATE</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2 py-1 bg-surface-container-high text-on-surface rounded font-label-code text-label-code hover:bg-surface-container-highest transition-colors" type="button">
+                  Check-in
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Footer Info -->
+<div class="p-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span>Showing 1-5 of 12 active gate queue transports</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-code text-label-code">Average Total Yard Turnaround: 18.4 mins</span>
+</div>
+<div class="flex items-center gap-1 font-label-numeric text-label-numeric">
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface disabled:opacity-50" type="button">Prev</button>
+<span class="px-2 py-1 rounded bg-primary text-on-primary">1</span>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container" type="button">2</button>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container" type="button">3</button>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container" type="button">Next</button>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Digital Chain of Custody & Dual Weighbridge Comparison -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Telemetric Cross-Validation Card -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-space-sm bg-surface-container-low p-3 rounded">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">scale</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">Dual Weighbridge &amp; AI Geometric Volume Cross-Check</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live mathematical comparison: Physical loadcells vs CV Solid Volume Conversion Model (Huber &amp; Smalian formula).</p>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-bold flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>TOLERANCE DELTA: 0.8% (OK)</span>
+</div>
+</div>
+<!-- Telemetry Metrics Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="p-3 bg-surface-container-low rounded space-y-1">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase font-semibold">Gross Weight (Weighbridge In)</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg text-headline-lg font-bold text-primary font-label-numeric">48,220</span>
+<span class="font-label-code text-label-code text-on-surface-variant font-medium">kg</span>
+</div>
+<div class="flex items-center gap-1 font-label-caption text-label-caption text-secondary">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+<span>Loadcell Scale calibrated at 06:00 UTC</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded space-y-1">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase font-semibold">Net Wood Weight (Physical Tare Est.)</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg text-headline-lg font-bold text-primary font-label-numeric">32,450</span>
+<span class="font-label-code text-label-code text-on-surface-variant font-medium">kg</span>
+</div>
+<div class="flex items-center gap-1 font-label-caption text-label-caption text-on-surface-variant">
+<span>Standard Truck Tare: 15,770 kg</span>
+</div>
+</div>
+<div class="p-3 bg-secondary-fixed/20 rounded space-y-1">
+<span class="font-label-caption text-label-caption text-on-secondary-fixed-variant uppercase font-bold">AI Geometric Estimated Yield</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg text-headline-lg font-bold text-secondary font-label-numeric">32,710</span>
+<span class="font-label-code text-label-code text-on-secondary-fixed-variant font-medium">kg equiv</span>
+</div>
+<div class="flex items-center gap-1 font-label-caption text-label-caption text-secondary font-semibold">
+<span class="material-symbols-outlined text-[13px]">trending_up</span>
+<span>Delta: +260 kg (+0.80%) • Within bounds</span>
+</div>
+</div>
+</div>
+<!-- SVG Visualizer Bar Chart: Sectional Density Profiler -->
+<div class="p-space-sm bg-surface-container-low rounded space-y-space-xs">
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>TRAILER SECTION DENSITY &amp; MOISTURE PROFILING (CHUNKS 01 - 08)</span>
+<span class="text-primary font-semibold">MEAN MOISTURE: 44.2%</span>
+</div>
+<div class="h-20 w-full flex items-end gap-2 pt-2">
+<!-- Simulated density bars with inline SVG -->
+<svg class="w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 600 60">
+<!-- Section 1 -->
+<rect class="opacity-90" fill="#173f35" height="45" rx="2" width="58" x="10" y="15"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="39" y="38">Sec 1</text>
+<!-- Section 2 -->
+<rect class="opacity-95" fill="#173f35" height="50" rx="2" width="58" x="80" y="10"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="109" y="38">Sec 2</text>
+<!-- Section 3 -->
+<rect class="opacity-80" fill="#173f35" height="42" rx="2" width="58" x="150" y="18"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="179" y="38">Sec 3</text>
+<!-- Section 4 -->
+<rect class="opacity-95" fill="#173f35" height="52" rx="2" width="58" x="220" y="8"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="249" y="38">Sec 4</text>
+<!-- Section 5 -->
+<rect class="opacity-90" fill="#173f35" height="48" rx="2" width="58" x="290" y="12"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="319" y="38">Sec 5</text>
+<!-- Section 6 -->
+<rect class="opacity-85" fill="#326855" height="36" rx="2" width="58" x="360" y="24"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="389" y="42">Sec 6</text>
+<!-- Section 7 -->
+<rect class="opacity-90" fill="#173f35" height="46" rx="2" width="58" x="430" y="14"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="459" y="38">Sec 7</text>
+<!-- Section 8 -->
+<rect class="opacity-85" fill="#173f35" height="40" rx="2" width="58" x="500" y="20"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="529" y="38">Sec 8</text>
+</svg>
+</div>
+<div class="flex justify-between font-label-caption text-label-caption text-on-surface-variant pt-1">
+<span>Front Axle (Cab)</span>
+<span>Bogie Center</span>
+<span>Rear Axle Array</span>
+</div>
+</div>
+</div>
+<!-- Digital Chain of Custody & Compliance Auditing Card -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs bg-surface-container-low p-2 rounded">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span class="font-title-sm text-title-sm text-primary font-bold">Chain of Custody Audit</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-code text-label-code font-bold">FSC / PEFC</span>
+</div>
+<!-- Duplicate Plate / Ticket Alert Box -->
+<div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] flex-shrink-0 mt-0.5">check_circle</span>
+<div class="space-y-0.5">
+<div class="font-title-sm text-title-sm font-semibold text-primary">No Duplicate Plates Detected</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+                Zero recycled weighbridge tickets or simultaneous plate passes in preceding 48 hours across Nordic network.
+              </p>
+</div>
+</div>
+<!-- Geo-Fence Validation -->
+<div class="space-y-1.5 p-3 rounded bg-surface-container-low font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant font-label-dense text-label-dense uppercase">Harvest Parcel Origin</span>
+<span class="font-label-code text-label-code font-bold text-primary">FI-KUUSAMO-841</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant font-label-dense text-label-dense uppercase">EUDR Deforestation Due Diligence</span>
+<span class="text-secondary font-bold font-label-code text-label-code">DDS-CLEARED</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant font-label-dense text-label-dense uppercase">Smart Contract Ledger</span>
+<span class="font-label-numeric text-label-numeric text-on-surface truncate max-w-[140px]">0x9b32..44e8 (SYNCED)</span>
+</div>
+</div>
+</div>
+<div class="pt-2 bg-surface-container-high/40 p-3 rounded">
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant mb-1">
+<span>DISPUTE RISK SCORE</span>
+<span class="text-secondary font-bold">0.4 / 10 (MINIMAL)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 4%"></div>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-2">
+            Automated green-lane dispatch recommended for trucks TRK-9844 &amp; TRK-9840.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Registration Modal (Hidden by default, triggered by primary CTA) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-[2px] flex items-center justify-center p-4 hidden" id="registrationModal">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl w-full max-w-4xl max-h-[921px] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+<!-- Modal Header -->
+<div class="px-space-lg py- space-md bg-surface-container-low flex items-center justify-between p-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md font-bold text-primary">Register Inbound Wood Transport</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Create digital chain of custody manifest &amp; link gantry imaging trigger</div>
+</div>
+</div>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="closeRegistrationModal()" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<!-- Modal Body / Multi-section Form -->
+<form class="flex-1 overflow-y-auto p-space-lg space-y-space-lg" id="truckRegForm">
+<!-- Section 1: Vehicle & Driver -->
+<div class="space-y-space-sm">
+<div class="flex items-center gap-2 pb-1 bg-surface-container-low p-2 rounded">
+<span class="font-label-code text-label-code px-1.5 py-0.5 rounded bg-primary text-on-primary font-bold">01</span>
+<span class="font-title-sm text-title-sm font-bold text-primary">Vehicle &amp; Driver Identification</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Truck Plate Reg No *</label>
+<input class="w-full h-9 px-3 bg-surface-container-low rounded font-label-numeric text-label-numeric font-semibold text-on-surface focus:outline-none focus:bg-surface-bright uppercase" required="" type="text" value="FIN-442-TG"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Logistics Carrier *</label>
+<input class="w-full h-9 px-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-bright" required="" type="text" value="Ahola Transport Oy"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Driver Full Name *</label>
+<input class="w-full h-9 px-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-bright" required="" type="text" value="Jari Pekka Niemi"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Driver Phone / SMS Auth</label>
+<input class="w-full h-9 px-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-bright" type="text" value="+358 40 892 1102"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Assigned Entry Gate *</label>
+<select class="w-full h-9 px-2 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option value="G-02">Gate G-02 (Central Optical Scanner)</option>
+<option value="G-01">Gate G-01 (LiDAR High Volume)</option>
+<option value="G-03">Gate G-03 (Express Weighbridge)</option>
+<option value="G-04">Gate G-04 (Manual Fallback Rig)</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Arrival Timestamp</label>
+<input class="w-full h-9 px-3 bg-surface-container-high rounded font-label-numeric text-label-numeric text-on-surface-variant" readonly="" type="text" value="2024-10-24 09:42:15 EEST"/>
+</div>
+</div>
+</div>
+<!-- Section 2: Supplier & Contract Reference -->
+<div class="space-y-space-sm">
+<div class="flex items-center gap-2 pb-1 bg-surface-container-low p-2 rounded">
+<span class="font-label-code text-label-code px-1.5 py-0.5 rounded bg-primary text-on-primary font-bold">02</span>
+<span class="font-title-sm text-title-sm font-bold text-primary">Supplier Manifest &amp; Commercial Contract</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Supplier Enterprise *</label>
+<select class="w-full h-9 px-2 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option value="stora">Stora Enso Biomaterials</option>
+<option value="upm">UPM Kymmene Oyj</option>
+<option value="metsa">Metsä Group Wood Supply</option>
+<option value="tornator">Tornator Oyj</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Supplier ID Code</label>
+<input class="w-full h-9 px-3 bg-surface-container-high rounded font-label-code text-label-code text-on-surface-variant" readonly="" type="text" value="SUP-FI-00921-ST"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">PO Reference Number *</label>
+<input class="w-full h-9 px-3 bg-surface-container-low rounded font-label-numeric text-label-numeric text-on-surface font-semibold focus:outline-none focus:bg-surface-bright" required="" type="text" value="PO-2024-8841"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Contract Grading Class *</label>
+<select class="w-full h-9 px-2 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option value="class-a">Nordic Pine Class A (Premium Sawlog / Pulp)</option>
+<option value="class-b">Nordic Pine Class B (Standard Pulpwood)</option>
+<option value="spruce-mix">Spruce Mix 60/40 Industrial</option>
+<option value="energy">Forest Residue / Energy Wood</option>
+</select>
+</div>
+<div class="space-y-1 md:col-span-2">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Chain of Custody Certificate Ref</label>
+<input class="w-full h-9 px-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-bright" type="text" value="PEFC/02-31-190 • FSC-C014902 (Verified Valid)"/>
+</div>
+</div>
+</div>
+<!-- Section 3: Material Specifications & Declared Payload -->
+<div class="space-y-space-sm">
+<div class="flex items-center gap-2 pb-1 bg-surface-container-low p-2 rounded">
+<span class="font-label-code text-label-code px-1.5 py-0.5 rounded bg-primary text-on-primary font-bold">03</span>
+<span class="font-title-sm text-title-sm font-bold text-primary">Wood Material Specifications &amp; Target Envelope</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm">
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Wood Category</label>
+<input class="w-full h-9 px-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-bright" type="text" value="Pine Pulpwood (Roundwood)"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Botanical Species</label>
+<input class="w-full h-9 px-3 bg-surface-container-low rounded font-body-sm text-body-sm italic text-on-surface focus:outline-none focus:bg-surface-bright" type="text" value="Pinus sylvestris"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Expected Log Count</label>
+<input class="w-full h-9 px-3 bg-surface-container-low rounded font-label-numeric text-label-numeric text-on-surface focus:outline-none focus:bg-surface-bright" type="number" value="320"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Target Dia Envelope (mm)</label>
+<input class="w-full h-9 px-3 bg-surface-container-low rounded font-label-numeric text-label-numeric text-on-surface focus:outline-none focus:bg-surface-bright" type="text" value="110 - 150 mm"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Declared Manifest Mass</label>
+<div class="relative">
+<input class="w-full h-9 pl-3 pr-10 bg-surface-container-low rounded font-label-numeric text-label-numeric font-semibold text-on-surface focus:outline-none focus:bg-surface-bright" step="0.1" type="number" value="38.5"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 font-label-code text-label-code text-on-surface-variant">MT</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Max Allowed Moisture</label>
+<input class="w-full h-9 px-3 bg-surface-container-low rounded font-label-numeric text-label-numeric text-on-surface focus:outline-none focus:bg-surface-bright" type="text" value="&lt; 52.0%"/>
+</div>
+<div class="space-y-1 md:col-span-2">
+<label class="font-label-dense text-label-dense uppercase text-on-surface-variant">Special Batch Delivery Notes</label>
+<input class="w-full h-9 px-3 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-bright" placeholder="e.g. Freshly felled, snow-covered, FSC pure lot" type="text"/>
+</div>
+</div>
+</div>
+</form>
+<!-- Modal Footer -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm p-4">
+<div class="flex items-center gap-2 font-label-caption text-label-caption text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">sensors</span>
+<span>Calibrated optical trigger will initiate 60 FPS scan automatically on gate entry.</span>
+</div>
+<div class="flex items-center gap-space-xs w-full sm:w-auto justify-end">
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface hover:bg-surface-container rounded font-title-sm text-title-sm transition-colors" onclick="closeRegistrationModal()" type="button">
+            Cancel
+          </button>
+<button class="px-4 py-2 bg-surface-container text-primary hover:bg-surface-container-high rounded font-title-sm text-title-sm transition-colors" onclick="closeRegistrationModal()" type="button">
+            Save as Draft
+          </button>
+<button class="px-5 py-2 bg-primary text-on-primary hover:bg-primary-container rounded font-title-sm text-title-sm flex items-center gap-2 shadow-sm transition-colors" onclick="submitRegistration()" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">satellite_alt</span>
+<span>Submit &amp; Trigger Calibrated Capture Rig</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function openRegistrationModal() {
+      document.getElementById('registrationModal').classList.remove('hidden');
+    }
+
+    function closeRegistrationModal() {
+      document.getElementById('registrationModal').classList.add('hidden');
+    }
+
+    function submitRegistration() {
+      closeRegistrationModal();
+      // Visual feedback: open stream modal to showcase live inference starting
+      const stream = document.getElementById('gateStreamModal');
+      if (stream) {
+        stream.classList.remove('hidden');
+      }
+    }
+
+    // Client-side quick filter on live queue table
+    document.getElementById('queueSearch')?.addEventListener('input', function(e) {
+      const term = e.target.value.toLowerCase();
+      const rows = document.querySelectorAll('tbody tr');
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(term) ? '' : 'none';
+      });
+    });
+  </script>
+</div></main></div></body></html>

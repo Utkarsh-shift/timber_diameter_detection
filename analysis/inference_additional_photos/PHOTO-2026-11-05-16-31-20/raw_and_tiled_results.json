@@ -1,0 +1,2245 @@
+{
+  "source": "C:\\Users\\utkarsh.suryaman\\Downloads\\PHOTO-2026-11-05-16-31-20.jpg",
+  "width": 1280,
+  "height": 960,
+  "timbervision_raw": {
+    "seg": {
+      "weights": "yolov8l-1024-seg.pt",
+      "confidence_threshold": 0.25,
+      "detections_total": 142,
+      "class_counts": {
+        "cut": 66,
+        "side": 76
+      },
+      "inference_seconds": 5.84,
+      "annotated_image": "C:\\Users\\utkarsh.suryaman\\Documents\\Paper_jk\\analysis\\inference_additional_photos\\PHOTO-2026-11-05-16-31-20\\timbervision_seg_raw_annotated.jpg"
+    },
+    "obb": {
+      "weights": "yolov8l-1024-obb.pt",
+      "confidence_threshold": 0.25,
+      "detections_total": 188,
+      "class_counts": {
+        "cut": 93,
+        "side": 95
+      },
+      "inference_seconds": 4.2,
+      "annotated_image": "C:\\Users\\utkarsh.suryaman\\Documents\\Paper_jk\\analysis\\inference_additional_photos\\PHOTO-2026-11-05-16-31-20\\timbervision_obb_raw_annotated.jpg"
+    }
+  },
+  "tiled": {
+    "tile640_conf040": {
+      "tile_size_px": 640,
+      "overlap_px": 320,
+      "grid": [
+        3,
+        2
+      ],
+      "tiles": 6,
+      "imgsz": 1024,
+      "confidence_threshold": 0.4,
+      "merge": "mask convex-hull IoU >= 0.45 or close-center/area match",
+      "raw_cut_detections": 127,
+      "merged_cut_detections": 68,
+      "inference_ms": 15588,
+      "tile_results": [
+        {
+          "x": 0,
+          "y": 0,
+          "cut_detections": 18
+        },
+        {
+          "x": 320,
+          "y": 0,
+          "cut_detections": 10
+        },
+        {
+          "x": 640,
+          "y": 0,
+          "cut_detections": 16
+        },
+        {
+          "x": 0,
+          "y": 320,
+          "cut_detections": 28
+        },
+        {
+          "x": 320,
+          "y": 320,
+          "cut_detections": 29
+        },
+        {
+          "x": 640,
+          "y": 320,
+          "cut_detections": 26
+        }
+      ],
+      "summary": {
+        "count": 68,
+        "mean_diameter_mm_est": 159.0,
+        "median_diameter_mm_est": 140.1,
+        "min_diameter_mm_est": 66.5,
+        "max_diameter_mm_est": 342.3,
+        "mean_confidence": 0.789,
+        "volume_m3_est": 4.79,
+        "weight_kg_est": 4314,
+        "grade_distribution_pct": {
+          "A": 5.9,
+          "B": 86.8,
+          "C": 7.4,
+          "R": 0.0
+        },
+        "truck_grade": {
+          "grade": "B",
+          "action": "To Secondary Chipper Line",
+          "tone": "ok",
+          "needs_review": false,
+          "pct": {
+            "A": 5.882352941176471,
+            "B": 86.76470588235294,
+            "C": 7.352941176470588,
+            "R": 0.0
+          },
+          "purity": 92.6
+        }
+      },
+      "scale": {
+        "mm_per_px": 1.83151,
+        "source": "stack width 2400 mm over 1310px",
+        "warning": "Derived measurements assume 2400 mm stack width; no physical scale is visible."
+      },
+      "annotated_image": "C:\\Users\\utkarsh.suryaman\\Documents\\Paper_jk\\analysis\\inference_additional_photos\\PHOTO-2026-11-05-16-31-20\\tile640_conf040_annotated.jpg",
+      "logs": [
+        {
+          "label": "LOG-001",
+          "cx_px": 934.3,
+          "cy_px": 460.4,
+          "diameter_mm_est": 152.0,
+          "confidence": 0.958,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.29"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-002",
+          "cx_px": 958.7,
+          "cy_px": 734.7,
+          "diameter_mm_est": 155.2,
+          "confidence": 0.957,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.27"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-003",
+          "cx_px": 412.3,
+          "cy_px": 723.2,
+          "diameter_mm_est": 117.4,
+          "confidence": 0.955,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.29"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-004",
+          "cx_px": 1119.2,
+          "cy_px": 882.7,
+          "diameter_mm_est": 182.7,
+          "confidence": 0.955,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.23"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-005",
+          "cx_px": 157.4,
+          "cy_px": 525.6,
+          "diameter_mm_est": 188.2,
+          "confidence": 0.955,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.73"
+          ],
+          "tile": [
+            0,
+            0
+          ]
+        },
+        {
+          "label": "LOG-006",
+          "cx_px": 582.9,
+          "cy_px": 898.4,
+          "diameter_mm_est": 131.8,
+          "confidence": 0.954,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.29"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-007",
+          "cx_px": 1113.1,
+          "cy_px": 185.8,
+          "diameter_mm_est": 131.8,
+          "confidence": 0.951,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.83"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-008",
+          "cx_px": 1102.1,
+          "cy_px": 602.5,
+          "diameter_mm_est": 162.8,
+          "confidence": 0.946,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.38"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-009",
+          "cx_px": 249.4,
+          "cy_px": 503.3,
+          "diameter_mm_est": 124.2,
+          "confidence": 0.944,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.42"
+          ],
+          "tile": [
+            0,
+            0
+          ]
+        },
+        {
+          "label": "LOG-010",
+          "cx_px": 611.7,
+          "cy_px": 589.3,
+          "diameter_mm_est": 121.5,
+          "confidence": 0.943,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.18"
+          ],
+          "tile": [
+            0,
+            0
+          ]
+        },
+        {
+          "label": "LOG-011",
+          "cx_px": 704.9,
+          "cy_px": 838.4,
+          "diameter_mm_est": 108.2,
+          "confidence": 0.943,
+          "grade": "B",
+          "grade_why": [],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-012",
+          "cx_px": 880.0,
+          "cy_px": 731.5,
+          "diameter_mm_est": 237.0,
+          "confidence": 0.941,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.47"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-013",
+          "cx_px": 873.7,
+          "cy_px": 818.7,
+          "diameter_mm_est": 109.5,
+          "confidence": 0.941,
+          "grade": "B",
+          "grade_why": [],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-014",
+          "cx_px": 543.4,
+          "cy_px": 946.0,
+          "diameter_mm_est": 166.3,
+          "confidence": 0.939,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.44"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-015",
+          "cx_px": 783.1,
+          "cy_px": 690.1,
+          "diameter_mm_est": 123.9,
+          "confidence": 0.933,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.26"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-016",
+          "cx_px": 1200.6,
+          "cy_px": 210.0,
+          "diameter_mm_est": 120.9,
+          "confidence": 0.931,
+          "grade": "B",
+          "grade_why": [
+            "ovality 2.40"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-017",
+          "cx_px": 1020.8,
+          "cy_px": 581.2,
+          "diameter_mm_est": 127.3,
+          "confidence": 0.93,
+          "grade": "A",
+          "grade_why": [],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-018",
+          "cx_px": 359.2,
+          "cy_px": 889.5,
+          "diameter_mm_est": 180.5,
+          "confidence": 0.926,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.36"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-019",
+          "cx_px": 396.7,
+          "cy_px": 364.8,
+          "diameter_mm_est": 75.5,
+          "confidence": 0.925,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 75mm"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-020",
+          "cx_px": 474.1,
+          "cy_px": 351.0,
+          "diameter_mm_est": 137.7,
+          "confidence": 0.925,
+          "grade": "A",
+          "grade_why": [],
+          "tile": [
+            1,
+            0
+          ]
+        },
+        {
+          "label": "LOG-021",
+          "cx_px": 159.8,
+          "cy_px": 742.6,
+          "diameter_mm_est": 123.5,
+          "confidence": 0.923,
+          "grade": "A",
+          "grade_why": [],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-022",
+          "cx_px": 356.5,
+          "cy_px": 571.2,
+          "diameter_mm_est": 135.4,
+          "confidence": 0.921,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.88"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-023",
+          "cx_px": 747.8,
+          "cy_px": 748.5,
+          "diameter_mm_est": 139.7,
+          "confidence": 0.919,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.41"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-024",
+          "cx_px": 283.1,
+          "cy_px": 517.8,
+          "diameter_mm_est": 124.9,
+          "confidence": 0.917,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.35"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-025",
+          "cx_px": 612.5,
+          "cy_px": 648.2,
+          "diameter_mm_est": 89.0,
+          "confidence": 0.917,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 89mm"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-026",
+          "cx_px": 216.5,
+          "cy_px": 622.4,
+          "diameter_mm_est": 169.9,
+          "confidence": 0.912,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.23"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-027",
+          "cx_px": 194.7,
+          "cy_px": 891.8,
+          "diameter_mm_est": 215.0,
+          "confidence": 0.893,
+          "grade": "A",
+          "grade_why": [],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-028",
+          "cx_px": 444.7,
+          "cy_px": 577.2,
+          "diameter_mm_est": 312.6,
+          "confidence": 0.893,
+          "grade": "B",
+          "grade_why": [
+            "crack 38.5%",
+            "ovality 3.23"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-029",
+          "cx_px": 57.3,
+          "cy_px": 542.5,
+          "diameter_mm_est": 180.9,
+          "confidence": 0.888,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.41"
+          ],
+          "tile": [
+            0,
+            0
+          ]
+        },
+        {
+          "label": "LOG-030",
+          "cx_px": 664.5,
+          "cy_px": 214.2,
+          "diameter_mm_est": 288.4,
+          "confidence": 0.887,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.67"
+          ],
+          "tile": [
+            0,
+            0
+          ]
+        },
+        {
+          "label": "LOG-031",
+          "cx_px": 1142.4,
+          "cy_px": 679.6,
+          "diameter_mm_est": 111.1,
+          "confidence": 0.887,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.72"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-032",
+          "cx_px": 461.6,
+          "cy_px": 290.9,
+          "diameter_mm_est": 90.4,
+          "confidence": 0.885,
+          "grade": "B",
+          "grade_why": [],
+          "tile": [
+            1,
+            0
+          ]
+        },
+        {
+          "label": "LOG-033",
+          "cx_px": 504.0,
+          "cy_px": 798.5,
+          "diameter_mm_est": 299.8,
+          "confidence": 0.881,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.29"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-034",
+          "cx_px": 190.0,
+          "cy_px": 325.6,
+          "diameter_mm_est": 94.4,
+          "confidence": 0.866,
+          "grade": "B",
+          "grade_why": [],
+          "tile": [
+            0,
+            0
+          ]
+        },
+        {
+          "label": "LOG-035",
+          "cx_px": 1166.8,
+          "cy_px": 357.4,
+          "diameter_mm_est": 189.5,
+          "confidence": 0.857,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.15"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-036",
+          "cx_px": 771.3,
+          "cy_px": 942.8,
+          "diameter_mm_est": 166.4,
+          "confidence": 0.855,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.37"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-037",
+          "cx_px": 639.1,
+          "cy_px": 380.6,
+          "diameter_mm_est": 195.5,
+          "confidence": 0.848,
+          "grade": "B",
+          "grade_why": [
+            "ovality 2.06"
+          ],
+          "tile": [
+            0,
+            0
+          ]
+        },
+        {
+          "label": "LOG-038",
+          "cx_px": 587.3,
+          "cy_px": 710.2,
+          "diameter_mm_est": 154.1,
+          "confidence": 0.823,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.50"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-039",
+          "cx_px": 718.7,
+          "cy_px": 534.4,
+          "diameter_mm_est": 132.8,
+          "confidence": 0.821,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.28"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-040",
+          "cx_px": 586.7,
+          "cy_px": 173.1,
+          "diameter_mm_est": 122.6,
+          "confidence": 0.805,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.60"
+          ],
+          "tile": [
+            0,
+            0
+          ]
+        },
+        {
+          "label": "LOG-041",
+          "cx_px": 577.7,
+          "cy_px": 537.2,
+          "diameter_mm_est": 102.0,
+          "confidence": 0.784,
+          "grade": "B",
+          "grade_why": [],
+          "tile": [
+            1,
+            0
+          ]
+        },
+        {
+          "label": "LOG-042",
+          "cx_px": 133.1,
+          "cy_px": 644.6,
+          "diameter_mm_est": 126.2,
+          "confidence": 0.784,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.70"
+          ],
+          "tile": [
+            0,
+            0
+          ]
+        },
+        {
+          "label": "LOG-043",
+          "cx_px": 1092.6,
+          "cy_px": 336.8,
+          "diameter_mm_est": 121.1,
+          "confidence": 0.773,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.50"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-044",
+          "cx_px": 1003.8,
+          "cy_px": 619.7,
+          "diameter_mm_est": 213.6,
+          "confidence": 0.763,
+          "grade": "B",
+          "grade_why": [
+            "ovality 15.70"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-045",
+          "cx_px": 1015.7,
+          "cy_px": 505.0,
+          "diameter_mm_est": 207.4,
+          "confidence": 0.756,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.49"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-046",
+          "cx_px": 1272.2,
+          "cy_px": 345.1,
+          "diameter_mm_est": 93.4,
+          "confidence": 0.749,
+          "grade": "B",
+          "grade_why": [],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-047",
+          "cx_px": 386.7,
+          "cy_px": 214.0,
+          "diameter_mm_est": 248.9,
+          "confidence": 0.73,
+          "grade": "B",
+          "grade_why": [
+            "ovality 4.12"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-048",
+          "cx_px": 608.3,
+          "cy_px": 571.7,
+          "diameter_mm_est": 157.3,
+          "confidence": 0.728,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.45"
+          ],
+          "tile": [
+            0,
+            0
+          ]
+        },
+        {
+          "label": "LOG-049",
+          "cx_px": 824.3,
+          "cy_px": 569.2,
+          "diameter_mm_est": 205.3,
+          "confidence": 0.719,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.26"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-050",
+          "cx_px": 279.1,
+          "cy_px": 570.2,
+          "diameter_mm_est": 258.9,
+          "confidence": 0.704,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.21"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-051",
+          "cx_px": 595.6,
+          "cy_px": 821.7,
+          "diameter_mm_est": 66.5,
+          "confidence": 0.701,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 67mm"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-052",
+          "cx_px": 836.6,
+          "cy_px": 464.5,
+          "diameter_mm_est": 187.5,
+          "confidence": 0.679,
+          "grade": "B",
+          "grade_why": [
+            "crack 33.8%",
+            "ovality 1.52"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-053",
+          "cx_px": 337.6,
+          "cy_px": 381.9,
+          "diameter_mm_est": 179.1,
+          "confidence": 0.659,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.34"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-054",
+          "cx_px": 800.6,
+          "cy_px": 321.4,
+          "diameter_mm_est": 174.7,
+          "confidence": 0.63,
+          "grade": "B",
+          "grade_why": [
+            "ovality 2.00"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-055",
+          "cx_px": 1053.2,
+          "cy_px": 140.0,
+          "diameter_mm_est": 115.8,
+          "confidence": 0.605,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.27"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-056",
+          "cx_px": 1212.7,
+          "cy_px": 630.9,
+          "diameter_mm_est": 157.8,
+          "confidence": 0.603,
+          "grade": "B",
+          "grade_why": [
+            "ovality 2.60"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-057",
+          "cx_px": 827.2,
+          "cy_px": 867.7,
+          "diameter_mm_est": 191.4,
+          "confidence": 0.598,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.84"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-058",
+          "cx_px": 218.3,
+          "cy_px": 922.9,
+          "diameter_mm_est": 189.7,
+          "confidence": 0.581,
+          "grade": "B",
+          "grade_why": [
+            "ovality 6.62"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-059",
+          "cx_px": 643.1,
+          "cy_px": 576.5,
+          "diameter_mm_est": 73.9,
+          "confidence": 0.554,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 74mm"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-060",
+          "cx_px": 653.5,
+          "cy_px": 762.8,
+          "diameter_mm_est": 97.8,
+          "confidence": 0.509,
+          "grade": "B",
+          "grade_why": [],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-061",
+          "cx_px": 1145.6,
+          "cy_px": 530.4,
+          "diameter_mm_est": 293.0,
+          "confidence": 0.469,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.60"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-062",
+          "cx_px": 669.8,
+          "cy_px": 702.9,
+          "diameter_mm_est": 114.9,
+          "confidence": 0.465,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.24"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-063",
+          "cx_px": 951.5,
+          "cy_px": 332.1,
+          "diameter_mm_est": 342.3,
+          "confidence": 0.464,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.59"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-064",
+          "cx_px": 949.0,
+          "cy_px": 635.4,
+          "diameter_mm_est": 87.4,
+          "confidence": 0.46,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 87mm"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-065",
+          "cx_px": 190.8,
+          "cy_px": 800.3,
+          "diameter_mm_est": 140.5,
+          "confidence": 0.442,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.21"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-066",
+          "cx_px": 982.8,
+          "cy_px": 842.6,
+          "diameter_mm_est": 248.4,
+          "confidence": 0.434,
+          "grade": "B",
+          "grade_why": [
+            "ovality 2.76"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-067",
+          "cx_px": 338.3,
+          "cy_px": 357.0,
+          "diameter_mm_est": 129.7,
+          "confidence": 0.422,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.52"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-068",
+          "cx_px": 13.9,
+          "cy_px": 745.3,
+          "diameter_mm_est": 96.9,
+          "confidence": 0.405,
+          "grade": "B",
+          "grade_why": [],
+          "tile": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "tile512_conf025": {
+      "tile_size_px": 512,
+      "overlap_px": 128,
+      "grid": [
+        3,
+        3
+      ],
+      "tiles": 9,
+      "imgsz": 1024,
+      "confidence_threshold": 0.25,
+      "merge": "mask convex-hull IoU >= 0.45 or close-center/area match",
+      "raw_cut_detections": 125,
+      "merged_cut_detections": 70,
+      "inference_ms": 25970,
+      "tile_results": [
+        {
+          "x": 0,
+          "y": 0,
+          "cut_detections": 5
+        },
+        {
+          "x": 384,
+          "y": 0,
+          "cut_detections": 5
+        },
+        {
+          "x": 768,
+          "y": 0,
+          "cut_detections": 8
+        },
+        {
+          "x": 0,
+          "y": 224,
+          "cut_detections": 14
+        },
+        {
+          "x": 384,
+          "y": 224,
+          "cut_detections": 15
+        },
+        {
+          "x": 768,
+          "y": 224,
+          "cut_detections": 21
+        },
+        {
+          "x": 0,
+          "y": 448,
+          "cut_detections": 14
+        },
+        {
+          "x": 384,
+          "y": 448,
+          "cut_detections": 21
+        },
+        {
+          "x": 768,
+          "y": 448,
+          "cut_detections": 22
+        }
+      ],
+      "summary": {
+        "count": 70,
+        "mean_diameter_mm_est": 144.9,
+        "median_diameter_mm_est": 130.7,
+        "min_diameter_mm_est": 30.8,
+        "max_diameter_mm_est": 346.3,
+        "mean_confidence": 0.714,
+        "volume_m3_est": 4.28,
+        "weight_kg_est": 3853,
+        "grade_distribution_pct": {
+          "A": 7.1,
+          "B": 74.3,
+          "C": 18.6,
+          "R": 0.0
+        },
+        "truck_grade": {
+          "grade": "B",
+          "action": "To Secondary Chipper Line",
+          "tone": "ok",
+          "needs_review": false,
+          "pct": {
+            "A": 7.142857142857143,
+            "B": 74.28571428571429,
+            "C": 18.571428571428573,
+            "R": 0.0
+          },
+          "purity": 81.4
+        }
+      },
+      "scale": {
+        "mm_per_px": 1.86511,
+        "source": "stack width 2400 mm over 1287px",
+        "warning": "Derived measurements assume 2400 mm stack width; no physical scale is visible."
+      },
+      "annotated_image": "C:\\Users\\utkarsh.suryaman\\Documents\\Paper_jk\\analysis\\inference_additional_photos\\PHOTO-2026-11-05-16-31-20\\tile512_conf025_annotated.jpg",
+      "logs": [
+        {
+          "label": "LOG-001",
+          "cx_px": 157.4,
+          "cy_px": 525.5,
+          "diameter_mm_est": 194.5,
+          "confidence": 0.966,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.75"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-002",
+          "cx_px": 934.4,
+          "cy_px": 460.4,
+          "diameter_mm_est": 155.3,
+          "confidence": 0.966,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.28"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-003",
+          "cx_px": 1119.1,
+          "cy_px": 881.9,
+          "diameter_mm_est": 189.3,
+          "confidence": 0.961,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.24"
+          ],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-004",
+          "cx_px": 544.1,
+          "cy_px": 946.4,
+          "diameter_mm_est": 170.2,
+          "confidence": 0.957,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.48"
+          ],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-005",
+          "cx_px": 249.5,
+          "cy_px": 504.0,
+          "diameter_mm_est": 123.9,
+          "confidence": 0.955,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.43"
+          ],
+          "tile": [
+            0,
+            2
+          ]
+        },
+        {
+          "label": "LOG-006",
+          "cx_px": 474.0,
+          "cy_px": 351.1,
+          "diameter_mm_est": 138.0,
+          "confidence": 0.955,
+          "grade": "A",
+          "grade_why": [],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-007",
+          "cx_px": 412.3,
+          "cy_px": 723.2,
+          "diameter_mm_est": 120.6,
+          "confidence": 0.948,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.28"
+          ],
+          "tile": [
+            0,
+            2
+          ]
+        },
+        {
+          "label": "LOG-008",
+          "cx_px": 841.5,
+          "cy_px": 459.3,
+          "diameter_mm_est": 183.1,
+          "confidence": 0.947,
+          "grade": "B",
+          "grade_why": [
+            "crack 35.1%",
+            "ovality 1.58"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-009",
+          "cx_px": 784.4,
+          "cy_px": 930.0,
+          "diameter_mm_est": 125.8,
+          "confidence": 0.942,
+          "grade": "A",
+          "grade_why": [],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-010",
+          "cx_px": 958.6,
+          "cy_px": 736.7,
+          "diameter_mm_est": 155.5,
+          "confidence": 0.939,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.18"
+          ],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-011",
+          "cx_px": 869.1,
+          "cy_px": 692.4,
+          "diameter_mm_est": 250.8,
+          "confidence": 0.936,
+          "grade": "B",
+          "grade_why": [
+            "ovality 2.22"
+          ],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-012",
+          "cx_px": 619.8,
+          "cy_px": 583.5,
+          "diameter_mm_est": 141.9,
+          "confidence": 0.935,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.24"
+          ],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-013",
+          "cx_px": 1140.5,
+          "cy_px": 677.5,
+          "diameter_mm_est": 111.2,
+          "confidence": 0.93,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.55"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-014",
+          "cx_px": 613.2,
+          "cy_px": 648.1,
+          "diameter_mm_est": 89.9,
+          "confidence": 0.923,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 90mm"
+          ],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-015",
+          "cx_px": 471.7,
+          "cy_px": 294.1,
+          "diameter_mm_est": 121.3,
+          "confidence": 0.922,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.68"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-016",
+          "cx_px": 1102.5,
+          "cy_px": 602.6,
+          "diameter_mm_est": 163.4,
+          "confidence": 0.919,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.36"
+          ],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-017",
+          "cx_px": 160.2,
+          "cy_px": 743.1,
+          "diameter_mm_est": 127.3,
+          "confidence": 0.916,
+          "grade": "A",
+          "grade_why": [],
+          "tile": [
+            0,
+            2
+          ]
+        },
+        {
+          "label": "LOG-018",
+          "cx_px": 1019.5,
+          "cy_px": 582.5,
+          "diameter_mm_est": 126.2,
+          "confidence": 0.912,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.26"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-019",
+          "cx_px": 705.4,
+          "cy_px": 838.9,
+          "diameter_mm_est": 111.8,
+          "confidence": 0.91,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.28"
+          ],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-020",
+          "cx_px": 204.7,
+          "cy_px": 471.3,
+          "diameter_mm_est": 124.0,
+          "confidence": 0.907,
+          "grade": "A",
+          "grade_why": [],
+          "tile": [
+            0,
+            2
+          ]
+        },
+        {
+          "label": "LOG-021",
+          "cx_px": 872.9,
+          "cy_px": 818.2,
+          "diameter_mm_est": 116.7,
+          "confidence": 0.887,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.22"
+          ],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-022",
+          "cx_px": 396.7,
+          "cy_px": 364.4,
+          "diameter_mm_est": 77.0,
+          "confidence": 0.886,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 77mm"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-023",
+          "cx_px": 1219.9,
+          "cy_px": 673.9,
+          "diameter_mm_est": 283.4,
+          "confidence": 0.882,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.38"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-024",
+          "cx_px": 1279.0,
+          "cy_px": 523.1,
+          "diameter_mm_est": 96.7,
+          "confidence": 0.874,
+          "grade": "B",
+          "grade_why": [],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-025",
+          "cx_px": 763.8,
+          "cy_px": 533.3,
+          "diameter_mm_est": 92.9,
+          "confidence": 0.846,
+          "grade": "B",
+          "grade_why": [],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-026",
+          "cx_px": 461.1,
+          "cy_px": 628.1,
+          "diameter_mm_est": 277.4,
+          "confidence": 0.845,
+          "grade": "B",
+          "grade_why": [
+            "crack 37.2%",
+            "ovality 2.04"
+          ],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-027",
+          "cx_px": 496.2,
+          "cy_px": 793.2,
+          "diameter_mm_est": 285.4,
+          "confidence": 0.839,
+          "grade": "B",
+          "grade_why": [
+            "crack 32.8%"
+          ],
+          "tile": [
+            0,
+            2
+          ]
+        },
+        {
+          "label": "LOG-028",
+          "cx_px": 135.4,
+          "cy_px": 647.2,
+          "diameter_mm_est": 141.1,
+          "confidence": 0.836,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.45"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-029",
+          "cx_px": 817.6,
+          "cy_px": 574.3,
+          "diameter_mm_est": 213.3,
+          "confidence": 0.835,
+          "grade": "B",
+          "grade_why": [
+            "crack 42.9%",
+            "ovality 1.35"
+          ],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-030",
+          "cx_px": 583.8,
+          "cy_px": 899.9,
+          "diameter_mm_est": 134.1,
+          "confidence": 0.832,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.37"
+          ],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-031",
+          "cx_px": 416.0,
+          "cy_px": 304.9,
+          "diameter_mm_est": 110.9,
+          "confidence": 0.827,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.98"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-032",
+          "cx_px": 785.4,
+          "cy_px": 688.2,
+          "diameter_mm_est": 121.9,
+          "confidence": 0.819,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.37"
+          ],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-033",
+          "cx_px": 868.3,
+          "cy_px": 668.1,
+          "diameter_mm_est": 258.2,
+          "confidence": 0.799,
+          "grade": "A",
+          "grade_why": [],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-034",
+          "cx_px": 55.8,
+          "cy_px": 541.6,
+          "diameter_mm_est": 184.7,
+          "confidence": 0.798,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.43"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-035",
+          "cx_px": 285.1,
+          "cy_px": 549.9,
+          "diameter_mm_est": 189.7,
+          "confidence": 0.798,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.58"
+          ],
+          "tile": [
+            0,
+            2
+          ]
+        },
+        {
+          "label": "LOG-036",
+          "cx_px": 586.0,
+          "cy_px": 713.1,
+          "diameter_mm_est": 167.7,
+          "confidence": 0.772,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.54"
+          ],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-037",
+          "cx_px": 216.6,
+          "cy_px": 623.0,
+          "diameter_mm_est": 173.5,
+          "confidence": 0.768,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.24"
+          ],
+          "tile": [
+            0,
+            2
+          ]
+        },
+        {
+          "label": "LOG-038",
+          "cx_px": 513.3,
+          "cy_px": 930.6,
+          "diameter_mm_est": 71.9,
+          "confidence": 0.759,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 72mm"
+          ],
+          "tile": [
+            0,
+            2
+          ]
+        },
+        {
+          "label": "LOG-039",
+          "cx_px": 771.9,
+          "cy_px": 754.9,
+          "diameter_mm_est": 68.4,
+          "confidence": 0.759,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 68mm"
+          ],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-040",
+          "cx_px": 1008.6,
+          "cy_px": 665.0,
+          "diameter_mm_est": 185.1,
+          "confidence": 0.757,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.90"
+          ],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-041",
+          "cx_px": 469.0,
+          "cy_px": 454.9,
+          "diameter_mm_est": 125.1,
+          "confidence": 0.739,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.66"
+          ],
+          "tile": [
+            0,
+            2
+          ]
+        },
+        {
+          "label": "LOG-042",
+          "cx_px": 355.7,
+          "cy_px": 569.5,
+          "diameter_mm_est": 141.9,
+          "confidence": 0.723,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.77"
+          ],
+          "tile": [
+            0,
+            2
+          ]
+        },
+        {
+          "label": "LOG-043",
+          "cx_px": 830.3,
+          "cy_px": 870.0,
+          "diameter_mm_est": 204.3,
+          "confidence": 0.715,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.90"
+          ],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-044",
+          "cx_px": 157.8,
+          "cy_px": 261.4,
+          "diameter_mm_est": 99.0,
+          "confidence": 0.672,
+          "grade": "B",
+          "grade_why": [],
+          "tile": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "LOG-045",
+          "cx_px": 576.9,
+          "cy_px": 538.3,
+          "diameter_mm_est": 99.2,
+          "confidence": 0.665,
+          "grade": "B",
+          "grade_why": [],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-046",
+          "cx_px": 1215.2,
+          "cy_px": 224.6,
+          "diameter_mm_est": 70.5,
+          "confidence": 0.662,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 70mm"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-047",
+          "cx_px": 980.4,
+          "cy_px": 842.3,
+          "diameter_mm_est": 248.7,
+          "confidence": 0.625,
+          "grade": "B",
+          "grade_why": [
+            "ovality 2.72"
+          ],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-048",
+          "cx_px": 549.9,
+          "cy_px": 460.2,
+          "diameter_mm_est": 191.7,
+          "confidence": 0.624,
+          "grade": "B",
+          "grade_why": [
+            "crack 34.5%",
+            "ovality 1.74"
+          ],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-049",
+          "cx_px": 420.7,
+          "cy_px": 361.5,
+          "diameter_mm_est": 82.7,
+          "confidence": 0.622,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 83mm"
+          ],
+          "tile": [
+            1,
+            0
+          ]
+        },
+        {
+          "label": "LOG-050",
+          "cx_px": 405.8,
+          "cy_px": 482.4,
+          "diameter_mm_est": 106.0,
+          "confidence": 0.605,
+          "grade": "B",
+          "grade_why": [],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-051",
+          "cx_px": 1154.8,
+          "cy_px": 528.3,
+          "diameter_mm_est": 346.3,
+          "confidence": 0.6,
+          "grade": "B",
+          "grade_why": [
+            "crack 32.1%",
+            "ovality 1.36"
+          ],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-052",
+          "cx_px": 750.0,
+          "cy_px": 752.1,
+          "diameter_mm_est": 137.9,
+          "confidence": 0.58,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.24"
+          ],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-053",
+          "cx_px": 783.3,
+          "cy_px": 444.5,
+          "diameter_mm_est": 111.8,
+          "confidence": 0.564,
+          "grade": "B",
+          "grade_why": [
+            "ovality 5.25"
+          ],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-054",
+          "cx_px": 776.8,
+          "cy_px": 741.5,
+          "diameter_mm_est": 32.7,
+          "confidence": 0.561,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 33mm"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-055",
+          "cx_px": 1139.9,
+          "cy_px": 748.9,
+          "diameter_mm_est": 161.2,
+          "confidence": 0.469,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.37"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-056",
+          "cx_px": 474.2,
+          "cy_px": 503.9,
+          "diameter_mm_est": 83.0,
+          "confidence": 0.461,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 83mm"
+          ],
+          "tile": [
+            0,
+            0
+          ]
+        },
+        {
+          "label": "LOG-057",
+          "cx_px": 1199.3,
+          "cy_px": 209.6,
+          "diameter_mm_est": 120.8,
+          "confidence": 0.439,
+          "grade": "B",
+          "grade_why": [
+            "ovality 2.31"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-058",
+          "cx_px": 772.7,
+          "cy_px": 180.6,
+          "diameter_mm_est": 119.4,
+          "confidence": 0.435,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.59"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-059",
+          "cx_px": 950.1,
+          "cy_px": 635.4,
+          "diameter_mm_est": 85.9,
+          "confidence": 0.41,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 86mm"
+          ],
+          "tile": [
+            2,
+            1
+          ]
+        },
+        {
+          "label": "LOG-060",
+          "cx_px": 767.8,
+          "cy_px": 616.7,
+          "diameter_mm_est": 63.5,
+          "confidence": 0.403,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 64mm"
+          ],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-061",
+          "cx_px": 881.1,
+          "cy_px": 510.8,
+          "diameter_mm_est": 157.4,
+          "confidence": 0.4,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.97"
+          ],
+          "tile": [
+            1,
+            1
+          ]
+        },
+        {
+          "label": "LOG-062",
+          "cx_px": 1019.9,
+          "cy_px": 506.3,
+          "diameter_mm_est": 243.9,
+          "confidence": 0.383,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.53"
+          ],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-063",
+          "cx_px": 723.6,
+          "cy_px": 530.7,
+          "diameter_mm_est": 149.5,
+          "confidence": 0.366,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.48"
+          ],
+          "tile": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "LOG-064",
+          "cx_px": 806.1,
+          "cy_px": 796.8,
+          "diameter_mm_est": 165.0,
+          "confidence": 0.35,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.33"
+          ],
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "LOG-065",
+          "cx_px": 777.9,
+          "cy_px": 513.6,
+          "diameter_mm_est": 32.6,
+          "confidence": 0.348,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 33mm"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-066",
+          "cx_px": 1270.5,
+          "cy_px": 509.2,
+          "diameter_mm_est": 30.8,
+          "confidence": 0.321,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 31mm"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-067",
+          "cx_px": 305.8,
+          "cy_px": 462.9,
+          "diameter_mm_est": 106.4,
+          "confidence": 0.295,
+          "grade": "B",
+          "grade_why": [],
+          "tile": [
+            0,
+            2
+          ]
+        },
+        {
+          "label": "LOG-068",
+          "cx_px": 829.1,
+          "cy_px": 381.4,
+          "diameter_mm_est": 176.1,
+          "confidence": 0.277,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.49"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-069",
+          "cx_px": 767.0,
+          "cy_px": 386.4,
+          "diameter_mm_est": 44.5,
+          "confidence": 0.276,
+          "grade": "C",
+          "grade_why": [
+            "sub-gauge 45mm"
+          ],
+          "tile": [
+            2,
+            0
+          ]
+        },
+        {
+          "label": "LOG-070",
+          "cx_px": 281.1,
+          "cy_px": 694.1,
+          "diameter_mm_est": 232.1,
+          "confidence": 0.253,
+          "grade": "B",
+          "grade_why": [
+            "ovality 1.52"
+          ],
+          "tile": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  }
+}

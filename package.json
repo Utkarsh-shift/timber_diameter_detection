@@ -1,0 +1,18 @@
+{
+  "name": "pine-os-demo",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend",
+    "analysis"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,py,web -c green,yellow,blue \"npm run dev -w backend\" \"npm run dev -w analysis\" \"npm run dev -w frontend\"",
+    "reset": "npm run reset -w backend",
+    "build": "npm run build -w frontend",
+    "setup:py": "npm run setup -w analysis"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

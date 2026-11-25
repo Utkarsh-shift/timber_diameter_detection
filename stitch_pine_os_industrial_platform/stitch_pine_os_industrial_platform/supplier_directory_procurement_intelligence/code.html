@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary":"#ffffff","inverse-primary":"#a6cfc1","secondary-fixed":"#b5efd7","primary-container":"#173f35","tertiary-fixed":"#cbef90","on-error-container":"#93000a","error-container":"#ffdad6","surface-container-highest":"#d6e6dd","surface-bright":"#edfdf3","surface-variant":"#d6e6dd","on-surface-variant":"#414845","on-primary-fixed":"#002019","on-primary":"#ffffff","secondary-container":"#b5efd7","on-tertiary-fixed":"#121f00","on-primary-fixed-variant":"#274e43","tertiary-fixed-dim":"#b0d277","primary":"#002920","surface-container":"#e2f2e8","on-tertiary-fixed-variant":"#344e00","on-secondary-fixed-variant":"#17503e","on-error":"#ffffff","surface-container-lowest":"#ffffff","tertiary-container":"#293f00","background":"#edfdf3","surface-tint":"#3f665a","on-background":"#111e19","on-secondary-fixed":"#002117","surface-dim":"#ceded4","inverse-on-surface":"#e5f5eb","surface-container-low":"#e7f7ee","on-surface":"#111e19","primary-fixed-dim":"#a6cfc1","on-tertiary":"#ffffff","error":"#ba1a1a","outline":"#717975","on-primary-container":"#82aa9d","primary-fixed":"#c1ecdd","on-secondary-container":"#386e5b","surface-container-high":"#dcece2","inverse-surface":"#26332d","on-tertiary-container":"#8cad56","secondary-fixed-dim":"#9ad2bb","outline-variant":"#c0c8c4","surface":"#edfdf3","secondary":"#326855","tertiary":"#182800"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"0.75rem","margin-mobile":"0.75rem","margin":"1.5rem","space-xs":"0.25rem","gutter-dense":"0.5rem","gutter":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","space-lg":"1rem"},"fontFamily":{"title-sm":["Inter"],"label-dense":["Inter"],"label-caption":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"],"label-numeric":["JetBrains Mono"],"headline-xl-mobile":["Inter"],"headline-lg":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"headline-xl":["Inter"],"label-code":["JetBrains Mono"]},"fontSize":{"title-sm":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-dense":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-caption":["10px",{"lineHeight":"12px","letterSpacing":"0.02em","fontWeight":"500"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-numeric":["12px",{"lineHeight":"16px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg-mobile":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-code":["11px",{"lineHeight":"14px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low flex flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container"><img alt="Pine OS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UzQXmfeY0ZgHp5KWNF3TcfswDWXortBjXfih0H8wJxIYAcOo_pHeQ1MekcVoloEv04-1whOHD-f78LEwLhIYOJXvA6352C46mJM592viYCD09QZdfJxdlQycRqr7yH5M_4P1ueUpCD-e2NJI5GEiYCTYYvkX8Z6ni4lEGZG1BkVP6WSRhJHVo_8ohTkpxQ_eR7TPi5Hf3NhyLenEJAG8zr891JtcwN837NSAkqtBRzdw"/><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md font-bold tracking-tight text-primary leading-tight truncate">PINE OS</span><span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-code text-label-code">v3.4</span></div><span class="font-label-caption text-label-caption text-on-surface-variant truncate uppercase tracking-wider">Industrial Wood Intelligence</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">Core Operations</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Overview</span></div><span class="font-label-code text-label-code text-on-surface-variant">01</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="intake" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span>Truck Intake &amp; Queue</span></div><span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-bold">12</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="studio" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">view_in_ar</span><span>AI Measurement Studio</span></div><span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code uppercase tracking-wider font-bold animate-pulse">LIVE CV</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="history" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">history</span><span>Measurement History</span></div></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">Intelligence &amp; Procurement</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="quality" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Quality Assessment</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="suppliers" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">verified</span><span>Suppliers &amp; Compliance</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="procurement" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">price_check</span><span>Procurement Intelligence</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Analytics &amp; Reports</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="disputes" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">gavel</span><span>Dispute Management</span></div><span class="px-1.5 py-0.2 rounded bg-error-container text-on-error-container font-label-code text-label-code font-bold">2</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">AI &amp; Infrastructure</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="calibration" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">tune</span><span>Camera &amp; Calibration</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="model-monitor" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">monitoring</span><span>AI Model Monitoring</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="integrations" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">hub</span><span>ERP &amp; Weighbridge</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings &amp; Admin</span></div></a></nav></div></div><div class="p-space-sm bg-surface-container space-y-space-xs"><button class="w-full flex items-center justify-between px-space-sm py-2 rounded bg-primary-container text-on-primary hover:bg-primary transition-colors" type="button"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed">psychology</span><span class="font-title-sm text-title-sm text-on-primary">Ask Pine OS</span></div><span class="material-symbols-outlined text-[16px] text-inverse-primary">arrow_forward</span></button><div class="px-space-sm py-1.5 rounded bg-surface-container-high flex items-center justify-between"><div class="flex items-center gap-1.5 min-w-0"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-caption text-label-caption text-on-surface truncate">Edge Node #08</span></div><span class="font-label-code text-label-code text-secondary font-semibold">14ms</span></div><div class="flex items-center gap-space-xs p-1.5 rounded bg-surface-container-lowest"><img alt="Marcus Lindqvist" class="w-8 h-8 rounded object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPIUyV7Rx3jw-mAhXLV3a3W5JI2fKW4RYifCu34JN1ecDHzg_qTKS3zBfd7RSxOqfo6oZ8RTHWXfPR1BoKqU_nUPs4OuEw3sYf5FkmCHba5vVYmBrwt8k1zHAJ24O6juRzfggLjtvNkAFjqX-jHVaYqptdV7OoGwngr-m1CYW3Fp_C1lR8mEsmQ3rrfpTPC7s1SVgfAw3_pWHxqyhaU7OgY3X9wclIUrzRShB-lcsX"/><div class="min-w-0 flex-1"><div class="font-title-sm text-title-sm text-on-surface truncate leading-none">Marcus Lindqvist</div><div class="font-label-caption text-label-caption text-on-surface-variant truncate mt-0.5">VP Operations</div></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">more_vert</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-md z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-shrink-0"><div class="flex items-center gap-space-xs px-2.5 py-1.5 bg-surface-container-high rounded cursor-pointer hover:bg-surface-container-highest transition-colors"><span class="material-symbols-outlined text-[18px] text-primary">factory</span><div class="flex flex-col text-left"><span class="font-label-caption text-label-caption text-on-surface-variant uppercase leading-none">Selected Mill</span><span class="font-title-sm text-title-sm text-on-surface leading-tight font-semibold">Mill 04 - Oulu Pulp &amp; Paper Complex</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant ml-1">expand_more</span></div><div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container-high"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-code text-label-code text-secondary font-medium">CV Pipeline: 60 FPS • Calibrated</span></div><div class="hidden 2xl:flex items-center gap-1.5 px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant"><span class="material-symbols-outlined text-[14px]">sensors</span><span class="font-label-code text-label-code font-semibold uppercase">Gate Intake Online</span></div></div><div class="flex-1 max-w-xl mx-space-sm hidden md:block"><div class="relative"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-9 pl-9 pr-14 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search trucks, log IDs, PO#, suppliers, certificates..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-code text-label-code">Ctrl+K</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="hidden lg:flex items-center gap-1 px-2 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-code text-label-code font-semibold"><span class="material-symbols-outlined text-[14px]">token</span><span>DEMO MODE</span></div><div class="flex items-center gap-1 px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface font-label-numeric text-label-numeric"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span><span class="hidden sm:inline">Today: Oct 24, 2024</span></div><div class="relative"><button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-error text-on-error font-label-code text-[9px] flex items-center justify-center font-bold">3</span></div><button class="w-8 h-8 rounded hidden sm:flex items-center justify-center bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin py-space-lg space-y-space-lg">
+<!-- Screen Title & Top Meta Strip -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-low p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-code text-label-code uppercase tracking-wider font-semibold">MODULE 04 // TIMBER SOURCING</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-medium">EUDR DUE DILIGENCE SYNCED</span>
+<span class="font-label-code text-label-code text-on-surface-variant">NODE: OUL-PULP-G1</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Supplier Intelligence &amp; Timber Procurement Directory</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+          Real-time supplier scorecards, contractual diameter compliance, volume fulfillment, and wood supply quality comparisons across regional boreal harvest concessions.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md py-2 rounded bg-surface-container-highest text-on-surface font-title-sm text-title-sm flex items-center gap-1.5 hover:bg-surface-dim transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Procurement Audit (CSV)</span>
+</button>
+<button class="px-space-md py-2 rounded bg-surface-container-highest text-on-surface font-title-sm text-title-sm flex items-center gap-1.5 hover:bg-surface-dim transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Tolerance Bands</span>
+</button>
+<button class="px-space-md py-2 rounded bg-primary text-on-primary font-title-sm text-title-sm flex items-center gap-1.5 hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">add_circle</span>
+<span>New Supply Contract</span>
+</button>
+</div>
+</div>
+<!-- 1. KPI Telemetry Matrix -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-gutter">
+<!-- KPI 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-dense text-label-dense uppercase tracking-wider text-on-surface-variant">Active Suppliers</span>
+<span class="p-1 rounded bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-label-numeric text-headline-xl font-bold text-primary">18</span>
+<span class="font-label-code text-label-code text-secondary font-semibold">ALL CERTIFIED</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">100% PEFC / FSC chain-of-custody</div>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-dense text-label-dense uppercase tracking-wider text-on-surface-variant">Inbound Volume MTD</span>
+<span class="p-1 rounded bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-label-numeric text-headline-xl font-bold text-primary">48,250</span>
+<span class="font-label-code text-label-code text-on-surface-variant">m³</span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-secondary mt-1">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span class="font-semibold">+8.4%</span>
+<span class="text-on-surface-variant">vs monthly target (44.5k m³)</span>
+</div>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 82%"></div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-dense text-label-dense uppercase tracking-wider text-on-surface-variant">Fleet Compliance</span>
+<span class="p-1 rounded bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-label-numeric text-headline-xl font-bold text-primary">96.4%</span>
+<span class="font-label-code text-label-code text-secondary font-semibold">TOL: &gt;95%</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">1,142 loads verified at gate scale</div>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 96.4%"></div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-dense text-label-dense uppercase tracking-wider text-on-surface-variant">Contract Variance</span>
+<span class="p-1 rounded bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-[16px]">balance</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-label-numeric text-headline-xl font-bold text-primary">±2.1%</span>
+<span class="font-label-code text-label-code text-secondary font-semibold">STABLE</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">Diameter &amp; moisture delta to PO</div>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 45%"></div>
+</div>
+</div>
+<!-- KPI 5 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-dense text-label-dense uppercase tracking-wider text-error">Disputed Deliveries</span>
+<span class="p-1 rounded bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-label-numeric text-headline-xl font-bold text-error">2</span>
+<span class="font-label-code text-label-code text-error font-semibold">ACTIVE CASES</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">Stora Enso (rot) • UPM (undersize)</div>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error" style="width: 15%"></div>
+</div>
+</div>
+</div>
+<!-- 2 & 5. Benchmark Chart & Detail Quick-View Bento Row -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-gutter">
+<!-- 2. Dual-Axis Supplier Benchmark Visualization (2 cols) -->
+<div class="xl:col-span-2 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">bar_chart</span>
+<h2 class="font-headline-md text-headline-md text-primary">Supplier Benchmarking &amp; Yield Integrity</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Delivered solid volume (m³) vs Diameter Spec Compliance (%) and CV Rejection Rate (%)</p>
+</div>
+<div class="flex items-center gap-space-md text-label-caption font-label-caption flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-primary"></span>
+<span class="text-on-surface">Delivered Volume (m³)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-secondary"></span>
+<span class="text-on-surface">Compliance %</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="text-on-surface">Rejection Rate %</span>
+</div>
+</div>
+</div>
+<!-- Inline SVG Visualization Chart -->
+<div class="relative w-full h-64 bg-surface-container-low rounded-lg p-space-md flex flex-col justify-end">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 700 200">
+<defs>
+<lineargradient id="volGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#002920" stop-opacity="0.95"></stop>
+<stop offset="100%" stop-color="#173f35" stop-opacity="0.75"></stop>
+</lineargradient>
+</defs>
+<!-- Grid Lines -->
+<line stroke="#c0c8c4" stroke-dasharray="3 3" stroke-width="0.7" x1="0" x2="700" y1="40" y2="40"></line>
+<line stroke="#c0c8c4" stroke-dasharray="3 3" stroke-width="0.7" x1="0" x2="700" y1="90" y2="90"></line>
+<line stroke="#c0c8c4" stroke-dasharray="3 3" stroke-width="0.7" x1="0" x2="700" y1="140" y2="140"></line>
+<line stroke="#717975" stroke-width="1" x1="0" x2="700" y1="185" y2="185"></line>
+<!-- Supplier 1: Metsä Group (x ~ 70) -->
+<rect fill="url(#volGrad)" height="150" rx="2" width="45" x="40" y="35"></rect>
+<!-- Supplier 2: Stora Enso (x ~ 190) -->
+<rect fill="url(#volGrad)" height="130" rx="2" width="45" x="175" y="55"></rect>
+<!-- Supplier 3: UPM Forest (x ~ 320) -->
+<rect fill="url(#volGrad)" height="115" rx="2" width="45" x="310" y="70"></rect>
+<!-- Supplier 4: Tornator Oyj (x ~ 450) -->
+<rect fill="url(#volGrad)" height="90" rx="2" width="45" x="445" y="95"></rect>
+<!-- Supplier 5: Nordic Timber Co (x ~ 580) -->
+<rect fill="url(#volGrad)" height="60" rx="2" width="45" x="580" y="125"></rect>
+<!-- Volume value tags on top of bars -->
+<text class="fill-primary text-[10px] font-mono font-bold" text-anchor="middle" x="62" y="28">16.4k m³</text>
+<text class="fill-primary text-[10px] font-mono font-bold" text-anchor="middle" x="197" y="48">13.8k m³</text>
+<text class="fill-primary text-[10px] font-mono font-bold" text-anchor="middle" x="332" y="63">10.2k m³</text>
+<text class="fill-primary text-[10px] font-mono font-bold" text-anchor="middle" x="467" y="88">5.1k m³</text>
+<text class="fill-primary text-[10px] font-mono font-bold" text-anchor="middle" x="602" y="118">2.7k m³</text>
+<!-- Compliance Rate Line (Secondary Axis, #326855) -->
+<path d="M 62 48 L 197 72 L 332 58 L 467 80 L 602 108" fill="none" stroke="#326855" stroke-width="3"></path>
+<!-- Compliance Nodes -->
+<circle cx="62" cy="48" fill="#326855" r="4.5"></circle>
+<circle cx="197" cy="72" fill="#326855" r="4.5"></circle>
+<circle cx="332" cy="58" fill="#326855" r="4.5"></circle>
+<circle cx="467" cy="80" fill="#326855" r="4.5"></circle>
+<circle cx="602" cy="108" fill="#326855" r="4.5"></circle>
+<text class="fill-secondary text-[9px] font-mono font-bold" text-anchor="middle" x="62" y="62">98.2%</text>
+<text class="fill-secondary text-[9px] font-mono font-bold" text-anchor="middle" x="197" y="86">94.1%</text>
+<text class="fill-secondary text-[9px] font-mono font-bold" text-anchor="middle" x="332" y="50">96.8%</text>
+<text class="fill-secondary text-[9px] font-mono font-bold" text-anchor="middle" x="467" y="94">92.5%</text>
+<text class="fill-secondary text-[9px] font-mono font-bold" text-anchor="middle" x="602" y="122">89.4%</text>
+<!-- Rejection Rate Dots (Error color #ba1a1a) -->
+<circle cx="62" cy="172" fill="#ba1a1a" r="3.5"></circle>
+<circle cx="197" cy="155" fill="#ba1a1a" r="3.5"></circle>
+<circle cx="332" cy="168" fill="#ba1a1a" r="3.5"></circle>
+<circle cx="467" cy="148" fill="#ba1a1a" r="3.5"></circle>
+<circle cx="602" cy="138" fill="#ba1a1a" r="3.5"></circle>
+<text class="fill-error text-[8px] font-mono" text-anchor="middle" x="62" y="165">0.8%</text>
+<text class="fill-error text-[8px] font-mono" text-anchor="middle" x="197" y="148">2.9%</text>
+<text class="fill-error text-[8px] font-mono" text-anchor="middle" x="332" y="161">1.2%</text>
+<text class="fill-error text-[8px] font-mono" text-anchor="middle" x="467" y="141">3.4%</text>
+<text class="fill-error text-[8px] font-mono" text-anchor="middle" x="602" y="131">4.8%</text>
+</svg>
+<!-- Chart X Axis Labels -->
+<div class="grid grid-cols-5 text-center mt-2 pt-2 bg-surface-container-high rounded font-label-code text-label-code text-on-surface">
+<div><span class="font-bold">Metsä Group</span><div class="text-[10px] text-on-surface-variant">Tier 1 • FI</div></div>
+<div><span class="font-bold">Stora Enso</span><div class="text-[10px] text-on-surface-variant">Tier 1 • SE/FI</div></div>
+<div><span class="font-bold">UPM Forest</span><div class="text-[10px] text-on-surface-variant">Tier 1 • FI</div></div>
+<div><span class="font-bold">Tornator Oyj</span><div class="text-[10px] text-on-surface-variant">Private Forests</div></div>
+<div><span class="font-bold">Nordic Timber</span><div class="text-[10px] text-on-surface-variant">Co-Op Sourcing</div></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg text-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span>All top 5 suppliers satisfy EU Deforestation Regulation (EUDR) Article 9 polygon traceability.</span>
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant">Audit Cycle: Q4-2024</span>
+</div>
+</div>
+<!-- 5. Supplier Detail Quick-View Panel: Selected Supplier (1 col) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code font-bold uppercase">PRIMARY PARTNER</span>
+<div class="flex items-center gap-1 font-label-code text-label-code text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              ACTIVE STREAM
+            </div>
+</div>
+<div class="flex items-center gap-3 pt-1">
+<div class="w-10 h-10 rounded bg-primary-container text-tertiary-fixed flex items-center justify-center font-bold text-headline-md font-headline-md">
+              MG
+            </div>
+<div>
+<h3 class="font-title-sm text-title-sm text-primary font-bold">Metsä Group Wood Supply</h3>
+<p class="font-label-code text-label-code text-on-surface-variant">Vendor ID: FI-882190 • Concession: Kainuu North</p>
+</div>
+</div>
+</div>
+<!-- Supplier Mini Visuals & Harvest Location Context -->
+<div class="space-y-space-sm">
+<div class="relative w-full h-24 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High-density industrial timber yard and conveyor sorting facility at dusk with piles of debarked pine logs ready for quality inspection and volumetric scanning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-zyQ8CCnHYw26JG_jYL93qWwWMIEzF8BDmecxcWiQ5rPkGHjIdnZ3vIhVgrN9l5ljWCWTtH3B71jzf0fkw51QSrY3oHEuj6MeJCWXQbcVLH8HnBu4IA3ptiSp4IRYG9qiqyJJb1RfmUgm-Xq0LEYU4Qb1uo9EAm7R6CnSY-H4DHpNLwuZYXXzb87W5kg-37geu5VqrVajR5YG0s94hFCTE4c_J7nfsLMBP9hCJ-5e"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-2.5">
+<div class="text-on-primary font-label-code text-label-code flex items-center justify-between w-full">
+<span>HARVEST COUPE: #KU-402</span>
+<span class="text-tertiary-fixed">100% PEFC CERT</span>
+</div>
+</div>
+</div>
+<!-- 12-Month Consistency Curve -->
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-dense text-label-dense uppercase tracking-wider text-on-surface-variant">12-Mo Diameter Consistency Curve</span>
+<span class="font-label-numeric text-label-numeric font-bold text-secondary">σ = 3.2mm</span>
+</div>
+<div class="h-10 w-full flex items-end gap-1 pt-2">
+<div class="flex-1 bg-primary/20 rounded-t h-[65%]"></div>
+<div class="flex-1 bg-primary/30 rounded-t h-[70%]"></div>
+<div class="flex-1 bg-primary/40 rounded-t h-[75%]"></div>
+<div class="flex-1 bg-primary/40 rounded-t h-[80%]"></div>
+<div class="flex-1 bg-primary/50 rounded-t h-[78%]"></div>
+<div class="flex-1 bg-primary/60 rounded-t h-[82%]"></div>
+<div class="flex-1 bg-primary/70 rounded-t h-[88%]"></div>
+<div class="flex-1 bg-primary/80 rounded-t h-[92%]"></div>
+<div class="flex-1 bg-primary/80 rounded-t h-[90%]"></div>
+<div class="flex-1 bg-primary/90 rounded-t h-[94%]"></div>
+<div class="flex-1 bg-primary rounded-t h-[96%]"></div>
+<div class="flex-1 bg-secondary rounded-t h-[98%]"></div>
+</div>
+<div class="flex justify-between font-label-code text-[9px] text-on-surface-variant pt-0.5">
+<span>Nov '23</span>
+<span>Jun '24</span>
+<span>Oct '24</span>
+</div>
+</div>
+<!-- Telemetry Specs List -->
+<div class="grid grid-cols-2 gap-space-xs text-body-sm text-body-sm">
+<div class="p-2 rounded bg-surface-container-low">
+<span class="font-label-caption text-label-caption text-on-surface-variant block uppercase">Punctuality Score</span>
+<span class="font-label-numeric text-title-sm text-primary font-bold">98.8%</span>
+<span class="text-[10px] text-secondary block">Avg wait: 4.2 min</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="font-label-caption text-label-caption text-on-surface-variant block uppercase">Fiber Yield Index</span>
+<span class="font-label-numeric text-title-sm text-primary font-bold">94.2 pts</span>
+<span class="text-[10px] text-secondary block">+2.3% above baseline</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="font-label-caption text-label-caption text-on-surface-variant block uppercase">Mean Log Moisture</span>
+<span class="font-label-numeric text-title-sm text-primary font-bold">48.2%</span>
+<span class="text-[10px] text-on-surface-variant block">Ideal: 46 - 50%</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="font-label-caption text-label-caption text-on-surface-variant block uppercase">Active Trucks / Day</span>
+<span class="font-label-numeric text-title-sm text-primary font-bold">14 Trucks</span>
+<span class="text-[10px] text-on-surface-variant block">Weighbridge Gate 02</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex gap-2">
+<button class="flex-1 py-2 rounded bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-container text-center transition-colors">
+            Full Supplier Dossier
+          </button>
+<button class="px-3 py-2 rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 3. Purchase Order Fulfillment vs AI Telemetry Variance -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Active Purchase Order Fulfillment vs AI Telemetry Variance</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time stereoscopic computer vision validation of incoming timber batches against contractual caliber envelopes</p>
+</div>
+<div class="hidden sm:flex items-center gap-1 font-label-code text-label-code text-on-surface-variant bg-surface-container-high px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[15px] text-secondary">camera_alt</span>
+<span>CV Gantry #01 &amp; #02 Active</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Contract Band Card 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-code text-label-code font-bold text-primary">PO-2024-8841</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-code text-[10px] font-bold">ON TARGET</span>
+</div>
+<div class="font-title-sm text-title-sm text-on-surface font-semibold mt-0.5">Scots Pine Pulpwood (Mäntykuitu)</div>
+<div class="font-label-caption text-label-caption text-on-surface-variant">Vendor: Metsä Group • Delivery Slot: Oct 15–30</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+</div>
+<!-- Target Spec Range vs Reality Gauge -->
+<div class="space-y-space-xs p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Contract Band:</span>
+<span class="font-bold text-primary">120 - 140 mm</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">CV Measured Median:</span>
+<span class="font-bold text-secondary">131.4 mm (Δ +1.4mm)</span>
+</div>
+<!-- Graphic Envelope Comparison -->
+<div class="relative w-full h-7 bg-surface-container rounded mt-2 flex items-center px-1">
+<!-- Allowed Band Box -->
+<div class="absolute left-[30%] right-[25%] h-5 bg-secondary-container/60 rounded flex items-center justify-center">
+<span class="font-label-code text-[9px] text-on-secondary-container font-semibold uppercase">Permitted 120-140mm</span>
+</div>
+<!-- Real Median Needle -->
+<div class="absolute left-[54%] h-6 w-1 bg-primary rounded shadow-sm"></div>
+</div>
+<div class="flex justify-between font-label-code text-[10px] text-on-surface-variant pt-1">
+<span>90 mm min</span>
+<span>131.4 mm actual</span>
+<span>180 mm max</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm pt-1">
+<div class="font-label-numeric text-label-numeric text-on-surface">
+<span class="font-bold">14,200</span> / 15,000 m³ fulfilled
+            </div>
+<span class="font-label-code text-label-code text-secondary font-bold">94.7% Complete</span>
+</div>
+</div>
+<!-- Contract Band Card 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-code text-label-code font-bold text-primary">PO-2024-8849</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-code text-[10px] font-bold">DEVIATION WARN</span>
+</div>
+<div class="font-title-sm text-title-sm text-on-surface font-semibold mt-0.5">Norway Spruce Small Sawlog (Pikkutukki)</div>
+<div class="font-label-caption text-label-caption text-on-surface-variant">Vendor: Stora Enso • Delivery Slot: Oct 10–28</div>
+</div>
+<span class="material-symbols-outlined text-error text-[24px]">warning</span>
+</div>
+<div class="space-y-space-xs p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Contract Band:</span>
+<span class="font-bold text-primary">150 - 195 mm</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">CV Measured Median:</span>
+<span class="font-bold text-error">144.2 mm (Δ -5.8mm)</span>
+</div>
+<div class="relative w-full h-7 bg-surface-container rounded mt-2 flex items-center px-1">
+<div class="absolute left-[35%] right-[20%] h-5 bg-secondary-container/60 rounded flex items-center justify-center">
+<span class="font-label-code text-[9px] text-on-secondary-container font-semibold uppercase">Permitted 150-195mm</span>
+</div>
+<!-- Out of band marker -->
+<div class="absolute left-[28%] h-6 w-1 bg-error rounded shadow-sm"></div>
+</div>
+<div class="flex justify-between font-label-code text-[10px] text-on-surface-variant pt-1">
+<span>144.2 mm (Undersized)</span>
+<span>150 mm min spec</span>
+<span>220 mm max</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm pt-1">
+<div class="font-label-numeric text-label-numeric text-on-surface">
+<span class="font-bold">9,410</span> / 11,000 m³ fulfilled
+            </div>
+<span class="font-label-code text-label-code text-error font-bold">85.5% Complete</span>
+</div>
+</div>
+<!-- Contract Band Card 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-code text-label-code font-bold text-primary">PO-2024-8854</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-code text-[10px] font-bold">EXCELLENT</span>
+</div>
+<div class="font-title-sm text-title-sm text-on-surface font-semibold mt-0.5">Birch Hardwood Pulp (Koivukuitu)</div>
+<div class="font-label-caption text-label-caption text-on-surface-variant">Vendor: Tornator Oyj • Delivery Slot: Oct 18–Nov 05</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]">eco</span>
+</div>
+<div class="space-y-space-xs p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">Contract Band:</span>
+<span class="font-bold text-primary">100 - 130 mm</span>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface-variant">CV Measured Median:</span>
+<span class="font-bold text-secondary">114.8 mm (Δ +0.2mm)</span>
+</div>
+<div class="relative w-full h-7 bg-surface-container rounded mt-2 flex items-center px-1">
+<div class="absolute left-[25%] right-[30%] h-5 bg-secondary-container/60 rounded flex items-center justify-center">
+<span class="font-label-code text-[9px] text-on-secondary-container font-semibold uppercase">Permitted 100-130mm</span>
+</div>
+<div class="absolute left-[47%] h-6 w-1 bg-primary rounded shadow-sm"></div>
+</div>
+<div class="flex justify-between font-label-code text-[10px] text-on-surface-variant pt-1">
+<span>80 mm min</span>
+<span>114.8 mm actual</span>
+<span>160 mm max</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm pt-1">
+<div class="font-label-numeric text-label-numeric text-on-surface">
+<span class="font-bold">4,890</span> / 5,000 m³ fulfilled
+            </div>
+<span class="font-label-code text-label-code text-secondary font-bold">97.8% Complete</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Master Supplier Directory & Performance Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden space-y-0">
+<!-- Table Header & Controls -->
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md bg-surface-container-low">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">table_rows</span>
+<h2 class="font-headline-md text-headline-md text-primary">Master Supplier Directory &amp; Performance Ledger</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Detailed inspection metrics, AI diameter sizing, automated grade distribution, and commercial settlement offsets.</p>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<div class="relative">
+<input class="h-8 pl-8 pr-3 bg-surface-container rounded text-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest" placeholder="Filter supplier or region..." type="text"/>
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px]">filter_list</span>
+</div>
+<button class="h-8 px-3 rounded bg-surface-container text-on-surface font-label-dense text-label-dense flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+<span>All Certifications</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- High-Density Telemetry Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-dense text-label-dense uppercase tracking-wider">
+<th class="py-2.5 px-space-md">Supplier &amp; Chain-of-Custody</th>
+<th class="py-2.5 px-space-md">Origin Concession</th>
+<th class="py-2.5 px-space-md text-right">Inbound Loads</th>
+<th class="py-2.5 px-space-md text-right">Delivered Vol</th>
+<th class="py-2.5 px-space-md text-right">Mean ⌀ &amp; Delta</th>
+<th class="py-2.5 px-space-md">CV Quality Grade Split (A / B / Rej)</th>
+<th class="py-2.5 px-space-md text-right">Settlement &amp; Penalties</th>
+<th class="py-2.5 px-space-md text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Metsä Group -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary"></div>
+<div>
+<div class="font-title-sm text-title-sm text-primary font-bold">Metsä Group Wood Supply</div>
+<div class="flex items-center gap-1 font-label-code text-[10px] text-on-surface-variant mt-0.5">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-1 rounded">PEFC 100%</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-1 rounded">FSC-C01423</span>
+<span class="text-secondary font-semibold">EUDR DDS #9811</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-medium">Kainuu North</div>
+<div class="font-label-code text-[10px] text-on-surface-variant">Concessions 14 &amp; 18</div>
+</td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric font-bold">
+                412 loads
+              </td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric">
+                16,420 m³
+              </td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric">
+<span class="text-primary font-bold">131.4 mm</span>
+<span class="text-secondary text-[11px] block">+1.2 mm vs PO</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1 w-44">
+<div class="h-2 w-full bg-surface-container rounded-full flex overflow-hidden">
+<div class="bg-primary h-full" style="width: 82%"></div>
+<div class="bg-secondary h-full" style="width: 17.2%"></div>
+<div class="bg-error h-full" style="width: 0.8%"></div>
+</div>
+<div class="flex justify-between font-label-code text-[10px] text-on-surface-variant">
+<span class="text-primary font-semibold">A: 82.0%</span>
+<span class="text-secondary font-semibold">B: 17.2%</span>
+<span class="text-error font-semibold">0.8%</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-code text-[11px] font-bold">100% CLEAN</span>
+<div class="font-label-code text-[10px] text-on-surface-variant mt-0.5">Deduction: €0.00</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-primary transition-colors" title="View Supplier Dossier">
+<span class="material-symbols-outlined text-[16px]">folder_open</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-primary transition-colors" title="Export Scorecard">
+<span class="material-symbols-outlined text-[16px]">sim_card_download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Stora Enso -->
+<tr class="hover:bg-surface-container-low transition-colors bg-error-container/10">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-2.5 h-2.5 rounded-full bg-error"></div>
+<div>
+<div class="font-title-sm text-title-sm text-primary font-bold">Stora Enso Forest AB</div>
+<div class="flex items-center gap-1 font-label-code text-[10px] text-on-surface-variant mt-0.5">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-1 rounded">FSC Mix 70%</span>
+<span class="bg-error-container text-on-error-container px-1 rounded font-bold">DISPUTE PENDING</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-medium">Lapland South</div>
+<div class="font-label-code text-[10px] text-on-surface-variant">Rovaniemi Sub-Region</div>
+</td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric font-bold">
+                338 loads
+              </td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric">
+                13,850 m³
+              </td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric">
+<span class="text-error font-bold">144.2 mm</span>
+<span class="text-error text-[11px] block">-5.8 mm undersize</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1 w-44">
+<div class="h-2 w-full bg-surface-container rounded-full flex overflow-hidden">
+<div class="bg-primary h-full" style="width: 71%"></div>
+<div class="bg-secondary h-full" style="width: 26.1%"></div>
+<div class="bg-error h-full" style="width: 2.9%"></div>
+</div>
+<div class="flex justify-between font-label-code text-[10px] text-on-surface-variant">
+<span class="text-primary font-semibold">A: 71.0%</span>
+<span class="text-secondary font-semibold">B: 26.1%</span>
+<span class="text-error font-semibold">2.9%</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-code text-[11px] font-bold">-4.5% PENALTY</span>
+<div class="font-label-code text-[10px] text-error font-bold mt-0.5">-€18,420 held</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="px-2 py-1 rounded bg-error text-on-error font-label-code text-[10px] font-bold flex items-center gap-1 hover:bg-error/90 transition-colors" title="Manage Dispute">
+<span class="material-symbols-outlined text-[13px]">gavel</span>
+<span>Dispute</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-primary transition-colors" title="View Dossier">
+<span class="material-symbols-outlined text-[16px]">folder_open</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: UPM Forest -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary"></div>
+<div>
+<div class="font-title-sm text-title-sm text-primary font-bold">UPM Forest Suomi</div>
+<div class="flex items-center gap-1 font-label-code text-[10px] text-on-surface-variant mt-0.5">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-1 rounded">PEFC 100%</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-1 rounded">EUDR CLEARED</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-medium">Pohjois-Pohjanmaa</div>
+<div class="font-label-code text-[10px] text-on-surface-variant">Concession Kuusamo #02</div>
+</td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric font-bold">
+                255 loads
+              </td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric">
+                10,210 m³
+              </td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric">
+<span class="text-primary font-bold">128.9 mm</span>
+<span class="text-secondary text-[11px] block">-1.1 mm vs PO</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1 w-44">
+<div class="h-2 w-full bg-surface-container rounded-full flex overflow-hidden">
+<div class="bg-primary h-full" style="width: 79%"></div>
+<div class="bg-secondary h-full" style="width: 19.8%"></div>
+<div class="bg-error h-full" style="width: 1.2%"></div>
+</div>
+<div class="flex justify-between font-label-code text-[10px] text-on-surface-variant">
+<span class="text-primary font-semibold">A: 79.0%</span>
+<span class="text-secondary font-semibold">B: 19.8%</span>
+<span class="text-error font-semibold">1.2%</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-code text-[11px] font-bold">CLEARED</span>
+<div class="font-label-code text-[10px] text-on-surface-variant mt-0.5">Deduction: €0.00</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-primary transition-colors" title="View Dossier">
+<span class="material-symbols-outlined text-[16px]">folder_open</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-primary transition-colors" title="Export Scorecard">
+<span class="material-symbols-outlined text-[16px]">sim_card_download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Tornator Oyj -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary"></div>
+<div>
+<div class="font-title-sm text-title-sm text-primary font-bold">Tornator Oyj Silviculture</div>
+<div class="flex items-center gap-1 font-label-code text-[10px] text-on-surface-variant mt-0.5">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-1 rounded">FSC 100%</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-1 rounded">PEFC 100%</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-medium">Kainuu South</div>
+<div class="font-label-code text-[10px] text-on-surface-variant">Sotkamo Woodlands</div>
+</td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric font-bold">
+                128 loads
+              </td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric">
+                5,120 m³
+              </td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric">
+<span class="text-primary font-bold">114.8 mm</span>
+<span class="text-secondary text-[11px] block">+0.2 mm vs PO</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1 w-44">
+<div class="h-2 w-full bg-surface-container rounded-full flex overflow-hidden">
+<div class="bg-primary h-full" style="width: 74%"></div>
+<div class="bg-secondary h-full" style="width: 22.6%"></div>
+<div class="bg-error h-full" style="width: 3.4%"></div>
+</div>
+<div class="flex justify-between font-label-code text-[10px] text-on-surface-variant">
+<span class="text-primary font-semibold">A: 74.0%</span>
+<span class="text-secondary font-semibold">B: 22.6%</span>
+<span class="text-error font-semibold">3.4%</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-code text-[11px] font-bold">SETTLED</span>
+<div class="font-label-code text-[10px] text-on-surface-variant mt-0.5">Rej offset: €1,240</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-primary transition-colors" title="View Dossier">
+<span class="material-symbols-outlined text-[16px]">folder_open</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-primary transition-colors" title="Export Scorecard">
+<span class="material-symbols-outlined text-[16px]">sim_card_download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Nordic Timber Co -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary"></div>
+<div>
+<div class="font-title-sm text-title-sm text-primary font-bold">Nordic Timber Cooperative</div>
+<div class="flex items-center gap-1 font-label-code text-[10px] text-on-surface-variant mt-0.5">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-1 rounded">PEFC Controlled</span>
+<span class="bg-surface-container-high text-on-surface px-1 rounded">DDS Reviewing</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-medium">Lapland East</div>
+<div class="font-label-code text-[10px] text-on-surface-variant">Kemijärvi District</div>
+</td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric font-bold">
+                68 loads
+              </td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric">
+                2,650 m³
+              </td>
+<td class="py-space-md px-space-md text-right font-label-numeric text-label-numeric">
+<span class="text-primary font-bold">136.1 mm</span>
+<span class="text-secondary text-[11px] block">+4.1 mm variance</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-1 w-44">
+<div class="h-2 w-full bg-surface-container rounded-full flex overflow-hidden">
+<div class="bg-primary h-full" style="width: 65%"></div>
+<div class="bg-secondary h-full" style="width: 30.2%"></div>
+<div class="bg-error h-full" style="width: 4.8%"></div>
+</div>
+<div class="flex justify-between font-label-code text-[10px] text-on-surface-variant">
+<span class="text-primary font-semibold">A: 65.0%</span>
+<span class="text-secondary font-semibold">B: 30.2%</span>
+<span class="text-error font-semibold">4.8%</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-code text-[11px] font-bold">HOLD (QA)</span>
+<div class="font-label-code text-[10px] text-on-surface-variant mt-0.5">Deduction: TBD</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-primary transition-colors" title="View Dossier">
+<span class="material-symbols-outlined text-[16px]">folder_open</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-primary transition-colors" title="Initiate Dispute">
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Metadata & Pagination -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-code text-label-code text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span>Showing 5 of 18 Registered Concession Partners</span>
+<span>•</span>
+<span class="text-primary font-semibold">Total Filtered Intake: 48,250 m³</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">Prev</button>
+<span class="px-2 py-1 rounded bg-primary text-on-primary font-bold">1</span>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">2</button>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">3</button>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">Next</button>
+</div>
+</div>
+</div>
+<!-- Quick Action / Settlement Drawer Banner -->
+<div class="p-space-md rounded-xl bg-primary-container text-on-primary shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[28px]">payments</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-tertiary-fixed font-bold">Automated ERP Weighbridge Settlement Ready</div>
+<div class="font-body-sm text-body-sm text-on-primary-container">
+            October Mid-Cycle billing statement ready for SAP S/4HANA release. €2.41M gross volume with €24,180 net defect deductions calculated.
+          </div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded bg-surface-container-lowest text-primary font-title-sm text-title-sm hover:bg-surface-container transition-colors shadow-sm font-semibold">
+          Review SAP Ledger
+        </button>
+<button class="px-space-md py-2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-title-sm text-title-sm hover:bg-tertiary-fixed-dim transition-colors shadow-sm font-semibold">
+          Approve Settlement Batch
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

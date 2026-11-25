@@ -1,0 +1,17 @@
+{
+  "name": "pine-os-backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --no-warnings --watch-path=src src/server.js",
+    "start": "node --no-warnings src/server.js",
+    "reset": "node --no-warnings src/reset.js",
+    "adduser": "node --no-warnings src/adduser.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.0",
+    "multer": "^2.5.0"
+  }
+}

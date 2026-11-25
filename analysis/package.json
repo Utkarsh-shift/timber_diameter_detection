@@ -1,0 +1,8 @@
+{
+  "name": "pine-os-analysis",
+  "private": true,
+  "scripts": {
+    "dev": "node run.js",
+    "setup": "node run.js --setup"
+  }
+}

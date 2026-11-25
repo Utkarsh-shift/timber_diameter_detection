@@ -1,0 +1,2212 @@
+{
+  "image": {
+    "path": "C:\\Users\\utkarsh.suryaman\\Downloads\\test1.jpg",
+    "width": 1280,
+    "height": 960
+  },
+  "model": "TimberVision YOLOv8-L segmentation v1.0",
+  "weights": "C:\\Users\\utkarsh.suryaman\\Documents\\Paper_jk\\analysis\\timbervision\\yolov8l-1024-seg.pt",
+  "tiling": {
+    "tile_width_px": 640,
+    "tile_height_px": 640,
+    "overlap_px": 320,
+    "tile_count": 6,
+    "imgsz": 1024,
+    "confidence_threshold": 0.4,
+    "merge_nms_iou": 0.4,
+    "raw_cut_detections_across_tiles": 275,
+    "merged_cut_detections": 119,
+    "tile_results": [
+      {
+        "tile_x": 0,
+        "tile_y": 0,
+        "width": 640,
+        "height": 640,
+        "cut_detections": 27
+      },
+      {
+        "tile_x": 320,
+        "tile_y": 0,
+        "width": 640,
+        "height": 640,
+        "cut_detections": 37
+      },
+      {
+        "tile_x": 640,
+        "tile_y": 0,
+        "width": 640,
+        "height": 640,
+        "cut_detections": 33
+      },
+      {
+        "tile_x": 0,
+        "tile_y": 320,
+        "width": 640,
+        "height": 640,
+        "cut_detections": 58
+      },
+      {
+        "tile_x": 320,
+        "tile_y": 320,
+        "width": 640,
+        "height": 640,
+        "cut_detections": 74
+      },
+      {
+        "tile_x": 640,
+        "tile_y": 320,
+        "width": 640,
+        "height": 640,
+        "cut_detections": 46
+      }
+    ]
+  },
+  "timing": {
+    "inference_ms": 19029
+  },
+  "scale": {
+    "mm_per_px": 1.8428,
+    "source": "stack width 2400 mm over 1302px",
+    "warning": "Estimated from assumed 2400 mm stack width; image has no scale reference."
+  },
+  "summary": {
+    "count": 119,
+    "mean_mm": 88.8,
+    "median_mm": 77.7,
+    "min_mm": 12.5,
+    "max_mm": 276.3,
+    "mean_confidence": 0.811,
+    "volume_m3_est": 2.9,
+    "weight_kg_est": 2613,
+    "log_length_m_assumed": 3.1,
+    "grade_distribution_pct": {
+      "A": 4.2,
+      "B": 33.6,
+      "C": 62.2,
+      "R": 0.0
+    },
+    "truck_grade": {
+      "grade": "C",
+      "action": "Divert to Pulp Pelletizing",
+      "tone": "bad",
+      "needs_review": true,
+      "pct": {
+        "A": 4.201680672268908,
+        "B": 33.61344537815126,
+        "C": 62.18487394957983,
+        "R": 0.0
+      },
+      "purity": 37.8
+    }
+  },
+  "comparison_full_image_pipeline": {
+    "previous_full_image_detections_conf_0_4": 144,
+    "tiled_merged_detections": 119
+  },
+  "annotated_image": "C:\\Users\\utkarsh.suryaman\\Documents\\Paper_jk\\analysis\\inference_test1\\timbervision_tiled_seg\\test1_tiled_merged_annotated.jpg",
+  "logs": [
+    {
+      "label": "LOG-001",
+      "cx_px": 232.8,
+      "cy_px": 802.7,
+      "diameter_mm_est": 251.7,
+      "confidence": 0.973,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.16"
+      ],
+      "bark_pct": 23.4,
+      "crack_pct": 6.7,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-002",
+      "cx_px": 555.2,
+      "cy_px": 812.8,
+      "diameter_mm_est": 130.1,
+      "confidence": 0.965,
+      "grade": "A",
+      "grade_why": [],
+      "bark_pct": 18.3,
+      "crack_pct": 10.8,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-003",
+      "cx_px": 688.0,
+      "cy_px": 461.5,
+      "diameter_mm_est": 269.0,
+      "confidence": 0.963,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.17"
+      ],
+      "bark_pct": 50.8,
+      "crack_pct": 22.4,
+      "rot_pct": 0.1,
+      "tile": [
+        2,
+        0
+      ]
+    },
+    {
+      "label": "LOG-004",
+      "cx_px": 1241.1,
+      "cy_px": 221.7,
+      "diameter_mm_est": 128.0,
+      "confidence": 0.96,
+      "grade": "A",
+      "grade_why": [],
+      "bark_pct": 20.4,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        0
+      ]
+    },
+    {
+      "label": "LOG-005",
+      "cx_px": 801.8,
+      "cy_px": 774.5,
+      "diameter_mm_est": 170.8,
+      "confidence": 0.959,
+      "grade": "B",
+      "grade_why": [
+        "crack 40.5%",
+        "ovality 1.18"
+      ],
+      "bark_pct": 21.7,
+      "crack_pct": 40.5,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-006",
+      "cx_px": 1144.5,
+      "cy_px": 224.7,
+      "diameter_mm_est": 114.7,
+      "confidence": 0.958,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.26"
+      ],
+      "bark_pct": 7.5,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        0
+      ]
+    },
+    {
+      "label": "LOG-007",
+      "cx_px": 775.7,
+      "cy_px": 382.9,
+      "diameter_mm_est": 149.7,
+      "confidence": 0.955,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.20"
+      ],
+      "bark_pct": 27.4,
+      "crack_pct": 5.5,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-008",
+      "cx_px": 859.3,
+      "cy_px": 736.2,
+      "diameter_mm_est": 114.9,
+      "confidence": 0.955,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.26"
+      ],
+      "bark_pct": 26.2,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-009",
+      "cx_px": 82.5,
+      "cy_px": 770.9,
+      "diameter_mm_est": 142.5,
+      "confidence": 0.954,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.47"
+      ],
+      "bark_pct": 10.4,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-010",
+      "cx_px": 1102.9,
+      "cy_px": 179.1,
+      "diameter_mm_est": 116.9,
+      "confidence": 0.954,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.37"
+      ],
+      "bark_pct": 10.2,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        0
+      ]
+    },
+    {
+      "label": "LOG-011",
+      "cx_px": 843.2,
+      "cy_px": 521.5,
+      "diameter_mm_est": 116.4,
+      "confidence": 0.953,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.20"
+      ],
+      "bark_pct": 37.6,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-012",
+      "cx_px": 172.4,
+      "cy_px": 728.4,
+      "diameter_mm_est": 103.7,
+      "confidence": 0.952,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 20.0,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-013",
+      "cx_px": 19.6,
+      "cy_px": 820.7,
+      "diameter_mm_est": 119.2,
+      "confidence": 0.949,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.16"
+      ],
+      "bark_pct": 24.3,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-014",
+      "cx_px": 394.9,
+      "cy_px": 492.8,
+      "diameter_mm_est": 98.7,
+      "confidence": 0.947,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 17.0,
+      "crack_pct": 10.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        0
+      ]
+    },
+    {
+      "label": "LOG-015",
+      "cx_px": 983.7,
+      "cy_px": 605.6,
+      "diameter_mm_est": 106.7,
+      "confidence": 0.946,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 10.1,
+      "crack_pct": 15.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-016",
+      "cx_px": 569.0,
+      "cy_px": 721.4,
+      "diameter_mm_est": 138.5,
+      "confidence": 0.941,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.19"
+      ],
+      "bark_pct": 30.8,
+      "crack_pct": 8.5,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-017",
+      "cx_px": 348.9,
+      "cy_px": 795.5,
+      "diameter_mm_est": 141.3,
+      "confidence": 0.941,
+      "grade": "A",
+      "grade_why": [],
+      "bark_pct": 32.6,
+      "crack_pct": 6.5,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-018",
+      "cx_px": 1204.1,
+      "cy_px": 384.2,
+      "diameter_mm_est": 84.6,
+      "confidence": 0.936,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 85mm"
+      ],
+      "bark_pct": 30.4,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        0
+      ]
+    },
+    {
+      "label": "LOG-019",
+      "cx_px": 146.8,
+      "cy_px": 807.1,
+      "diameter_mm_est": 99.1,
+      "confidence": 0.935,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 19.4,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-020",
+      "cx_px": 690.9,
+      "cy_px": 756.6,
+      "diameter_mm_est": 76.3,
+      "confidence": 0.933,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 76mm"
+      ],
+      "bark_pct": 30.4,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-021",
+      "cx_px": 410.5,
+      "cy_px": 441.9,
+      "diameter_mm_est": 113.8,
+      "confidence": 0.933,
+      "grade": "A",
+      "grade_why": [],
+      "bark_pct": 46.7,
+      "crack_pct": 8.7,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-022",
+      "cx_px": 844.3,
+      "cy_px": 366.5,
+      "diameter_mm_est": 86.2,
+      "confidence": 0.933,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 86mm"
+      ],
+      "bark_pct": 21.1,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-023",
+      "cx_px": 430.1,
+      "cy_px": 820.5,
+      "diameter_mm_est": 116.8,
+      "confidence": 0.932,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.21"
+      ],
+      "bark_pct": 38.3,
+      "crack_pct": 7.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-024",
+      "cx_px": 486.6,
+      "cy_px": 827.6,
+      "diameter_mm_est": 137.4,
+      "confidence": 0.931,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.23"
+      ],
+      "bark_pct": 24.6,
+      "crack_pct": 8.4,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-025",
+      "cx_px": 420.7,
+      "cy_px": 686.6,
+      "diameter_mm_est": 88.9,
+      "confidence": 0.931,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 89mm"
+      ],
+      "bark_pct": 43.8,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-026",
+      "cx_px": 1243.7,
+      "cy_px": 291.8,
+      "diameter_mm_est": 99.4,
+      "confidence": 0.93,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 45.1,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        0
+      ]
+    },
+    {
+      "label": "LOG-027",
+      "cx_px": 462.7,
+      "cy_px": 653.3,
+      "diameter_mm_est": 92.1,
+      "confidence": 0.93,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 21.1,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-028",
+      "cx_px": 332.6,
+      "cy_px": 334.3,
+      "diameter_mm_est": 105.2,
+      "confidence": 0.929,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 11.5,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-029",
+      "cx_px": 603.2,
+      "cy_px": 569.8,
+      "diameter_mm_est": 58.6,
+      "confidence": 0.927,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 59mm"
+      ],
+      "bark_pct": 29.3,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        0
+      ]
+    },
+    {
+      "label": "LOG-030",
+      "cx_px": 593.1,
+      "cy_px": 595.8,
+      "diameter_mm_est": 61.5,
+      "confidence": 0.926,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 61mm"
+      ],
+      "bark_pct": 27.6,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        0
+      ]
+    },
+    {
+      "label": "LOG-031",
+      "cx_px": 1046.1,
+      "cy_px": 530.4,
+      "diameter_mm_est": 76.5,
+      "confidence": 0.925,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 76mm"
+      ],
+      "bark_pct": 30.9,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        0
+      ]
+    },
+    {
+      "label": "LOG-032",
+      "cx_px": 659.1,
+      "cy_px": 560.1,
+      "diameter_mm_est": 74.1,
+      "confidence": 0.925,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 74mm"
+      ],
+      "bark_pct": 53.5,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-033",
+      "cx_px": 610.2,
+      "cy_px": 803.5,
+      "diameter_mm_est": 113.1,
+      "confidence": 0.919,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.27"
+      ],
+      "bark_pct": 21.4,
+      "crack_pct": 10.4,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-034",
+      "cx_px": 858.8,
+      "cy_px": 786.4,
+      "diameter_mm_est": 79.8,
+      "confidence": 0.919,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 80mm"
+      ],
+      "bark_pct": 23.5,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-035",
+      "cx_px": 915.4,
+      "cy_px": 406.5,
+      "diameter_mm_est": 58.1,
+      "confidence": 0.916,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 58mm"
+      ],
+      "bark_pct": 70.5,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        2,
+        0
+      ]
+    },
+    {
+      "label": "LOG-036",
+      "cx_px": 516.2,
+      "cy_px": 536.0,
+      "diameter_mm_est": 124.3,
+      "confidence": 0.916,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.88"
+      ],
+      "bark_pct": 30.1,
+      "crack_pct": 19.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-037",
+      "cx_px": 919.9,
+      "cy_px": 358.2,
+      "diameter_mm_est": 65.0,
+      "confidence": 0.914,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 65mm"
+      ],
+      "bark_pct": 31.9,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        0
+      ]
+    },
+    {
+      "label": "LOG-038",
+      "cx_px": 654.9,
+      "cy_px": 774.9,
+      "diameter_mm_est": 80.7,
+      "confidence": 0.91,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 81mm"
+      ],
+      "bark_pct": 42.6,
+      "crack_pct": 16.5,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-039",
+      "cx_px": 955.5,
+      "cy_px": 832.1,
+      "diameter_mm_est": 68.5,
+      "confidence": 0.908,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 69mm"
+      ],
+      "bark_pct": 80.2,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-040",
+      "cx_px": 1178.1,
+      "cy_px": 426.4,
+      "diameter_mm_est": 76.3,
+      "confidence": 0.907,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 76mm"
+      ],
+      "bark_pct": 34.9,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-041",
+      "cx_px": 849.8,
+      "cy_px": 457.9,
+      "diameter_mm_est": 118.7,
+      "confidence": 0.906,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.39"
+      ],
+      "bark_pct": 13.1,
+      "crack_pct": 9.3,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        0
+      ]
+    },
+    {
+      "label": "LOG-042",
+      "cx_px": 743.3,
+      "cy_px": 755.8,
+      "diameter_mm_est": 77.4,
+      "confidence": 0.905,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 77mm"
+      ],
+      "bark_pct": 12.6,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-043",
+      "cx_px": 172.6,
+      "cy_px": 470.1,
+      "diameter_mm_est": 80.6,
+      "confidence": 0.904,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 81mm"
+      ],
+      "bark_pct": 8.7,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-044",
+      "cx_px": 257.0,
+      "cy_px": 886.5,
+      "diameter_mm_est": 65.1,
+      "confidence": 0.899,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 65mm"
+      ],
+      "bark_pct": 37.5,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-045",
+      "cx_px": 978.5,
+      "cy_px": 473.3,
+      "diameter_mm_est": 110.5,
+      "confidence": 0.898,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.41"
+      ],
+      "bark_pct": 45.6,
+      "crack_pct": 13.2,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-046",
+      "cx_px": 938.7,
+      "cy_px": 632.2,
+      "diameter_mm_est": 47.2,
+      "confidence": 0.898,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 47mm"
+      ],
+      "bark_pct": 55.0,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-047",
+      "cx_px": 333.8,
+      "cy_px": 415.3,
+      "diameter_mm_est": 97.3,
+      "confidence": 0.897,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 43.7,
+      "crack_pct": 16.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-048",
+      "cx_px": 636.4,
+      "cy_px": 678.7,
+      "diameter_mm_est": 112.7,
+      "confidence": 0.895,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.84"
+      ],
+      "bark_pct": 54.5,
+      "crack_pct": 11.9,
+      "rot_pct": 0.2,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-049",
+      "cx_px": 422.7,
+      "cy_px": 579.4,
+      "diameter_mm_est": 65.7,
+      "confidence": 0.894,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 66mm"
+      ],
+      "bark_pct": 47.0,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-050",
+      "cx_px": 1192.6,
+      "cy_px": 511.3,
+      "diameter_mm_est": 51.3,
+      "confidence": 0.893,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 51mm"
+      ],
+      "bark_pct": 76.7,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-051",
+      "cx_px": 628.7,
+      "cy_px": 584.5,
+      "diameter_mm_est": 48.8,
+      "confidence": 0.893,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 49mm"
+      ],
+      "bark_pct": 52.8,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        1,
+        0
+      ]
+    },
+    {
+      "label": "LOG-052",
+      "cx_px": 240.3,
+      "cy_px": 474.5,
+      "diameter_mm_est": 63.8,
+      "confidence": 0.89,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 64mm"
+      ],
+      "bark_pct": 24.8,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        0
+      ]
+    },
+    {
+      "label": "LOG-053",
+      "cx_px": 410.2,
+      "cy_px": 543.5,
+      "diameter_mm_est": 98.3,
+      "confidence": 0.89,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 41.5,
+      "crack_pct": 10.4,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-054",
+      "cx_px": 962.6,
+      "cy_px": 883.5,
+      "diameter_mm_est": 84.5,
+      "confidence": 0.889,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 84mm"
+      ],
+      "bark_pct": 46.4,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-055",
+      "cx_px": 1205.9,
+      "cy_px": 463.5,
+      "diameter_mm_est": 40.2,
+      "confidence": 0.888,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 40mm"
+      ],
+      "bark_pct": 45.0,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-056",
+      "cx_px": 934.6,
+      "cy_px": 716.3,
+      "diameter_mm_est": 45.4,
+      "confidence": 0.886,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 45mm"
+      ],
+      "bark_pct": 51.8,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-057",
+      "cx_px": 542.5,
+      "cy_px": 598.8,
+      "diameter_mm_est": 36.1,
+      "confidence": 0.882,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 36mm"
+      ],
+      "bark_pct": null,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        0,
+        0
+      ]
+    },
+    {
+      "label": "LOG-058",
+      "cx_px": 459.2,
+      "cy_px": 774.4,
+      "diameter_mm_est": 68.2,
+      "confidence": 0.877,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 68mm"
+      ],
+      "bark_pct": 23.3,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-059",
+      "cx_px": 723.3,
+      "cy_px": 775.1,
+      "diameter_mm_est": 40.9,
+      "confidence": 0.875,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 41mm"
+      ],
+      "bark_pct": 48.1,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-060",
+      "cx_px": 621.2,
+      "cy_px": 548.2,
+      "diameter_mm_est": 46.2,
+      "confidence": 0.875,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 46mm"
+      ],
+      "bark_pct": 51.8,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        0,
+        0
+      ]
+    },
+    {
+      "label": "LOG-061",
+      "cx_px": 316.4,
+      "cy_px": 506.9,
+      "diameter_mm_est": 95.7,
+      "confidence": 0.871,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 39.7,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-062",
+      "cx_px": 574.3,
+      "cy_px": 575.3,
+      "diameter_mm_est": 46.3,
+      "confidence": 0.868,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 46mm"
+      ],
+      "bark_pct": 33.3,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        1,
+        0
+      ]
+    },
+    {
+      "label": "LOG-063",
+      "cx_px": 895.0,
+      "cy_px": 827.6,
+      "diameter_mm_est": 60.4,
+      "confidence": 0.867,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 60mm"
+      ],
+      "bark_pct": 41.5,
+      "crack_pct": 13.1,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-064",
+      "cx_px": 882.7,
+      "cy_px": 372.9,
+      "diameter_mm_est": 93.8,
+      "confidence": 0.864,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 46.7,
+      "crack_pct": 6.9,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-065",
+      "cx_px": 598.3,
+      "cy_px": 467.1,
+      "diameter_mm_est": 35.0,
+      "confidence": 0.864,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 35mm"
+      ],
+      "bark_pct": null,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-066",
+      "cx_px": 640.6,
+      "cy_px": 839.5,
+      "diameter_mm_est": 61.0,
+      "confidence": 0.861,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 61mm"
+      ],
+      "bark_pct": 52.7,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-067",
+      "cx_px": 538.0,
+      "cy_px": 566.5,
+      "diameter_mm_est": 37.7,
+      "confidence": 0.86,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 38mm"
+      ],
+      "bark_pct": 53.6,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-068",
+      "cx_px": 1107.6,
+      "cy_px": 493.3,
+      "diameter_mm_est": 45.4,
+      "confidence": 0.859,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 45mm"
+      ],
+      "bark_pct": 28.5,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        2,
+        0
+      ]
+    },
+    {
+      "label": "LOG-069",
+      "cx_px": 557.7,
+      "cy_px": 495.4,
+      "diameter_mm_est": 73.5,
+      "confidence": 0.853,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 73mm"
+      ],
+      "bark_pct": 45.9,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-070",
+      "cx_px": 684.6,
+      "cy_px": 697.7,
+      "diameter_mm_est": 49.4,
+      "confidence": 0.853,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 49mm"
+      ],
+      "bark_pct": 56.2,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-071",
+      "cx_px": 541.4,
+      "cy_px": 583.3,
+      "diameter_mm_est": 36.2,
+      "confidence": 0.85,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 36mm"
+      ],
+      "bark_pct": null,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-072",
+      "cx_px": 16.2,
+      "cy_px": 491.3,
+      "diameter_mm_est": 77.7,
+      "confidence": 0.844,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 78mm"
+      ],
+      "bark_pct": 28.4,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-073",
+      "cx_px": 587.5,
+      "cy_px": 520.0,
+      "diameter_mm_est": 74.6,
+      "confidence": 0.843,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 75mm"
+      ],
+      "bark_pct": 42.7,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-074",
+      "cx_px": 401.2,
+      "cy_px": 342.3,
+      "diameter_mm_est": 183.3,
+      "confidence": 0.834,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.42"
+      ],
+      "bark_pct": 38.0,
+      "crack_pct": 27.5,
+      "rot_pct": 0.3,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-075",
+      "cx_px": 48.5,
+      "cy_px": 748.9,
+      "diameter_mm_est": 68.9,
+      "confidence": 0.834,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 69mm"
+      ],
+      "bark_pct": 46.6,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-076",
+      "cx_px": 587.6,
+      "cy_px": 628.9,
+      "diameter_mm_est": 59.2,
+      "confidence": 0.834,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 59mm"
+      ],
+      "bark_pct": 40.1,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-077",
+      "cx_px": 922.3,
+      "cy_px": 788.2,
+      "diameter_mm_est": 71.5,
+      "confidence": 0.834,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 71mm"
+      ],
+      "bark_pct": 21.1,
+      "crack_pct": 16.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-078",
+      "cx_px": 658.0,
+      "cy_px": 440.7,
+      "diameter_mm_est": 143.9,
+      "confidence": 0.826,
+      "grade": "A",
+      "grade_why": [],
+      "bark_pct": 18.3,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        0
+      ]
+    },
+    {
+      "label": "LOG-079",
+      "cx_px": 694.6,
+      "cy_px": 578.9,
+      "diameter_mm_est": 47.2,
+      "confidence": 0.818,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 47mm"
+      ],
+      "bark_pct": 47.3,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        2,
+        0
+      ]
+    },
+    {
+      "label": "LOG-080",
+      "cx_px": 881.8,
+      "cy_px": 412.1,
+      "diameter_mm_est": 57.0,
+      "confidence": 0.817,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 57mm"
+      ],
+      "bark_pct": 68.9,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-081",
+      "cx_px": 149.3,
+      "cy_px": 497.4,
+      "diameter_mm_est": 87.6,
+      "confidence": 0.815,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 88mm"
+      ],
+      "bark_pct": 41.2,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-082",
+      "cx_px": 955.3,
+      "cy_px": 793.0,
+      "diameter_mm_est": 39.0,
+      "confidence": 0.809,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 39mm"
+      ],
+      "bark_pct": 46.0,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-083",
+      "cx_px": 590.9,
+      "cy_px": 483.4,
+      "diameter_mm_est": 37.5,
+      "confidence": 0.774,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 37mm"
+      ],
+      "bark_pct": 38.3,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-084",
+      "cx_px": 351.5,
+      "cy_px": 652.9,
+      "diameter_mm_est": 59.2,
+      "confidence": 0.771,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 59mm"
+      ],
+      "bark_pct": 53.5,
+      "crack_pct": 44.3,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-085",
+      "cx_px": 756.8,
+      "cy_px": 324.5,
+      "diameter_mm_est": 60.5,
+      "confidence": 0.771,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 60mm"
+      ],
+      "bark_pct": 15.0,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-086",
+      "cx_px": 332.6,
+      "cy_px": 732.7,
+      "diameter_mm_est": 127.9,
+      "confidence": 0.77,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.30"
+      ],
+      "bark_pct": 31.5,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-087",
+      "cx_px": 819.2,
+      "cy_px": 326.9,
+      "diameter_mm_est": 71.8,
+      "confidence": 0.77,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 72mm"
+      ],
+      "bark_pct": 43.2,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        0
+      ]
+    },
+    {
+      "label": "LOG-088",
+      "cx_px": 1151.1,
+      "cy_px": 402.7,
+      "diameter_mm_est": 66.2,
+      "confidence": 0.75,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 66mm"
+      ],
+      "bark_pct": 41.6,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-089",
+      "cx_px": 265.1,
+      "cy_px": 321.3,
+      "diameter_mm_est": 276.3,
+      "confidence": 0.743,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.37"
+      ],
+      "bark_pct": 40.2,
+      "crack_pct": 19.8,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        0
+      ]
+    },
+    {
+      "label": "LOG-090",
+      "cx_px": 704.0,
+      "cy_px": 627.3,
+      "diameter_mm_est": 97.4,
+      "confidence": 0.737,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 20.6,
+      "crack_pct": 8.9,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        0
+      ]
+    },
+    {
+      "label": "LOG-091",
+      "cx_px": 630.1,
+      "cy_px": 620.9,
+      "diameter_mm_est": 69.0,
+      "confidence": 0.722,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 69mm"
+      ],
+      "bark_pct": 58.4,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-092",
+      "cx_px": 343.4,
+      "cy_px": 851.9,
+      "diameter_mm_est": 73.6,
+      "confidence": 0.716,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 74mm"
+      ],
+      "bark_pct": 51.6,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-093",
+      "cx_px": 847.3,
+      "cy_px": 435.4,
+      "diameter_mm_est": 46.6,
+      "confidence": 0.71,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 47mm"
+      ],
+      "bark_pct": 18.9,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        2,
+        0
+      ]
+    },
+    {
+      "label": "LOG-094",
+      "cx_px": 387.2,
+      "cy_px": 669.0,
+      "diameter_mm_est": 88.2,
+      "confidence": 0.705,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 88mm"
+      ],
+      "bark_pct": 26.3,
+      "crack_pct": 13.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-095",
+      "cx_px": 643.1,
+      "cy_px": 694.2,
+      "diameter_mm_est": 27.0,
+      "confidence": 0.702,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 27mm"
+      ],
+      "bark_pct": null,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-096",
+      "cx_px": 521.7,
+      "cy_px": 778.5,
+      "diameter_mm_est": 82.4,
+      "confidence": 0.699,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 82mm"
+      ],
+      "bark_pct": 38.7,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-097",
+      "cx_px": 84.5,
+      "cy_px": 886.4,
+      "diameter_mm_est": 137.6,
+      "confidence": 0.692,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.21"
+      ],
+      "bark_pct": 18.9,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-098",
+      "cx_px": 1273.4,
+      "cy_px": 466.9,
+      "diameter_mm_est": 71.2,
+      "confidence": 0.666,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 71mm"
+      ],
+      "bark_pct": 26.2,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-099",
+      "cx_px": 968.5,
+      "cy_px": 767.3,
+      "diameter_mm_est": 56.2,
+      "confidence": 0.658,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 56mm"
+      ],
+      "bark_pct": 53.7,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-100",
+      "cx_px": 469.3,
+      "cy_px": 508.6,
+      "diameter_mm_est": 88.3,
+      "confidence": 0.623,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 88mm"
+      ],
+      "bark_pct": 26.5,
+      "crack_pct": 34.4,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-101",
+      "cx_px": 654.9,
+      "cy_px": 328.7,
+      "diameter_mm_est": 66.4,
+      "confidence": 0.619,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 66mm"
+      ],
+      "bark_pct": 15.2,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-102",
+      "cx_px": 366.5,
+      "cy_px": 543.7,
+      "diameter_mm_est": 47.1,
+      "confidence": 0.603,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 47mm"
+      ],
+      "bark_pct": 22.4,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-103",
+      "cx_px": 1269.1,
+      "cy_px": 402.8,
+      "diameter_mm_est": 36.1,
+      "confidence": 0.595,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 36mm"
+      ],
+      "bark_pct": null,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-104",
+      "cx_px": 137.4,
+      "cy_px": 862.6,
+      "diameter_mm_est": 100.4,
+      "confidence": 0.577,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 13.0,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-105",
+      "cx_px": 264.7,
+      "cy_px": 550.5,
+      "diameter_mm_est": 141.9,
+      "confidence": 0.546,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.39"
+      ],
+      "bark_pct": 40.6,
+      "crack_pct": 19.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-106",
+      "cx_px": 383.8,
+      "cy_px": 720.4,
+      "diameter_mm_est": 73.7,
+      "confidence": 0.533,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 74mm"
+      ],
+      "bark_pct": 41.4,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-107",
+      "cx_px": 934.4,
+      "cy_px": 376.6,
+      "diameter_mm_est": 59.4,
+      "confidence": 0.525,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 59mm"
+      ],
+      "bark_pct": 50.6,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-108",
+      "cx_px": 1253.3,
+      "cy_px": 353.3,
+      "diameter_mm_est": 102.2,
+      "confidence": 0.52,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 39.6,
+      "crack_pct": 16.3,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-109",
+      "cx_px": 305.8,
+      "cy_px": 580.6,
+      "diameter_mm_est": 65.5,
+      "confidence": 0.518,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 65mm"
+      ],
+      "bark_pct": 46.2,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-110",
+      "cx_px": 323.6,
+      "cy_px": 578.5,
+      "diameter_mm_est": 12.5,
+      "confidence": 0.518,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 12mm"
+      ],
+      "bark_pct": null,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        1,
+        0
+      ]
+    },
+    {
+      "label": "LOG-111",
+      "cx_px": 356.6,
+      "cy_px": 520.2,
+      "diameter_mm_est": 82.1,
+      "confidence": 0.504,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 82mm"
+      ],
+      "bark_pct": 21.6,
+      "crack_pct": 9.4,
+      "rot_pct": 0.5,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-112",
+      "cx_px": 506.0,
+      "cy_px": 886.0,
+      "diameter_mm_est": 85.1,
+      "confidence": 0.488,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 85mm"
+      ],
+      "bark_pct": 38.8,
+      "crack_pct": 0.0,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-113",
+      "cx_px": 1057.8,
+      "cy_px": 651.3,
+      "diameter_mm_est": 57.5,
+      "confidence": 0.486,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 57mm"
+      ],
+      "bark_pct": 54.0,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        2,
+        1
+      ]
+    },
+    {
+      "label": "LOG-114",
+      "cx_px": 643.8,
+      "cy_px": 660.3,
+      "diameter_mm_est": 47.5,
+      "confidence": 0.48,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 48mm"
+      ],
+      "bark_pct": 51.2,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-115",
+      "cx_px": 667.2,
+      "cy_px": 517.2,
+      "diameter_mm_est": 109.9,
+      "confidence": 0.445,
+      "grade": "B",
+      "grade_why": [],
+      "bark_pct": 20.3,
+      "crack_pct": 0.0,
+      "rot_pct": 0.1,
+      "tile": [
+        2,
+        0
+      ]
+    },
+    {
+      "label": "LOG-116",
+      "cx_px": 501.9,
+      "cy_px": 578.8,
+      "diameter_mm_est": 88.5,
+      "confidence": 0.428,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 89mm"
+      ],
+      "bark_pct": 42.5,
+      "crack_pct": 44.4,
+      "rot_pct": 0.0,
+      "tile": [
+        1,
+        1
+      ]
+    },
+    {
+      "label": "LOG-117",
+      "cx_px": 245.8,
+      "cy_px": 473.0,
+      "diameter_mm_est": 230.7,
+      "confidence": 0.425,
+      "grade": "B",
+      "grade_why": [
+        "ovality 3.84"
+      ],
+      "bark_pct": 34.7,
+      "crack_pct": 25.2,
+      "rot_pct": 0.0,
+      "tile": [
+        0,
+        1
+      ]
+    },
+    {
+      "label": "LOG-118",
+      "cx_px": 1035.2,
+      "cy_px": 419.4,
+      "diameter_mm_est": 189.2,
+      "confidence": 0.423,
+      "grade": "B",
+      "grade_why": [
+        "ovality 1.51"
+      ],
+      "bark_pct": 54.2,
+      "crack_pct": 26.5,
+      "rot_pct": 0.0,
+      "tile": [
+        2,
+        0
+      ]
+    },
+    {
+      "label": "LOG-119",
+      "cx_px": 526.3,
+      "cy_px": 632.2,
+      "diameter_mm_est": 44.7,
+      "confidence": 0.411,
+      "grade": "C",
+      "grade_why": [
+        "sub-gauge 45mm"
+      ],
+      "bark_pct": 60.1,
+      "crack_pct": null,
+      "rot_pct": null,
+      "tile": [
+        0,
+        0
+      ]
+    }
+  ]
+}

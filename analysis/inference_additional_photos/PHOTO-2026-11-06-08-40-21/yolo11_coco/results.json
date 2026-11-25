@@ -1,0 +1,24 @@
+﻿{
+    "image":  "C:\\Users\\utkarsh.suryaman\\Downloads\\PHOTO-2026-11-06-08-40-21.jpg",
+    "image_size_px":  [
+                          900,
+                          1600
+                      ],
+    "model":  "YOLO11l-seg pretrained COCO",
+    "weights":  "C:\\Users\\utkarsh.suryaman\\Documents\\Paper_jk\\analysis\\inference_additional_photos\\PHOTO-2026-11-06-08-40-21\\yolo11_coco\\yolo11l-seg.pt",
+    "task":  "COCO instance segmentation (general objects; no log-end class)",
+    "imgsz":  1280,
+    "confidence_threshold":  0.25,
+    "device":  "cpu",
+    "inference_seconds":  5.3,
+    "detections_total":  0,
+    "class_counts":  {
+
+                     },
+    "annotated_image":  "C:\\Users\\utkarsh.suryaman\\Documents\\Paper_jk\\analysis\\inference_additional_photos\\PHOTO-2026-11-06-08-40-21\\yolo11_coco\\yolo11l_seg_coco_annotated.jpg",
+    "detections":  [
+
+                   ],
+    "caveat":  "These weights are pretrained on COCO, not log ends. The output is only a general-object baseline and is not suitable for counting logs without fine-tuning.",
+    "ultralytics_test_version":  "8.3.0 (restored environment to 8.2.22 after test)"
+}

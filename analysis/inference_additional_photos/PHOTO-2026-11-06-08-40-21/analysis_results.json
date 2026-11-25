@@ -1,0 +1,148 @@
+{
+  "source": "C:\\Users\\utkarsh.suryaman\\Downloads\\PHOTO-2026-11-06-08-40-21.jpg",
+  "image_size_px": [
+    900,
+    1600
+  ],
+  "analysis_profiles": [
+    {
+      "profile": "ellipse-v1.3-highrecall",
+      "summary": {
+        "count": 180,
+        "mean_mm": 75.4,
+        "median_mm": 69.3,
+        "std_mm": 23.6,
+        "min_mm": 46.6,
+        "max_mm": 139.2,
+        "volume_m3": 2.73,
+        "weight_kg": 2461,
+        "log_length_m": 3.1,
+        "sub_gauge": 141,
+        "avg_ovality": 1.222,
+        "avg_bark_pct": 17.35,
+        "avg_crack_pct": 0.93,
+        "rot_logs": 1,
+        "texture_measured": 50,
+        "mean_conf": 84.8
+      },
+      "grade": {
+        "grade": "C",
+        "action": "Divert to Pulp Pelletizing",
+        "tone": "bad",
+        "needs_review": true,
+        "pct": {
+          "A": 4.444444444444445,
+          "B": 16.666666666666668,
+          "C": 78.33333333333333,
+          "R": 0.5555555555555556
+        },
+        "purity": 21.1
+      },
+      "scale": {
+        "mm_per_px": 2.70842,
+        "source": "stack width 2400 mm over 886px",
+        "mode": "ref_width"
+      },
+      "timing": {
+        "total_ms": 16085,
+        "inference_ms": 15158
+      },
+      "annotated_image": "C:\\Users\\utkarsh.suryaman\\Documents\\Paper_jk\\analysis\\inference_additional_photos\\PHOTO-2026-11-06-08-40-21\\ellipse-v1.3-highrecall_annotated.jpg"
+    },
+    {
+      "profile": "ellipse-v1.4-wild",
+      "summary": {
+        "count": 280,
+        "mean_mm": 83.0,
+        "median_mm": 71.4,
+        "std_mm": 47.0,
+        "min_mm": 26.4,
+        "max_mm": 294.6,
+        "volume_m3": 6.21,
+        "weight_kg": 5585,
+        "log_length_m": 3.1,
+        "sub_gauge": 195,
+        "avg_ovality": 1.226,
+        "avg_bark_pct": 18.61,
+        "avg_crack_pct": 1.45,
+        "rot_logs": 2,
+        "texture_measured": 103,
+        "mean_conf": 86.8
+      },
+      "grade": {
+        "grade": "C",
+        "action": "Divert to Pulp Pelletizing",
+        "tone": "bad",
+        "needs_review": true,
+        "pct": {
+          "A": 6.785714285714286,
+          "B": 23.214285714285715,
+          "C": 69.28571428571429,
+          "R": 0.7142857142857143
+        },
+        "purity": 30.0
+      },
+      "scale": {
+        "mm_per_px": 2.67018,
+        "source": "stack width 2400 mm over 899px",
+        "mode": "ref_width"
+      },
+      "timing": {
+        "total_ms": 8789,
+        "inference_ms": 8067
+      },
+      "annotated_image": "C:\\Users\\utkarsh.suryaman\\Documents\\Paper_jk\\analysis\\inference_additional_photos\\PHOTO-2026-11-06-08-40-21\\ellipse-v1.4-wild_annotated.jpg"
+    },
+    {
+      "profile": "timbervision-v1.0-seg",
+      "summary": {
+        "count": 216,
+        "mean_mm": 103.7,
+        "median_mm": 91.5,
+        "std_mm": 47.8,
+        "min_mm": 41.5,
+        "max_mm": 327.1,
+        "volume_m3": 6.86,
+        "weight_kg": 6176,
+        "log_length_m": 3.1,
+        "sub_gauge": 106,
+        "avg_ovality": 1.334,
+        "avg_bark_pct": 38.69,
+        "avg_crack_pct": 3.08,
+        "rot_logs": 2,
+        "texture_measured": 139,
+        "mean_conf": 90.2
+      },
+      "grade": {
+        "grade": "C",
+        "action": "Divert to Pulp Pelletizing",
+        "tone": "bad",
+        "needs_review": true,
+        "pct": {
+          "A": 6.481481481481482,
+          "B": 43.51851851851852,
+          "C": 49.074074074074076,
+          "R": 0.9259259259259259
+        },
+        "purity": 50.0
+      },
+      "scale": {
+        "mm_per_px": 2.56323,
+        "source": "stack width 2400 mm over 936px",
+        "mode": "ref_width"
+      },
+      "timing": {
+        "total_ms": 4760,
+        "inference_ms": 4142
+      },
+      "annotated_image": "C:\\Users\\utkarsh.suryaman\\Documents\\Paper_jk\\analysis\\inference_additional_photos\\PHOTO-2026-11-06-08-40-21\\timbervision-v1.0-seg_annotated.jpg"
+    }
+  ],
+  "learned_verifier": {
+    "profile": "logend_verifier.joblib",
+    "threshold": 0.25,
+    "detections": 111,
+    "inference_ms": 3926,
+    "annotated_image": "C:\\Users\\utkarsh.suryaman\\Documents\\Paper_jk\\analysis\\inference_additional_photos\\PHOTO-2026-11-06-08-40-21\\logend_verifier_annotated.jpg"
+  }
+}

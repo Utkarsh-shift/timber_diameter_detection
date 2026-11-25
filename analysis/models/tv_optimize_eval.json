@@ -1,0 +1,335 @@
+{
+ "images": 40,
+ "gt_boxes": 324,
+ "variants": {
+  "base": {
+   "sec_per_image": 3.3,
+   "at_conf_0_4": {
+    "conf": 0.4,
+    "found": 592,
+    "precision": 49.2,
+    "recall": 89.8,
+    "f1": 63.5
+   },
+   "best_f1": {
+    "conf": 0.5,
+    "found": 588,
+    "precision": 49.3,
+    "recall": 89.5,
+    "f1": 63.6
+   },
+   "sweep": [
+    {
+     "conf": 0.25,
+     "found": 605,
+     "precision": 48.4,
+     "recall": 90.4,
+     "f1": 63.1
+    },
+    {
+     "conf": 0.3,
+     "found": 598,
+     "precision": 48.8,
+     "recall": 90.1,
+     "f1": 63.3
+    },
+    {
+     "conf": 0.4,
+     "found": 592,
+     "precision": 49.2,
+     "recall": 89.8,
+     "f1": 63.5
+    },
+    {
+     "conf": 0.5,
+     "found": 588,
+     "precision": 49.3,
+     "recall": 89.5,
+     "f1": 63.6
+    }
+   ]
+  },
+  "full1280": {
+   "sec_per_image": 4.7,
+   "at_conf_0_4": {
+    "conf": 0.4,
+    "found": 590,
+    "precision": 48.8,
+    "recall": 88.9,
+    "f1": 63.0
+   },
+   "best_f1": {
+    "conf": 0.5,
+    "found": 581,
+    "precision": 49.2,
+    "recall": 88.3,
+    "f1": 63.2
+   },
+   "sweep": [
+    {
+     "conf": 0.25,
+     "found": 604,
+     "precision": 47.8,
+     "recall": 89.2,
+     "f1": 62.3
+    },
+    {
+     "conf": 0.3,
+     "found": 598,
+     "precision": 48.2,
+     "recall": 88.9,
+     "f1": 62.5
+    },
+    {
+     "conf": 0.4,
+     "found": 590,
+     "precision": 48.8,
+     "recall": 88.9,
+     "f1": 63.0
+    },
+    {
+     "conf": 0.5,
+     "found": 581,
+     "precision": 49.2,
+     "recall": 88.3,
+     "f1": 63.2
+    }
+   ]
+  },
+  "full1600": {
+   "sec_per_image": 7.3,
+   "at_conf_0_4": {
+    "conf": 0.4,
+    "found": 600,
+    "precision": 48.2,
+    "recall": 89.2,
+    "f1": 62.6
+   },
+   "best_f1": {
+    "conf": 0.5,
+    "found": 587,
+    "precision": 49.1,
+    "recall": 88.9,
+    "f1": 63.2
+   },
+   "sweep": [
+    {
+     "conf": 0.25,
+     "found": 616,
+     "precision": 47.4,
+     "recall": 90.1,
+     "f1": 62.1
+    },
+    {
+     "conf": 0.3,
+     "found": 612,
+     "precision": 47.4,
+     "recall": 89.5,
+     "f1": 62.0
+    },
+    {
+     "conf": 0.4,
+     "found": 600,
+     "precision": 48.2,
+     "recall": 89.2,
+     "f1": 62.6
+    },
+    {
+     "conf": 0.5,
+     "found": 587,
+     "precision": 49.1,
+     "recall": 88.9,
+     "f1": 63.2
+    }
+   ]
+  },
+  "flip": {
+   "sec_per_image": 6.6,
+   "at_conf_0_4": {
+    "conf": 0.4,
+    "found": 630,
+    "precision": 46.8,
+    "recall": 91.0,
+    "f1": 61.8
+   },
+   "best_f1": {
+    "conf": 0.5,
+    "found": 623,
+    "precision": 47.2,
+    "recall": 90.7,
+    "f1": 62.1
+   },
+   "sweep": [
+    {
+     "conf": 0.25,
+     "found": 648,
+     "precision": 45.7,
+     "recall": 91.4,
+     "f1": 60.9
+    },
+    {
+     "conf": 0.3,
+     "found": 639,
+     "precision": 46.3,
+     "recall": 91.4,
+     "f1": 61.5
+    },
+    {
+     "conf": 0.4,
+     "found": 630,
+     "precision": 46.8,
+     "recall": 91.0,
+     "f1": 61.8
+    },
+    {
+     "conf": 0.5,
+     "found": 623,
+     "precision": 47.2,
+     "recall": 90.7,
+     "f1": 62.1
+    }
+   ]
+  },
+  "tiles2": {
+   "sec_per_image": 16.0,
+   "at_conf_0_4": {
+    "conf": 0.4,
+    "found": 708,
+    "precision": 42.9,
+    "recall": 93.8,
+    "f1": 58.9
+   },
+   "best_f1": {
+    "conf": 0.5,
+    "found": 699,
+    "precision": 43.2,
+    "recall": 93.2,
+    "f1": 59.0
+   },
+   "sweep": [
+    {
+     "conf": 0.25,
+     "found": 732,
+     "precision": 41.5,
+     "recall": 93.8,
+     "f1": 57.6
+    },
+    {
+     "conf": 0.3,
+     "found": 722,
+     "precision": 42.1,
+     "recall": 93.8,
+     "f1": 58.1
+    },
+    {
+     "conf": 0.4,
+     "found": 708,
+     "precision": 42.9,
+     "recall": 93.8,
+     "f1": 58.9
+    },
+    {
+     "conf": 0.5,
+     "found": 699,
+     "precision": 43.2,
+     "recall": 93.2,
+     "f1": 59.0
+    }
+   ]
+  },
+  "tiles2c": {
+   "sec_per_image": 16.0,
+   "at_conf_0_4": {
+    "conf": 0.4,
+    "found": 697,
+    "precision": 42.5,
+    "recall": 91.4,
+    "f1": 58.0
+   },
+   "best_f1": {
+    "conf": 0.5,
+    "found": 682,
+    "precision": 43.4,
+    "recall": 91.4,
+    "f1": 58.8
+   },
+   "sweep": [
+    {
+     "conf": 0.25,
+     "found": 725,
+     "precision": 41.4,
+     "recall": 92.6,
+     "f1": 57.2
+    },
+    {
+     "conf": 0.3,
+     "found": 718,
+     "precision": 41.5,
+     "recall": 92.0,
+     "f1": 57.2
+    },
+    {
+     "conf": 0.4,
+     "found": 697,
+     "precision": 42.5,
+     "recall": 91.4,
+     "f1": 58.0
+    },
+    {
+     "conf": 0.5,
+     "found": 682,
+     "precision": 43.4,
+     "recall": 91.4,
+     "f1": 58.8
+    }
+   ]
+  },
+  "tiles3": {
+   "sec_per_image": 43.6,
+   "at_conf_0_4": {
+    "conf": 0.4,
+    "found": 734,
+    "precision": 42.0,
+    "recall": 95.1,
+    "f1": 58.2
+   },
+   "best_f1": {
+    "conf": 0.5,
+    "found": 725,
+    "precision": 42.5,
+    "recall": 95.1,
+    "f1": 58.7
+   },
+   "sweep": [
+    {
+     "conf": 0.25,
+     "found": 766,
+     "precision": 40.3,
+     "recall": 95.4,
+     "f1": 56.7
+    },
+    {
+     "conf": 0.3,
+     "found": 754,
+     "precision": 40.8,
+     "recall": 95.1,
+     "f1": 57.1
+    },
+    {
+     "conf": 0.4,
+     "found": 734,
+     "precision": 42.0,
+     "recall": 95.1,
+     "f1": 58.2
+    },
+    {
+     "conf": 0.5,
+     "found": 725,
+     "precision": 42.5,
+     "recall": 95.1,
+     "f1": 58.7
+    }
+   ]
+  }
+ }
+}

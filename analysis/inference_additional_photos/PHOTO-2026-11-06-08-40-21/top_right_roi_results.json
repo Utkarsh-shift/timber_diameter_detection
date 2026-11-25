@@ -1,0 +1,250 @@
+{
+  "image": "C:\\Users\\utkarsh.suryaman\\Downloads\\PHOTO-2026-11-06-08-40-21.jpg",
+  "roi_px": [
+    432,
+    208,
+    900,
+    768
+  ],
+  "roi_size_px": [
+    468,
+    560
+  ],
+  "model": "TimberVision YOLOv8-L segmentation v1.0",
+  "weights": "C:\\Users\\utkarsh.suryaman\\Documents\\Paper_jk\\analysis\\timbervision\\yolov8l-1024-seg.pt",
+  "imgsz": 1280,
+  "confidence_threshold": 0.2,
+  "raw_class_counts": {
+    "cut": 28,
+    "side": 20
+  },
+  "cut_masks": [
+    {
+      "confidence": 0.962,
+      "center_px": [
+        496.2,
+        675.3
+      ],
+      "mask_points": 270
+    },
+    {
+      "confidence": 0.9559,
+      "center_px": [
+        449.3,
+        727.4
+      ],
+      "mask_points": 86
+    },
+    {
+      "confidence": 0.9447,
+      "center_px": [
+        831.3,
+        674.4
+      ],
+      "mask_points": 158
+    },
+    {
+      "confidence": 0.9433,
+      "center_px": [
+        524.2,
+        726.1
+      ],
+      "mask_points": 120
+    },
+    {
+      "confidence": 0.9358,
+      "center_px": [
+        548.7,
+        618.1
+      ],
+      "mask_points": 72
+    },
+    {
+      "confidence": 0.9355,
+      "center_px": [
+        861.2,
+        704.1
+      ],
+      "mask_points": 146
+    },
+    {
+      "confidence": 0.9301,
+      "center_px": [
+        463.5,
+        755.8
+      ],
+      "mask_points": 54
+    },
+    {
+      "confidence": 0.9284,
+      "center_px": [
+        577.8,
+        761.6
+      ],
+      "mask_points": 102
+    },
+    {
+      "confidence": 0.9246,
+      "center_px": [
+        638.7,
+        742.5
+      ],
+      "mask_points": 62
+    },
+    {
+      "confidence": 0.9179,
+      "center_px": [
+        495.1,
+        746.1
+      ],
+      "mask_points": 64
+    },
+    {
+      "confidence": 0.9004,
+      "center_px": [
+        804.1,
+        636.4
+      ],
+      "mask_points": 83
+    },
+    {
+      "confidence": 0.8963,
+      "center_px": [
+        657.4,
+        671.4
+      ],
+      "mask_points": 108
+    },
+    {
+      "confidence": 0.8836,
+      "center_px": [
+        602.6,
+        649.9
+      ],
+      "mask_points": 277
+    },
+    {
+      "confidence": 0.8813,
+      "center_px": [
+        530.8,
+        479.9
+      ],
+      "mask_points": 325
+    },
+    {
+      "confidence": 0.8615,
+      "center_px": [
+        530.3,
+        762.4
+      ],
+      "mask_points": 23
+    },
+    {
+      "confidence": 0.8446,
+      "center_px": [
+        435.9,
+        756.2
+      ],
+      "mask_points": 42
+    },
+    {
+      "confidence": 0.8382,
+      "center_px": [
+        762.0,
+        723.6
+      ],
+      "mask_points": 48
+    },
+    {
+      "confidence": 0.8322,
+      "center_px": [
+        765.8,
+        425.1
+      ],
+      "mask_points": 130
+    },
+    {
+      "confidence": 0.8106,
+      "center_px": [
+        446.1,
+        556.1
+      ],
+      "mask_points": 50
+    },
+    {
+      "confidence": 0.7868,
+      "center_px": [
+        752.5,
+        696.4
+      ],
+      "mask_points": 50
+    },
+    {
+      "confidence": 0.786,
+      "center_px": [
+        733.3,
+        404.4
+      ],
+      "mask_points": 95
+    },
+    {
+      "confidence": 0.7759,
+      "center_px": [
+        734.3,
+        742.5
+      ],
+      "mask_points": 53
+    },
+    {
+      "confidence": 0.7229,
+      "center_px": [
+        613.9,
+        714.3
+      ],
+      "mask_points": 89
+    },
+    {
+      "confidence": 0.6876,
+      "center_px": [
+        484.1,
+        753.0
+      ],
+      "mask_points": 41
+    },
+    {
+      "confidence": 0.5529,
+      "center_px": [
+        892.0,
+        731.4
+      ],
+      "mask_points": 112
+    },
+    {
+      "confidence": 0.4879,
+      "center_px": [
+        896.3,
+        743.8
+      ],
+      "mask_points": 89
+    },
+    {
+      "confidence": 0.3061,
+      "center_px": [
+        546.2,
+        715.9
+      ],
+      "mask_points": 72
+    },
+    {
+      "confidence": 0.2244,
+      "center_px": [
+        646.5,
+        715.6
+      ],
+      "mask_points": 144
+    }
+  ],
+  "inference_seconds": 6.54,
+  "annotated_image": "C:\\Users\\utkarsh.suryaman\\Documents\\Paper_jk\\analysis\\inference_additional_photos\\PHOTO-2026-11-06-08-40-21\\top_right_roi_seg_imgsz1280_conf020.jpg",
+  "warning": "ROI candidates require visual review; crop inference does not by itself prove improved accuracy."
+}

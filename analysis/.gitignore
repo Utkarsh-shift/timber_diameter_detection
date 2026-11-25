@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.venv-tv/
+timbervision/*.pt
+data/timbervision/
+data/timbervision_cut_yolo/
+runs_yolo26/

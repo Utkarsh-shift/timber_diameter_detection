@@ -1,0 +1,12 @@
+{
+ "summary": {
+  "profile": "timbervision-v1.0-seg",
+  "images": 146,
+  "gt_boxes": 478,
+  "precision": 55.9,
+  "recall": 89.1,
+  "f1": 68.7,
+  "mean_iou": 82.3,
+  "conf": 0.4
+ }
+}

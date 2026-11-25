@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary":"#ffffff","inverse-primary":"#a6cfc1","secondary-fixed":"#b5efd7","primary-container":"#173f35","tertiary-fixed":"#cbef90","on-error-container":"#93000a","error-container":"#ffdad6","surface-container-highest":"#d6e6dd","surface-bright":"#edfdf3","surface-variant":"#d6e6dd","on-surface-variant":"#414845","on-primary-fixed":"#002019","on-primary":"#ffffff","secondary-container":"#b5efd7","on-tertiary-fixed":"#121f00","on-primary-fixed-variant":"#274e43","tertiary-fixed-dim":"#b0d277","primary":"#002920","surface-container":"#e2f2e8","on-tertiary-fixed-variant":"#344e00","on-secondary-fixed-variant":"#17503e","on-error":"#ffffff","surface-container-lowest":"#ffffff","tertiary-container":"#293f00","background":"#edfdf3","surface-tint":"#3f665a","on-background":"#111e19","on-secondary-fixed":"#002117","surface-dim":"#ceded4","inverse-on-surface":"#e5f5eb","surface-container-low":"#e7f7ee","on-surface":"#111e19","primary-fixed-dim":"#a6cfc1","on-tertiary":"#ffffff","error":"#ba1a1a","outline":"#717975","on-primary-container":"#82aa9d","primary-fixed":"#c1ecdd","on-secondary-container":"#386e5b","surface-container-high":"#dcece2","inverse-surface":"#26332d","on-tertiary-container":"#8cad56","secondary-fixed-dim":"#9ad2bb","outline-variant":"#c0c8c4","surface":"#edfdf3","secondary":"#326855","tertiary":"#182800"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"0.75rem","margin-mobile":"0.75rem","margin":"1.5rem","space-xs":"0.25rem","gutter-dense":"0.5rem","gutter":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","space-lg":"1rem"},"fontFamily":{"title-sm":["Inter"],"label-dense":["Inter"],"label-caption":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"],"label-numeric":["JetBrains Mono"],"headline-xl-mobile":["Inter"],"headline-lg":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"headline-xl":["Inter"],"label-code":["JetBrains Mono"]},"fontSize":{"title-sm":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-dense":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-caption":["10px",{"lineHeight":"12px","letterSpacing":"0.02em","fontWeight":"500"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-numeric":["12px",{"lineHeight":"16px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg-mobile":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-code":["11px",{"lineHeight":"14px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low flex flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container"><img alt="Pine OS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UzQXmfeY0ZgHp5KWNF3TcfswDWXortBjXfih0H8wJxIYAcOo_pHeQ1MekcVoloEv04-1whOHD-f78LEwLhIYOJXvA6352C46mJM592viYCD09QZdfJxdlQycRqr7yH5M_4P1ueUpCD-e2NJI5GEiYCTYYvkX8Z6ni4lEGZG1BkVP6WSRhJHVo_8ohTkpxQ_eR7TPi5Hf3NhyLenEJAG8zr891JtcwN837NSAkqtBRzdw"/><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md font-bold tracking-tight text-primary leading-tight truncate">PINE OS</span><span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-code text-label-code">v3.4</span></div><span class="font-label-caption text-label-caption text-on-surface-variant truncate uppercase tracking-wider">Industrial Wood Intelligence</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">Core Operations</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Overview</span></div><span class="font-label-code text-label-code text-on-surface-variant">01</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="intake" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span>Truck Intake &amp; Queue</span></div><span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-bold">12</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="studio" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">view_in_ar</span><span>AI Measurement Studio</span></div><span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code uppercase tracking-wider font-bold animate-pulse">LIVE CV</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="history" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">history</span><span>Measurement History</span></div></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">Intelligence &amp; Procurement</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="quality" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Quality Assessment</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="suppliers" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">verified</span><span>Suppliers &amp; Compliance</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="procurement" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">price_check</span><span>Procurement Intelligence</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Analytics &amp; Reports</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="disputes" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">gavel</span><span>Dispute Management</span></div><span class="px-1.5 py-0.2 rounded bg-error-container text-on-error-container font-label-code text-label-code font-bold">2</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">AI &amp; Infrastructure</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="calibration" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">tune</span><span>Camera &amp; Calibration</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="model-monitor" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">monitoring</span><span>AI Model Monitoring</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="integrations" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">hub</span><span>ERP &amp; Weighbridge</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings &amp; Admin</span></div></a></nav></div></div><div class="p-space-sm bg-surface-container space-y-space-xs"><button class="w-full flex items-center justify-between px-space-sm py-2 rounded bg-primary-container text-on-primary hover:bg-primary transition-colors" type="button"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed">psychology</span><span class="font-title-sm text-title-sm text-on-primary">Ask Pine OS</span></div><span class="material-symbols-outlined text-[16px] text-inverse-primary">arrow_forward</span></button><div class="px-space-sm py-1.5 rounded bg-surface-container-high flex items-center justify-between"><div class="flex items-center gap-1.5 min-w-0"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-caption text-label-caption text-on-surface truncate">Edge Node #08</span></div><span class="font-label-code text-label-code text-secondary font-semibold">14ms</span></div><div class="flex items-center gap-space-xs p-1.5 rounded bg-surface-container-lowest"><img alt="Marcus Lindqvist" class="w-8 h-8 rounded object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPIUyV7Rx3jw-mAhXLV3a3W5JI2fKW4RYifCu34JN1ecDHzg_qTKS3zBfd7RSxOqfo6oZ8RTHWXfPR1BoKqU_nUPs4OuEw3sYf5FkmCHba5vVYmBrwt8k1zHAJ24O6juRzfggLjtvNkAFjqX-jHVaYqptdV7OoGwngr-m1CYW3Fp_C1lR8mEsmQ3rrfpTPC7s1SVgfAw3_pWHxqyhaU7OgY3X9wclIUrzRShB-lcsX"/><div class="min-w-0 flex-1"><div class="font-title-sm text-title-sm text-on-surface truncate leading-none">Marcus Lindqvist</div><div class="font-label-caption text-label-caption text-on-surface-variant truncate mt-0.5">VP Operations</div></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">more_vert</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-md z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-shrink-0"><div class="flex items-center gap-space-xs px-2.5 py-1.5 bg-surface-container-high rounded cursor-pointer hover:bg-surface-container-highest transition-colors"><span class="material-symbols-outlined text-[18px] text-primary">factory</span><div class="flex flex-col text-left"><span class="font-label-caption text-label-caption text-on-surface-variant uppercase leading-none">Selected Mill</span><span class="font-title-sm text-title-sm text-on-surface leading-tight font-semibold">Mill 04 - Oulu Pulp &amp; Paper Complex</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant ml-1">expand_more</span></div><div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container-high"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-code text-label-code text-secondary font-medium">CV Pipeline: 60 FPS • Calibrated</span></div><div class="hidden 2xl:flex items-center gap-1.5 px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant"><span class="material-symbols-outlined text-[14px]">sensors</span><span class="font-label-code text-label-code font-semibold uppercase">Gate Intake Online</span></div></div><div class="flex-1 max-w-xl mx-space-sm hidden md:block"><div class="relative"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-9 pl-9 pr-14 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search trucks, log IDs, PO#, suppliers, certificates..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-code text-label-code">Ctrl+K</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="hidden lg:flex items-center gap-1 px-2 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-code text-label-code font-semibold"><span class="material-symbols-outlined text-[14px]">token</span><span>DEMO MODE</span></div><div class="flex items-center gap-1 px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface font-label-numeric text-label-numeric"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span><span class="hidden sm:inline">Today: Oct 24, 2024</span></div><div class="relative"><button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-error text-on-error font-label-code text-[9px] flex items-center justify-center font-bold">3</span></div><button class="w-8 h-8 rounded hidden sm:flex items-center justify-center bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Industrial Command Strip / Workstation Context -->
+<section class="bg-surface-container-low px-space-md py-space-sm shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="flex items-center gap-space-xs bg-surface-container px-2.5 py-1.5 rounded">
+<span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-primary font-bold tracking-tight">TRK-9841</span>
+<span class="font-label-code text-label-code text-on-surface-variant">SWE-419-KL</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-bold">GATE G-03</span>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface-variant truncate">Nordic Timber Co • Pine Pulpwood Grade 1 • Batch #PB-2024-884</span>
+</div>
+</div>
+<div class="hidden xl:flex items-center gap-space-sm bg-surface-container px-2.5 py-1.5 rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">videocam</span>
+<div class="flex flex-col font-label-code text-label-code">
+<span class="text-on-surface font-semibold">Gantry Multi-Spectrum Cam 01</span>
+<span class="text-on-surface-variant">Calibrated 08:00 AM • Scale 0.412 mm/px</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high px-2.5 py-1.5 rounded">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code uppercase tracking-wider text-secondary font-bold">Stage 09: HITL Review &amp; Validation</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">AI Pass: 288 Detections • 98.6% Confidence</span>
+</div>
+</div>
+</div>
+<!-- Action Cluster -->
+<div class="flex items-center flex-wrap gap-1.5">
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded bg-surface-container-highest text-primary hover:bg-surface-container font-title-sm text-title-sm transition-colors" id="btn-recalc">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Recalculate</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded bg-surface-container-highest text-primary hover:bg-surface-container font-title-sm text-title-sm transition-colors" id="btn-add-log">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Add Missed</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded bg-error-container text-on-error-container hover:bg-surface-container-highest font-title-sm text-title-sm transition-colors" id="btn-flag-dispute">
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+<span>Flag Dispute</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded bg-surface-container-highest text-primary hover:bg-surface-container font-title-sm text-title-sm transition-colors" id="btn-export-data">
+<span class="material-symbols-outlined text-[16px]">ios_share</span>
+<span>Export GeoJSON</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-title-sm text-title-sm transition-colors shadow-sm" id="btn-approve">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">verified</span>
+<span>Approve &amp; Commit (ERP)</span>
+</button>
+</div>
+</div>
+<!-- 10-Step Pipeline Visual Progress Ribbon -->
+<div class="mt-2.5 pt-2 bg-surface-container-lowest rounded p-2 overflow-x-auto shadow-sm">
+<div class="flex items-center justify-between min-w-[900px] text-center gap-1">
+<div class="flex-1 flex items-center gap-1 px-1.5 py-1 rounded bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="font-label-code text-label-code font-bold uppercase truncate">1. Ingest</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<div class="flex-1 flex items-center gap-1 px-1.5 py-1 rounded bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="font-label-code text-label-code font-bold uppercase truncate">2. Quality QA</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<div class="flex-1 flex items-center gap-1 px-1.5 py-1 rounded bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="font-label-code text-label-code font-bold uppercase truncate">3. Lens Unwarp</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<div class="flex-1 flex items-center gap-1 px-1.5 py-1 rounded bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="font-label-code text-label-code font-bold uppercase truncate">4. YOLOv8-v4.2</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<div class="flex-1 flex items-center gap-1 px-1.5 py-1 rounded bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="font-label-code text-label-code font-bold uppercase truncate">5. Mask Poly</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<div class="flex-1 flex items-center gap-1 px-1.5 py-1 rounded bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="font-label-code text-label-code font-bold uppercase truncate">6. Ellipse Fit</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<div class="flex-1 flex items-center gap-1 px-1.5 py-1 rounded bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="font-label-code text-label-code font-bold uppercase truncate">7. Metric Scale</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<div class="flex-1 flex items-center gap-1 px-1.5 py-1 rounded bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="font-label-code text-label-code font-bold uppercase truncate">8. Anomaly Flag</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<div class="flex-1 flex items-center gap-1 px-2 py-1 rounded bg-primary text-on-primary shadow-sm ring-1 ring-tertiary-fixed">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">pan_tool_alt</span>
+<span class="font-label-code text-label-code font-bold uppercase truncate text-tertiary-fixed">9. HITL Review</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<div class="flex-1 flex items-center gap-1 px-1.5 py-1 rounded bg-surface-container text-on-surface-variant opacity-60">
+<span class="material-symbols-outlined text-[14px]">send_and_archive</span>
+<span class="font-label-code text-label-code font-semibold uppercase truncate">10. ERP Sync</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Centerpiece Layout: 65% Interactive CV Annotation Canvas + 35% Inspector Telemetry -->
+<div class="p-space-md grid grid-cols-1 2xl:grid-cols-12 gap-space-md">
+<!-- LEFT: Computer Vision Interactive Annotation Studio (65%) -->
+<div class="2xl:col-span-8 flex flex-col gap-space-sm">
+<!-- Canvas Control Deck Toolbar -->
+<div class="bg-surface-container-lowest p-2 rounded flex flex-wrap items-center justify-between gap-2 shadow-sm">
+<div class="flex items-center flex-wrap gap-1">
+<div class="flex items-center bg-surface-container rounded p-0.5">
+<button class="w-7 h-7 flex items-center justify-center rounded hover:bg-surface-container-high text-on-surface" id="zoom-out" title="Zoom Out">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="px-2 font-label-code text-label-code font-bold text-primary" id="zoom-level">125%</span>
+<button class="w-7 h-7 flex items-center justify-center rounded hover:bg-surface-container-high text-on-surface" id="zoom-in" title="Zoom In">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center rounded hover:bg-surface-container-high text-on-surface" id="zoom-reset" title="Fit to Canvas">
+<span class="material-symbols-outlined text-[16px]">fit_screen</span>
+</button>
+</div>
+<div class="h-5 w-px bg-surface-container-highest mx-0.5"></div>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-code text-label-code flex items-center gap-1 shadow-sm" id="tool-pan">
+<span class="material-symbols-outlined text-[15px]">pan_tool</span>
+<span>Pan [H]</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-code text-label-code flex items-center gap-1" id="tool-select">
+<span class="material-symbols-outlined text-[15px]">arrow_selector_tool</span>
+<span>Inspect [V]</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-code text-label-code flex items-center gap-1" id="tool-poly">
+<span class="material-symbols-outlined text-[15px]">polyline</span>
+<span>Polygon Refine</span>
+</button>
+<div class="h-5 w-px bg-surface-container-highest mx-0.5"></div>
+<!-- Feature Toggles -->
+<button class="px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-label-code text-label-code font-bold flex items-center gap-1" id="toggle-masks">
+<span class="material-symbols-outlined text-[15px]">layers</span>
+<span>Masks: ON</span>
+</button>
+<button class="px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-label-code text-label-code font-bold flex items-center gap-1" id="toggle-axes">
+<span class="material-symbols-outlined text-[15px]">straighten</span>
+<span>Axes: ON</span>
+</button>
+<button class="px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-label-code text-label-code font-bold flex items-center gap-1" id="toggle-labels">
+<span class="material-symbols-outlined text-[15px]">label</span>
+<span>IDs: ON</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<!-- Metric Scale Bar -->
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container text-on-surface font-label-code text-label-code">
+<span class="material-symbols-outlined text-[14px] text-secondary">square_foot</span>
+<span>Scale: 200 mm</span>
+<div class="w-12 h-1.5 bg-primary relative rounded-sm">
+<span class="absolute -top-1 left-0 w-0.5 h-3.5 bg-primary"></span>
+<span class="absolute -top-1 right-0 w-0.5 h-3.5 bg-primary"></span>
+</div>
+<span class="text-on-surface-variant">(485.4 px)</span>
+</div>
+</div>
+</div>
+<!-- CV Visualizer Viewport Canvas (Hardware Accelerated Style) -->
+<div class="relative bg-primary overflow-hidden rounded shadow-md group select-none min-h-[560px] flex items-center justify-center">
+<!-- Live Stream Industrial Overlay HUD -->
+<div class="absolute top-3 left-3 z-30 flex flex-wrap items-center gap-2 pointer-events-none">
+<div class="px-2.5 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-md shadow-sm flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span>
+</span>
+<span class="font-label-code text-label-code text-primary font-bold">REC [60 FPS] • GANTRY CAM-01 RAW SENSOR STREAM</span>
+</div>
+<div class="px-2 py-1 rounded bg-primary-container/85 backdrop-blur-md text-on-primary font-label-code text-label-code flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">tune</span>
+<span>k1=-0.04 | k2=0.001 | fx=3204.1 | fy=3202.8</span>
+</div>
+</div>
+<div class="absolute top-3 right-3 z-30 pointer-events-none flex flex-col items-end gap-1.5">
+<div class="px-2.5 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-md shadow-sm font-label-code text-label-code text-primary">
+<span class="font-bold text-secondary">YOLOv8-Timber-v4.2</span> • mAP@50: 97.4% • Latency: 16.2ms
+          </div>
+<div class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code font-bold">
+            DETECTION COUNT: 288/288 LOGS
+          </div>
+</div>
+<!-- Cross-section Timber Truck Real Graphic Viewport -->
+<div class="relative w-full h-[580px] bg-cover bg-center overflow-hidden cursor-crosshair" data-alt="Close-up high-resolution industrial overhead computer vision capture of stacked raw pine timber logs loaded on a heavy flatbed logging truck, round cut log ends facing camera with natural tree rings, deep forest green equipment shadows and bright warehouse lighting." id="cv-viewport" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7PKHW17IYpvCK3rDhRVnLIQcqyIbAXp3Nj3wZ_jX3VYNiSdQ51OTskZjkgMhoBNXIFtDFZtsQTZRThNrgbS8Zgtpolo58psW1ozxAQUm_sIwJ_SHpsZ3odeJO7bUHtaoCCJUplpjkWWKIfkl65WT3S2EmxOkSyRSU5c0LICOA6NNpTXsAvWa1xlNhfxaQFkdsaB9wZQt7yZixhVPPAXRucbjZfJ487W6KdqUdcfU-')">
+<!-- Background dark vignette gradient for industrial contrast -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/40 pointer-events-none"></div>
+<!-- SVG Visual Overlays: Computer Vision Bounding Boxes, Ellipse Fits, Major/Minor Axes -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" id="cv-svg-layer" preserveaspectratio="none" viewbox="0 0 1000 600">
+<defs>
+<!-- Mask Glow Pattern -->
+<filter height="140%" id="ai-glow" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+</defs>
+<!-- Grid Overlay Lines for SCADA aesthetic -->
+<path d="M 0,150 L 1000,150 M 0,300 L 1000,300 M 0,450 L 1000,450 M 250,0 L 250,600 M 500,0 L 500,600 M 750,0 L 750,600" stroke="#b5efd7" stroke-dasharray="4,4" stroke-opacity="0.15" stroke-width="0.5"></path>
+<!-- Group 1: Background logs (represented with segmentation rings) -->
+<!-- Log 001 -->
+<g class="cv-log-overlay" data-id="LOG-001">
+<ellipse cx="220" cy="180" fill="#cbef90" fill-opacity="0.16" rx="58" ry="52" stroke="#cbef90" stroke-width="1.8"></ellipse>
+<line class="cv-axis" stroke="#ffffff" stroke-dasharray="2,2" stroke-width="1" x1="162" x2="278" y1="180" y2="180"></line>
+<line class="cv-axis" stroke="#cbef90" stroke-dasharray="2,2" stroke-width="1" x1="220" x2="220" y1="128" y2="232"></line>
+</g>
+<!-- Log 002 -->
+<g class="cv-log-overlay" data-id="LOG-002">
+<ellipse cx="360" cy="170" fill="#cbef90" fill-opacity="0.16" rx="54" ry="50" stroke="#cbef90" stroke-width="1.8"></ellipse>
+<line class="cv-axis" stroke="#ffffff" stroke-dasharray="2,2" stroke-width="1" x1="306" x2="414" y1="170" y2="170"></line>
+<line class="cv-axis" stroke="#cbef90" stroke-dasharray="2,2" stroke-width="1" x1="360" x2="360" y1="120" y2="220"></line>
+</g>
+<!-- Log 015 -->
+<g class="cv-log-overlay" data-id="LOG-015">
+<ellipse cx="490" cy="185" fill="#cbef90" fill-opacity="0.16" rx="64" ry="58" stroke="#cbef90" stroke-width="1.8"></ellipse>
+<line class="cv-axis" stroke="#ffffff" stroke-dasharray="2,2" stroke-width="1" x1="426" x2="554" y1="185" y2="185"></line>
+<line class="cv-axis" stroke="#cbef90" stroke-dasharray="2,2" stroke-width="1" x1="490" x2="490" y1="127" y2="243"></line>
+</g>
+<!-- Log 021 -->
+<g class="cv-log-overlay" data-id="LOG-021">
+<ellipse cx="630" cy="190" fill="#cbef90" fill-opacity="0.16" rx="52" ry="48" stroke="#cbef90" stroke-width="1.8"></ellipse>
+<line class="cv-axis" stroke="#ffffff" stroke-dasharray="2,2" stroke-width="1" x1="578" x2="682" y1="190" y2="190"></line>
+<line class="cv-axis" stroke="#cbef90" stroke-dasharray="2,2" stroke-width="1" x1="630" x2="630" y1="142" y2="238"></line>
+</g>
+<!-- Log 033 -->
+<g class="cv-log-overlay" data-id="LOG-033">
+<ellipse cx="280" cy="300" fill="#cbef90" fill-opacity="0.16" rx="60" ry="56" stroke="#cbef90" stroke-width="1.8"></ellipse>
+<line class="cv-axis" stroke="#ffffff" stroke-dasharray="2,2" stroke-width="1" x1="220" x2="340" y1="300" y2="300"></line>
+<line class="cv-axis" stroke="#cbef90" stroke-dasharray="2,2" stroke-width="1" x1="280" x2="280" y1="244" y2="356"></line>
+</g>
+<!-- Log 042 (FLAGGED SUB-GAUGE ANOMALY) - Center Spotlight -->
+<g class="cv-log-overlay cursor-pointer" data-id="LOG-042">
+<!-- Animated Pulse Ring -->
+<ellipse class="animate-pulse" cx="440" cy="310" fill="#ffdad6" fill-opacity="0.25" rx="42" ry="38" stroke="#ba1a1a" stroke-width="2.5"></ellipse>
+<!-- Bounding Box Reticle -->
+<rect fill="none" height="90" stroke="#ba1a1a" stroke-dasharray="3,3" stroke-width="1" width="100" x="390" y="265"></rect>
+<!-- Corner Ticks -->
+<path d="M 390,277 L 390,265 L 402,265 M 478,265 L 490,265 L 490,277 M 390,343 L 390,355 L 402,355 M 478,355 L 490,355 L 490,343" fill="none" stroke="#ba1a1a" stroke-width="2"></path>
+<!-- Major & Minor Cross-hair axes -->
+<line class="cv-axis" stroke="#ffffff" stroke-width="1.5" x1="398" x2="482" y1="310" y2="310"></line>
+<line class="cv-axis" stroke="#ffdad6" stroke-width="1.5" x1="440" x2="440" y1="272" y2="348"></line>
+<!-- Center Reticle Point -->
+<circle cx="440" cy="310" fill="#ba1a1a" r="3"></circle>
+</g>
+<!-- Log 104 -->
+<g class="cv-log-overlay" data-id="LOG-104">
+<ellipse cx="585" cy="320" fill="#cbef90" fill-opacity="0.16" rx="66" ry="60" stroke="#cbef90" stroke-width="1.8"></ellipse>
+<line class="cv-axis" stroke="#ffffff" stroke-dasharray="2,2" stroke-width="1" x1="519" x2="651" y1="320" y2="320"></line>
+<line class="cv-axis" stroke="#cbef90" stroke-dasharray="2,2" stroke-width="1" x1="585" x2="585" y1="260" y2="380"></line>
+</g>
+<!-- Log 118 -->
+<g class="cv-log-overlay" data-id="LOG-118">
+<ellipse cx="730" cy="315" fill="#cbef90" fill-opacity="0.16" rx="55" ry="52" stroke="#cbef90" stroke-width="1.8"></ellipse>
+<line class="cv-axis" stroke="#ffffff" stroke-dasharray="2,2" stroke-width="1" x1="675" x2="785" y1="315" y2="315"></line>
+<line class="cv-axis" stroke="#cbef90" stroke-dasharray="2,2" stroke-width="1" x1="730" x2="730" y1="263" y2="367"></line>
+</g>
+<!-- Log 202 -->
+<g class="cv-log-overlay" data-id="LOG-202">
+<ellipse cx="340" cy="440" fill="#cbef90" fill-opacity="0.16" rx="62" ry="58" stroke="#cbef90" stroke-width="1.8"></ellipse>
+<line class="cv-axis" stroke="#ffffff" stroke-dasharray="2,2" stroke-width="1" x1="278" x2="402" y1="440" y2="440"></line>
+<line class="cv-axis" stroke="#cbef90" stroke-dasharray="2,2" stroke-width="1" x1="340" x2="340" y1="382" y2="498"></line>
+</g>
+<!-- Log 208 -->
+<g class="cv-log-overlay" data-id="LOG-208">
+<ellipse cx="490" cy="445" fill="#cbef90" fill-opacity="0.16" rx="59" ry="55" stroke="#cbef90" stroke-width="1.8"></ellipse>
+<line class="cv-axis" stroke="#ffffff" stroke-dasharray="2,2" stroke-width="1" x1="431" x2="549" y1="445" y2="445"></line>
+<line class="cv-axis" stroke="#cbef90" stroke-dasharray="2,2" stroke-width="1" x1="490" x2="490" y1="390" y2="500"></line>
+</g>
+<!-- Log 214 -->
+<g class="cv-log-overlay" data-id="LOG-214">
+<ellipse cx="640" cy="440" fill="#cbef90" fill-opacity="0.16" rx="57" ry="53" stroke="#cbef90" stroke-width="1.8"></ellipse>
+<line class="cv-axis" stroke="#ffffff" stroke-dasharray="2,2" stroke-width="1" x1="583" x2="697" y1="440" y2="440"></line>
+<line class="cv-axis" stroke="#cbef90" stroke-dasharray="2,2" stroke-width="1" x1="640" x2="640" y1="387" y2="493"></line>
+</g>
+</svg>
+<!-- Floating HTML HUD Badges pinned to log coordinates -->
+<div class="cv-label absolute left-[200px] top-[140px] px-1.5 py-0.5 rounded bg-primary/90 text-on-primary font-label-code text-[10px] tracking-tight pointer-events-none">
+            LOG-001 <span class="text-tertiary-fixed font-bold">134mm</span> | 99%
+          </div>
+<div class="cv-label absolute left-[340px] top-[130px] px-1.5 py-0.5 rounded bg-primary/90 text-on-primary font-label-code text-[10px] tracking-tight pointer-events-none">
+            LOG-002 <span class="text-tertiary-fixed font-bold">128mm</span> | 98%
+          </div>
+<!-- Highlighted Anomaly Label: LOG-042 -->
+<div class="cv-label absolute left-[400px] top-[240px] z-20 px-2 py-1 rounded bg-error text-on-error font-label-code text-[11px] font-bold shadow-md pointer-events-none flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+<span>LOG-042: 88mm ⚠️ UNDER-SPEC (&lt;90mm)</span>
+</div>
+<div class="cv-label absolute left-[565px] top-[275px] px-1.5 py-0.5 rounded bg-primary/90 text-on-primary font-label-code text-[10px] tracking-tight pointer-events-none">
+            LOG-104 <span class="text-tertiary-fixed font-bold">142mm</span> | 97%
+          </div>
+<div class="cv-label absolute left-[470px] top-[405px] px-1.5 py-0.5 rounded bg-primary/90 text-on-primary font-label-code text-[10px] tracking-tight pointer-events-none">
+            LOG-208 <span class="text-tertiary-fixed font-bold">116mm</span> | 99%
+          </div>
+<!-- Active Calibration Watermark / Target Overlay -->
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1.5 rounded shadow-sm text-on-surface font-label-code text-label-code">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-bold">Metric Calibration:</span>
+<span class="text-secondary font-semibold">0.412 mm/px</span>
+<span class="text-on-surface-variant">• Homography Matrix: Validated (RMSE 0.08px)</span>
+</div>
+</div>
+<!-- Right Bottom Quick Filter Chips -->
+<div class="absolute bottom-3 right-3 flex items-center gap-1.5 bg-surface-container-lowest/90 backdrop-blur-md p-1 rounded shadow-sm">
+<span class="font-label-caption text-label-caption text-on-surface-variant px-1 font-semibold uppercase">Color Band:</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code font-bold">Compliant (274)</span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-code text-label-code font-bold">Under-spec (11)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-code text-label-code font-bold">Ovality &gt;1.2 (3)</span>
+</div>
+</div>
+</div>
+<!-- Quick Canvas Calibration & Traceability Footnote Strip -->
+<div class="bg-surface-container-low px-space-sm py-2 rounded flex flex-wrap items-center justify-between text-on-surface-variant font-label-code text-label-code shadow-sm">
+<div class="flex items-center gap-3">
+<span>Camera Rig: <strong class="text-on-surface">FLIR Ladybug6 360/Stereo</strong></span>
+<span>•</span>
+<span>Exposure: <strong class="text-on-surface">1/1250s ISO 200</strong></span>
+<span>•</span>
+<span>Radial Distortion: <strong class="text-on-surface">Corrected (k1=-0.04)</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>EUDR Compliance ID: <span class="font-semibold text-primary">FI-OUL-2024-LOGSCAN-7719</span></span>
+</div>
+</div>
+</div>
+<!-- RIGHT: Inspector Telemetry & Aggregates Workspace (35%) -->
+<div class="2xl:col-span-4 flex flex-col gap-space-sm">
+<!-- Tab Control Strip -->
+<div class="bg-surface-container-lowest p-1 rounded shadow-sm flex items-center gap-1">
+<button class="flex-1 py-1.5 px-2 rounded bg-primary text-on-primary font-title-sm text-title-sm font-semibold flex items-center justify-center gap-1 shadow-sm transition-colors" id="tab-log">
+<span class="material-symbols-outlined text-[16px]">biotech</span>
+<span>Selected Log (LOG-042)</span>
+</button>
+<button class="flex-1 py-1.5 px-2 rounded hover:bg-surface-container text-on-surface font-title-sm text-title-sm font-medium flex items-center justify-center gap-1 transition-colors" id="tab-truck">
+<span class="material-symbols-outlined text-[16px]">bar_chart</span>
+<span>Truck Aggregates</span>
+</button>
+<button class="flex-1 py-1.5 px-2 rounded hover:bg-surface-container text-on-surface font-title-sm text-title-sm font-medium flex items-center justify-center gap-1 transition-colors" id="tab-qa">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Quality Rules</span>
+</button>
+</div>
+<!-- Tab Content 1: Selected Log Deep-Dive Card (LOG-042) -->
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm flex flex-col gap-space-sm" id="panel-selected-log">
+<!-- Log Identification Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-16 h-16 rounded bg-surface-container-highest flex items-center justify-center overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Macro circular cross section inspection photo cutout of a pine timber log end showing dense growth rings and bark boundary against dark measurement studio backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaF4BXSv7ltK12VttG-D6zBbAna3s8T75B_tBnL1thtEWr51_rpYYnW9lWOzlljY1oPBQ2YfWkAhaYn_j7HlGNKhkmhU527KeZG0l89ttTuAMY2WR5bYBKgbxi-N7O2adJK0y6fdLMeixMUagukSIV7uM2PeB7SvnMb7cMqoAuWQ_9IJh_CztKYcLfMNPh-5VxF0xKJ1DvYIne-BE4CqIL8FT--O6gY0f_GJPB2BiA"/>
+<div class="absolute inset-0 ring-2 ring-error rounded pointer-events-none"></div>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md font-bold text-primary">LOG-042</span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-code text-label-code font-bold uppercase">Sub-Gauge Flag</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cluster Zone: Center-Mid Bunk • Detection ID #4289</p>
+</div>
+</div>
+<div class="text-right font-label-numeric text-label-numeric">
+<div class="text-on-surface-variant font-label-caption text-label-caption uppercase">AI Confidence</div>
+<div class="text-primary font-bold text-title-sm">94.2%</div>
+</div>
+</div>
+<!-- Metric Measurements Grid -->
+<div class="grid grid-cols-3 gap-2 bg-surface-container-low p-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase font-semibold">Major Axis</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md font-bold text-primary">91.2</span>
+<span class="font-label-code text-label-code text-on-surface-variant">mm</span>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface-variant">221.4 px</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase font-semibold">Minor Axis</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md font-bold text-primary">84.8</span>
+<span class="font-label-code text-label-code text-on-surface-variant">mm</span>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface-variant">205.8 px</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase font-semibold">Eq. Diameter</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md font-bold text-error">88.0</span>
+<span class="font-label-code text-label-code text-error">mm</span>
+</div>
+<span class="font-label-caption text-label-caption text-error font-medium">Under Target</span>
+</div>
+</div>
+<!-- Geometric Telemetry Matrix -->
+<div class="grid grid-cols-2 gap-2 text-on-surface font-body-sm text-body-sm">
+<div class="flex justify-between items-center p-2 rounded bg-surface-container">
+<span class="text-on-surface-variant">Cross-Section Area</span>
+<span class="font-label-numeric text-label-numeric font-bold">60.8 cm²</span>
+</div>
+<div class="flex justify-between items-center p-2 rounded bg-surface-container">
+<span class="text-on-surface-variant">Ovality Ratio (A/B)</span>
+<span class="font-label-numeric text-label-numeric font-bold">1.07 <span class="text-secondary font-normal">(Normal)</span></span>
+</div>
+<div class="flex justify-between items-center p-2 rounded bg-surface-container">
+<span class="text-on-surface-variant">Visibility Score</span>
+<span class="font-label-numeric text-label-numeric font-bold">100% (Unoccluded)</span>
+</div>
+<div class="flex justify-between items-center p-2 rounded bg-surface-container">
+<span class="text-on-surface-variant">Bark Inclusion Ratio</span>
+<span class="font-label-numeric text-label-numeric font-bold">2.1%</span>
+</div>
+</div>
+<!-- Anomaly Warning Box -->
+<div class="p-2.5 rounded bg-error-container text-on-error-container flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-error flex-shrink-0 mt-0.5">report_problem</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-bold">Tolerance Breach: Sub-gauge Log</span>
+<span class="font-body-sm text-body-sm mt-0.5">
+              Contract spec requires minimum <strong>90.0 mm</strong> for Grade 1 Pine Pulpwood. This log measures <strong>88.0 mm (-2.0 mm variance)</strong>.
+            </span>
+</div>
+</div>
+<!-- Human-in-the-Loop Operator Override Section -->
+<div class="bg-surface-container p-space-sm rounded flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-primary font-bold">Inspector Manual Adjustment</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase">Operator ID: ML-819</span>
+</div>
+<div class="grid grid-cols-2 gap-1.5">
+<button class="py-1 px-2 rounded bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-code text-label-code flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">open_with</span>
+<span>Nudge Ellipse (±1px)</span>
+</button>
+<button class="py-1 px-2 rounded bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-code text-label-code flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>Diameter (±1mm)</span>
+</button>
+<button class="py-1 px-2 rounded bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-code text-label-code flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">crop_free</span>
+<span>Exclude Bark Ring</span>
+</button>
+<button class="py-1 px-2 rounded bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-code text-label-code flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">delete_outline</span>
+<span>Mark False Positive</span>
+</button>
+</div>
+<div class="flex flex-col gap-1 mt-1">
+<label class="font-label-caption text-label-caption text-on-surface-variant uppercase font-semibold">Audit Override Reason</label>
+<input class="w-full h-8 px-2.5 bg-surface-container-lowest rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none" placeholder="e.g. Oblique saw cut accounted; recalculated along normal plane" type="text"/>
+</div>
+<div class="flex justify-end gap-2 mt-1">
+<button class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-title-sm text-title-sm hover:bg-surface-container-highest transition-colors">
+              Reset AI Fit
+            </button>
+<button class="px-3 py-1 rounded bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-container transition-colors shadow-sm">
+              Commit Override
+            </button>
+</div>
+</div>
+</div>
+<!-- Tab Content 2: Truck Aggregate Telemetry Card -->
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm flex flex-col gap-space-sm" id="panel-truck-aggregates">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">analytics</span>
+<span class="font-title-sm text-title-sm font-bold text-primary">Intake Truck Aggregates</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-bold">288 TOTAL LOGS</span>
+</div>
+<!-- Metrics Overview Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+<div class="p-2 rounded bg-surface-container flex flex-col">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase">Mean Diam</span>
+<div class="flex items-baseline gap-0.5 mt-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">114.5</span>
+<span class="font-label-code text-label-code text-on-surface-variant">mm</span>
+</div>
+<span class="font-label-caption text-label-caption text-error mt-0.5">PO: 120 ±5mm (Low)</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex flex-col">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase">Median Diam</span>
+<div class="flex items-baseline gap-0.5 mt-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">115.0</span>
+<span class="font-label-code text-label-code text-on-surface-variant">mm</span>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-0.5">StdDev: 12.8 mm</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex flex-col">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase">Min / Max</span>
+<div class="flex items-baseline gap-0.5 mt-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">76 / 154</span>
+<span class="font-label-code text-label-code text-on-surface-variant">mm</span>
+</div>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-0.5">Spread: 77.9 mm</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex flex-col">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase">Solid Wood Area</span>
+<div class="flex items-baseline gap-0.5 mt-1">
+<span class="font-headline-md text-headline-md font-bold text-secondary">3.12</span>
+<span class="font-label-code text-label-code text-on-surface-variant">m²</span>
+</div>
+<span class="font-label-caption text-label-caption text-secondary mt-0.5">Est. Solid: 68.4%</span>
+</div>
+</div>
+<!-- Inline Data Visualizations: Diameter Distribution Histogram & Ellipse Aspect Ratio Scatter -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+<!-- Histogram / Frequency Bar Chart (SVG, <2KB) -->
+<div class="p-2 rounded bg-surface-container-low flex flex-col">
+<div class="flex items-center justify-between text-on-surface mb-1.5">
+<span class="font-label-caption text-label-caption uppercase font-bold">Diameter Distribution</span>
+<span class="font-label-code text-label-code text-on-surface-variant">N=288</span>
+</div>
+<div class="h-28 w-full flex items-end gap-1.5 pt-2">
+<!-- Bar 1: <90mm (Sub-gauge) -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full bg-error rounded-t transition-all" style="height: 18%;"></div>
+<span class="font-label-caption text-[9px] text-error font-mono">&lt;90</span>
+</div>
+<!-- Bar 2: 90-100mm -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-primary-container rounded-t" style="height: 38%;"></div>
+<span class="font-label-caption text-[9px] text-on-surface-variant font-mono">100</span>
+</div>
+<!-- Bar 3: 100-110mm -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-primary rounded-t" style="height: 72%;"></div>
+<span class="font-label-caption text-[9px] text-on-surface-variant font-mono">110</span>
+</div>
+<!-- Bar 4: 110-120mm (Modal Peak) -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-secondary rounded-t" style="height: 94%;"></div>
+<span class="font-label-caption text-[9px] text-secondary font-bold font-mono">120</span>
+</div>
+<!-- Bar 5: 120-130mm -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-primary-container rounded-t" style="height: 60%;"></div>
+<span class="font-label-caption text-[9px] text-on-surface-variant font-mono">130</span>
+</div>
+<!-- Bar 6: 130-140mm -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-primary-container rounded-t" style="height: 30%;"></div>
+<span class="font-label-caption text-[9px] text-on-surface-variant font-mono">140</span>
+</div>
+<!-- Bar 7: >140mm -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-primary-container rounded-t" style="height: 14%;"></div>
+<span class="font-label-caption text-[9px] text-on-surface-variant font-mono">&gt;140</span>
+</div>
+</div>
+</div>
+<!-- Scatter Plot / Aspect Ratio Check (SVG, <2KB) -->
+<div class="p-2 rounded bg-surface-container-low flex flex-col">
+<div class="flex items-center justify-between text-on-surface mb-1">
+<span class="font-label-caption text-label-caption uppercase font-bold">Major vs Minor Aspect</span>
+<span class="font-label-code text-label-code text-on-surface-variant">Ideal 1.0</span>
+</div>
+<div class="h-28 w-full relative flex items-center justify-center bg-surface-container-lowest rounded">
+<svg class="w-full h-full p-2" viewbox="0 0 160 100">
+<!-- Diagonal 1:1 Identity Reference Line -->
+<line opacity="0.6" stroke="#717975" stroke-dasharray="2,2" stroke-width="0.8" x1="10" x2="150" y1="90" y2="10"></line>
+<!-- 1.2 Ovality Threshold Line -->
+<line opacity="0.5" stroke="#ba1a1a" stroke-dasharray="2,2" stroke-width="0.6" x1="10" x2="150" y1="90" y2="24"></line>
+<!-- Data Scatter Points -->
+<circle cx="45" cy="65" fill="#ba1a1a" r="2"></circle>
+<circle cx="50" cy="62" fill="#ba1a1a" r="2"></circle>
+<circle cx="70" cy="46" fill="#326855" r="2"></circle>
+<circle cx="75" cy="42" fill="#326855" r="2"></circle>
+<circle cx="80" cy="40" fill="#326855" r="2"></circle>
+<circle cx="82" cy="38" fill="#326855" r="2"></circle>
+<circle cx="85" cy="35" fill="#326855" r="2"></circle>
+<circle cx="92" cy="31" fill="#326855" r="2"></circle>
+<circle cx="98" cy="27" fill="#326855" r="2"></circle>
+<circle cx="104" cy="24" fill="#326855" r="2"></circle>
+<circle cx="115" cy="18" fill="#326855" r="2"></circle>
+<circle cx="120" cy="15" fill="#326855" r="2"></circle>
+<!-- Selected Point (LOG-042) -->
+<circle cx="55" cy="60" fill="#ba1a1a" r="3.5" stroke="#ffffff" stroke-width="1"></circle>
+</svg>
+<div class="absolute bottom-1 right-2 font-label-caption text-[9px] text-on-surface-variant font-mono">
+                98.9% within 1.2 limit
+              </div>
+</div>
+</div>
+</div>
+<!-- Intake Validation Status Alert Banner -->
+<div class="p-2.5 rounded bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">task_alt</span>
+<span class="font-body-sm text-body-sm text-on-surface">Valid Measurements: <strong>286 / 288</strong> (2 manual edits logged)</span>
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant">0 Occluded</span>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM SECTION: Filterable & Sortable Individual Log Measurement Table -->
+<section class="p-space-md pt-0">
+<div class="bg-surface-container-lowest rounded shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header Action Deck -->
+<div class="p-space-sm bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center flex-wrap gap-2">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px]">search</span>
+<input class="h-8 pl-8 pr-3 bg-surface-container-lowest rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none" id="log-search-input" placeholder="Filter by log ID (e.g., LOG-042)..." type="text"/>
+</div>
+<!-- Quality Status Filter Selector -->
+<div class="flex items-center bg-surface-container rounded p-0.5">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest font-label-code text-label-code font-bold text-primary shadow-xs">
+              All (288)
+            </button>
+<button class="px-2.5 py-1 rounded text-on-surface font-label-code text-label-code hover:text-primary">
+              Compliant (274)
+            </button>
+<button class="px-2.5 py-1 rounded text-error font-label-code text-label-code font-bold hover:bg-error-container">
+              Sub-Gauge (11)
+            </button>
+<button class="px-2.5 py-1 rounded text-on-surface font-label-code text-label-code hover:text-primary">
+              Ovality &gt;1.2 (3)
+            </button>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase font-semibold">Showing 1-7 of 288 records</span>
+<button class="h-8 px-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Export CSV</span>
+</button>
+</div>
+</div>
+<!-- Table Viewport Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="h-7 bg-surface-container font-label-dense text-label-dense text-on-surface-variant uppercase tracking-wider select-none">
+<th class="px-space-sm py-1 font-semibold">Log ID</th>
+<th class="px-space-sm py-1 font-semibold">Status</th>
+<th class="px-space-sm py-1 text-right font-semibold">Major Axis (mm)</th>
+<th class="px-space-sm py-1 text-right font-semibold">Minor Axis (mm)</th>
+<th class="px-space-sm py-1 text-right font-semibold">Eq. Diam (mm)</th>
+<th class="px-space-sm py-1 text-right font-semibold">Area (cm²)</th>
+<th class="px-space-sm py-1 text-right font-semibold">AI Conf</th>
+<th class="px-space-sm py-1 text-center font-semibold">Visibility</th>
+<th class="px-space-sm py-1 font-semibold">Quality Assessment</th>
+<th class="px-space-sm py-1 text-center font-semibold">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y divide-surface-container">
+<!-- Row 1: LOG-001 -->
+<tr class="h-9 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<td class="px-space-sm py-1.5 font-label-code text-label-code font-bold text-primary">LOG-001</td>
+<td class="px-space-sm py-1.5">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-code text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> VALID
+                </span>
+</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">138.4</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">130.1</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric font-bold text-primary">134.2</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">141.4</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric text-secondary font-bold">99.1%</td>
+<td class="px-space-sm py-1.5 text-center font-label-code text-label-code">100%</td>
+<td class="px-space-sm py-1.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Grade 1 Compliant</span>
+</td>
+<td class="px-space-sm py-1.5 text-center">
+<button class="w-6 h-6 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: LOG-002 -->
+<tr class="h-9 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<td class="px-space-sm py-1.5 font-label-code text-label-code font-bold text-primary">LOG-002</td>
+<td class="px-space-sm py-1.5">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-code text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> VALID
+                </span>
+</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">132.0</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">124.2</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric font-bold text-primary">128.0</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">128.8</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric text-secondary font-bold">98.4%</td>
+<td class="px-space-sm py-1.5 text-center font-label-code text-label-code">100%</td>
+<td class="px-space-sm py-1.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Grade 1 Compliant</span>
+</td>
+<td class="px-space-sm py-1.5 text-center">
+<button class="w-6 h-6 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: LOG-042 (Selected / Flagged) -->
+<tr class="h-9 bg-error-container/20 hover:bg-error-container/30 transition-colors cursor-pointer font-semibold">
+<td class="px-space-sm py-1.5 font-label-code text-label-code font-bold text-error flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-error">flag</span>
+<span>LOG-042</span>
+</td>
+<td class="px-space-sm py-1.5">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-code text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> FLAGGED
+                </span>
+</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">91.2</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">84.8</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric font-bold text-error">88.0</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">60.8</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric text-primary font-bold">94.2%</td>
+<td class="px-space-sm py-1.5 text-center font-label-code text-label-code">100%</td>
+<td class="px-space-sm py-1.5">
+<span class="inline-flex items-center gap-1 text-error font-body-sm text-body-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                  Sub-gauge (&lt;90 mm PO Threshold)
+                </span>
+</td>
+<td class="px-space-sm py-1.5 text-center">
+<button class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-code text-label-code hover:bg-primary-container transition-colors shadow-xs">
+                  Review
+                </button>
+</td>
+</tr>
+<!-- Row 4: LOG-104 -->
+<tr class="h-9 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<td class="px-space-sm py-1.5 font-label-code text-label-code font-bold text-primary">LOG-104</td>
+<td class="px-space-sm py-1.5">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-code text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> VALID
+                </span>
+</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">146.2</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">138.0</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric font-bold text-primary">142.1</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">158.6</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric text-secondary font-bold">97.8%</td>
+<td class="px-space-sm py-1.5 text-center font-label-code text-label-code">100%</td>
+<td class="px-space-sm py-1.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Grade 1 Compliant</span>
+</td>
+<td class="px-space-sm py-1.5 text-center">
+<button class="w-6 h-6 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: LOG-118 -->
+<tr class="h-9 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<td class="px-space-sm py-1.5 font-label-code text-label-code font-bold text-primary">LOG-118</td>
+<td class="px-space-sm py-1.5">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-code text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> VALID
+                </span>
+</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">122.4</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">118.6</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric font-bold text-primary">120.5</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">114.0</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric text-secondary font-bold">99.4%</td>
+<td class="px-space-sm py-1.5 text-center font-label-code text-label-code">100%</td>
+<td class="px-space-sm py-1.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Grade 1 Compliant</span>
+</td>
+<td class="px-space-sm py-1.5 text-center">
+<button class="w-6 h-6 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 6: LOG-208 -->
+<tr class="h-9 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<td class="px-space-sm py-1.5 font-label-code text-label-code font-bold text-primary">LOG-208</td>
+<td class="px-space-sm py-1.5">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-code text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> VALID
+                </span>
+</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">118.0</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">114.2</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric font-bold text-primary">116.1</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">105.8</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric text-secondary font-bold">98.9%</td>
+<td class="px-space-sm py-1.5 text-center font-label-code text-label-code">100%</td>
+<td class="px-space-sm py-1.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Grade 1 Compliant</span>
+</td>
+<td class="px-space-sm py-1.5 text-center">
+<button class="w-6 h-6 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 7: LOG-214 -->
+<tr class="h-9 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<td class="px-space-sm py-1.5 font-label-code text-label-code font-bold text-primary">LOG-214</td>
+<td class="px-space-sm py-1.5">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-code text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> VALID
+                </span>
+</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">115.6</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">110.8</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric font-bold text-primary">113.2</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric">100.6</td>
+<td class="px-space-sm py-1.5 text-right font-label-numeric text-label-numeric text-secondary font-bold">98.1%</td>
+<td class="px-space-sm py-1.5 text-center font-label-code text-label-code">100%</td>
+<td class="px-space-sm py-1.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Grade 1 Compliant</span>
+</td>
+<td class="px-space-sm py-1.5 text-center">
+<button class="w-6 h-6 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Bar -->
+<div class="px-space-sm py-2 bg-surface-container-low flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span>Row display:</span>
+<select class="bg-surface-container-lowest text-on-surface px-2 py-0.5 rounded font-body-sm text-body-sm focus:outline-none">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+<option selected="">All 288</option>
+</select>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[14px]">chevron_left</span>
+</button>
+<span class="px-2 font-bold text-primary">Page 1 of 1</span>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Client-side Script for Studio Controls -->
+<script>
+    (function initAIStudio() {
+      // Zoom Controls
+      let currentZoom = 125;
+      const zoomLevelLabel = document.getElementById('zoom-level');
+      const cvViewport = document.getElementById('cv-viewport');
+
+      document.getElementById('zoom-in')?.addEventListener('click', () => {
+        if (currentZoom < 250) {
+          currentZoom += 25;
+          if (zoomLevelLabel) zoomLevelLabel.textContent = currentZoom + '%';
+        }
+      });
+
+      document.getElementById('zoom-out')?.addEventListener('click', () => {
+        if (currentZoom > 75) {
+          currentZoom -= 25;
+          if (zoomLevelLabel) zoomLevelLabel.textContent = currentZoom + '%';
+        }
+      });
+
+      document.getElementById('zoom-reset')?.addEventListener('click', () => {
+        currentZoom = 100;
+        if (zoomLevelLabel) zoomLevelLabel.textContent = '100%';
+      });
+
+      // Layer Toggles
+      const toggleMasksBtn = document.getElementById('toggle-masks');
+      const toggleAxesBtn = document.getElementById('toggle-axes');
+      const toggleLabelsBtn = document.getElementById('toggle-labels');
+      const svgLayer = document.getElementById('cv-svg-layer');
+
+      let masksVisible = true;
+      let axesVisible = true;
+      let labelsVisible = true;
+
+      toggleMasksBtn?.addEventListener('click', () => {
+        masksVisible = !masksVisible;
+        toggleMasksBtn.textContent = masksVisible ? 'Masks: ON' : 'Masks: OFF';
+        toggleMasksBtn.className = masksVisible 
+          ? 'px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-label-code text-label-code font-bold flex items-center gap-1'
+          : 'px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-code text-label-code font-bold flex items-center gap-1';
+        
+        document.querySelectorAll('.cv-log-overlay ellipse').forEach(el => {
+          el.style.opacity = masksVisible ? '1' : '0.1';
+        });
+      });
+
+      toggleAxesBtn?.addEventListener('click', () => {
+        axesVisible = !axesVisible;
+        toggleAxesBtn.textContent = axesVisible ? 'Axes: ON' : 'Axes: OFF';
+        toggleAxesBtn.className = axesVisible
+          ? 'px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-label-code text-label-code font-bold flex items-center gap-1'
+          : 'px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-code text-label-code font-bold flex items-center gap-1';
+
+        document.querySelectorAll('.cv-axis').forEach(el => {
+          el.style.display = axesVisible ? 'block' : 'none';
+        });
+      });
+
+      toggleLabelsBtn?.addEventListener('click', () => {
+        labelsVisible = !labelsVisible;
+        toggleLabelsBtn.textContent = labelsVisible ? 'IDs: ON' : 'IDs: OFF';
+        toggleLabelsBtn.className = labelsVisible
+          ? 'px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-label-code text-label-code font-bold flex items-center gap-1'
+          : 'px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-code text-label-code font-bold flex items-center gap-1';
+
+        document.querySelectorAll('.cv-label').forEach(el => {
+          el.style.display = labelsVisible ? 'flex' : 'none';
+        });
+      });
+
+      // Inspector Tab Switching
+      const tabLog = document.getElementById('tab-log');
+      const tabTruck = document.getElementById('tab-truck');
+      const panelLog = document.getElementById('panel-selected-log');
+      const panelTruck = document.getElementById('panel-truck-aggregates');
+
+      tabLog?.addEventListener('click', () => {
+        tabLog.className = 'flex-1 py-1.5 px-2 rounded bg-primary text-on-primary font-title-sm text-title-sm font-semibold flex items-center justify-center gap-1 shadow-sm transition-colors';
+        tabTruck.className = 'flex-1 py-1.5 px-2 rounded hover:bg-surface-container text-on-surface font-title-sm text-title-sm font-medium flex items-center justify-center gap-1 transition-colors';
+        if (panelLog) panelLog.classList.remove('hidden');
+        if (panelTruck) panelTruck.classList.add('hidden');
+      });
+
+      tabTruck?.addEventListener('click', () => {
+        tabTruck.className = 'flex-1 py-1.5 px-2 rounded bg-primary text-on-primary font-title-sm text-title-sm font-semibold flex items-center justify-center gap-1 shadow-sm transition-colors';
+        tabLog.className = 'flex-1 py-1.5 px-2 rounded hover:bg-surface-container text-on-surface font-title-sm text-title-sm font-medium flex items-center justify-center gap-1 transition-colors';
+        if (panelLog) panelLog.classList.add('hidden');
+        if (panelTruck) panelTruck.classList.remove('hidden');
+      });
+
+      // Quick Notification on Action Buttons
+      document.getElementById('btn-approve')?.addEventListener('click', () => {
+        alert('Batch TRK-9841 validated by Inspector ML-819. Telemetry record and wood certificate successfully synced to SAP S/4HANA Timber ERP.');
+      });
+      document.getElementById('btn-flag-dispute')?.addEventListener('click', () => {
+        alert('Dispute Dossier created for Nordic Timber Co (TRK-9841). 11 Sub-gauge logs flagged. Forwarded to Procurement Desk.');
+      });
+    })();
+  </script>
+</div></main></div></body></html>

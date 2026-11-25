@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary":"#ffffff","inverse-primary":"#a6cfc1","secondary-fixed":"#b5efd7","primary-container":"#173f35","tertiary-fixed":"#cbef90","on-error-container":"#93000a","error-container":"#ffdad6","surface-container-highest":"#d6e6dd","surface-bright":"#edfdf3","surface-variant":"#d6e6dd","on-surface-variant":"#414845","on-primary-fixed":"#002019","on-primary":"#ffffff","secondary-container":"#b5efd7","on-tertiary-fixed":"#121f00","on-primary-fixed-variant":"#274e43","tertiary-fixed-dim":"#b0d277","primary":"#002920","surface-container":"#e2f2e8","on-tertiary-fixed-variant":"#344e00","on-secondary-fixed-variant":"#17503e","on-error":"#ffffff","surface-container-lowest":"#ffffff","tertiary-container":"#293f00","background":"#edfdf3","surface-tint":"#3f665a","on-background":"#111e19","on-secondary-fixed":"#002117","surface-dim":"#ceded4","inverse-on-surface":"#e5f5eb","surface-container-low":"#e7f7ee","on-surface":"#111e19","primary-fixed-dim":"#a6cfc1","on-tertiary":"#ffffff","error":"#ba1a1a","outline":"#717975","on-primary-container":"#82aa9d","primary-fixed":"#c1ecdd","on-secondary-container":"#386e5b","surface-container-high":"#dcece2","inverse-surface":"#26332d","on-tertiary-container":"#8cad56","secondary-fixed-dim":"#9ad2bb","outline-variant":"#c0c8c4","surface":"#edfdf3","secondary":"#326855","tertiary":"#182800"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"0.75rem","margin-mobile":"0.75rem","margin":"1.5rem","space-xs":"0.25rem","gutter-dense":"0.5rem","gutter":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","space-lg":"1rem"},"fontFamily":{"title-sm":["Inter"],"label-dense":["Inter"],"label-caption":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"],"label-numeric":["JetBrains Mono"],"headline-xl-mobile":["Inter"],"headline-lg":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"headline-xl":["Inter"],"label-code":["JetBrains Mono"]},"fontSize":{"title-sm":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-dense":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-caption":["10px",{"lineHeight":"12px","letterSpacing":"0.02em","fontWeight":"500"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-numeric":["12px",{"lineHeight":"16px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg-mobile":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-code":["11px",{"lineHeight":"14px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low flex flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container"><img alt="Pine OS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UzQXmfeY0ZgHp5KWNF3TcfswDWXortBjXfih0H8wJxIYAcOo_pHeQ1MekcVoloEv04-1whOHD-f78LEwLhIYOJXvA6352C46mJM592viYCD09QZdfJxdlQycRqr7yH5M_4P1ueUpCD-e2NJI5GEiYCTYYvkX8Z6ni4lEGZG1BkVP6WSRhJHVo_8ohTkpxQ_eR7TPi5Hf3NhyLenEJAG8zr891JtcwN837NSAkqtBRzdw"/><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md font-bold tracking-tight text-primary leading-tight truncate">PINE OS</span><span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-code text-label-code">v3.4</span></div><span class="font-label-caption text-label-caption text-on-surface-variant truncate uppercase tracking-wider">Industrial Wood Intelligence</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">Core Operations</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Overview</span></div><span class="font-label-code text-label-code text-on-surface-variant">01</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="intake" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span>Truck Intake &amp; Queue</span></div><span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-bold">12</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="studio" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">view_in_ar</span><span>AI Measurement Studio</span></div><span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code uppercase tracking-wider font-bold animate-pulse">LIVE CV</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="history" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">history</span><span>Measurement History</span></div></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">Intelligence &amp; Procurement</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="quality" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Quality Assessment</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="suppliers" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">verified</span><span>Suppliers &amp; Compliance</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="procurement" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">price_check</span><span>Procurement Intelligence</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Analytics &amp; Reports</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="disputes" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">gavel</span><span>Dispute Management</span></div><span class="px-1.5 py-0.2 rounded bg-error-container text-on-error-container font-label-code text-label-code font-bold">2</span></a></nav></div><div class="space-y-space-xs"><div class="px-space-sm py-1 font-label-caption text-label-caption font-semibold tracking-wider text-on-surface-variant uppercase">AI &amp; Infrastructure</div><nav class="space-y-0.5" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="calibration" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">tune</span><span>Camera &amp; Calibration</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="model-monitor" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">monitoring</span><span>AI Model Monitoring</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="integrations" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">hub</span><span>ERP &amp; Weighbridge</span></div></a><a class="group flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-md text-body-md transition-colors" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings &amp; Admin</span></div></a></nav></div></div><div class="p-space-sm bg-surface-container space-y-space-xs"><button class="w-full flex items-center justify-between px-space-sm py-2 rounded bg-primary-container text-on-primary hover:bg-primary transition-colors" type="button"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed">psychology</span><span class="font-title-sm text-title-sm text-on-primary">Ask Pine OS</span></div><span class="material-symbols-outlined text-[16px] text-inverse-primary">arrow_forward</span></button><div class="px-space-sm py-1.5 rounded bg-surface-container-high flex items-center justify-between"><div class="flex items-center gap-1.5 min-w-0"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-caption text-label-caption text-on-surface truncate">Edge Node #08</span></div><span class="font-label-code text-label-code text-secondary font-semibold">14ms</span></div><div class="flex items-center gap-space-xs p-1.5 rounded bg-surface-container-lowest"><img alt="Marcus Lindqvist" class="w-8 h-8 rounded object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPIUyV7Rx3jw-mAhXLV3a3W5JI2fKW4RYifCu34JN1ecDHzg_qTKS3zBfd7RSxOqfo6oZ8RTHWXfPR1BoKqU_nUPs4OuEw3sYf5FkmCHba5vVYmBrwt8k1zHAJ24O6juRzfggLjtvNkAFjqX-jHVaYqptdV7OoGwngr-m1CYW3Fp_C1lR8mEsmQ3rrfpTPC7s1SVgfAw3_pWHxqyhaU7OgY3X9wclIUrzRShB-lcsX"/><div class="min-w-0 flex-1"><div class="font-title-sm text-title-sm text-on-surface truncate leading-none">Marcus Lindqvist</div><div class="font-label-caption text-label-caption text-on-surface-variant truncate mt-0.5">VP Operations</div></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">more_vert</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-md z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-shrink-0"><div class="flex items-center gap-space-xs px-2.5 py-1.5 bg-surface-container-high rounded cursor-pointer hover:bg-surface-container-highest transition-colors"><span class="material-symbols-outlined text-[18px] text-primary">factory</span><div class="flex flex-col text-left"><span class="font-label-caption text-label-caption text-on-surface-variant uppercase leading-none">Selected Mill</span><span class="font-title-sm text-title-sm text-on-surface leading-tight font-semibold">Mill 04 - Oulu Pulp &amp; Paper Complex</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant ml-1">expand_more</span></div><div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container-high"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-code text-label-code text-secondary font-medium">CV Pipeline: 60 FPS • Calibrated</span></div><div class="hidden 2xl:flex items-center gap-1.5 px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant"><span class="material-symbols-outlined text-[14px]">sensors</span><span class="font-label-code text-label-code font-semibold uppercase">Gate Intake Online</span></div></div><div class="flex-1 max-w-xl mx-space-sm hidden md:block"><div class="relative"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-9 pl-9 pr-14 bg-surface-container-low rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search trucks, log IDs, PO#, suppliers, certificates..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-code text-label-code">Ctrl+K</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="hidden lg:flex items-center gap-1 px-2 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-code text-label-code font-semibold"><span class="material-symbols-outlined text-[14px]">token</span><span>DEMO MODE</span></div><div class="flex items-center gap-1 px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface font-label-numeric text-label-numeric"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span><span class="hidden sm:inline">Today: Oct 24, 2024</span></div><div class="relative"><button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-error text-on-error font-label-code text-[9px] flex items-center justify-center font-bold">3</span></div><button class="w-8 h-8 rounded hidden sm:flex items-center justify-center bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-space-lg py-space-md bg-surface-container flex flex-col md:flex-row md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-code text-label-code uppercase tracking-wider font-semibold">MLOps Platform</span>
+<span class="text-on-surface-variant font-label-caption text-label-caption">• Node Cluster: Oulu-West-CV04</span>
+<span class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-ping"></span>
+          REAL-TIME TELEMETRY
+        </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">AI Model Monitoring &amp; Computer Vision Ops</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+        Oulu Pulp &amp; Paper Complex • Real-time inference latency, YOLOv8-Timber instance segmentation metrics, ground-truth validation, and drift telemetry.
+      </p>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap self-start md:self-auto">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors font-title-sm text-title-sm shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-error">history</span>
+<span>Rollback Model</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors font-title-sm text-title-sm shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">alt_route</span>
+<span>Trigger Shadow Mode</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded bg-primary-container text-on-primary hover:bg-primary transition-colors font-title-sm text-title-sm shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">download</span>
+<span>Export Benchmark Report</span>
+</button>
+</div>
+</div>
+<div class="p-space-lg space-y-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-gutter">
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex items-start justify-between mb-2">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase tracking-wider">Active Architecture</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">psychology</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md font-bold text-primary truncate" title="YOLOv8-Timber-v4.2.1">v4.2.1</div>
+<div class="font-label-code text-label-code text-secondary font-medium">YOLOv8-Timber • INT8</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low px-2 py-1 rounded flex items-center justify-between text-on-surface-variant font-label-caption text-label-caption">
+<span>Engine: TensorRT 10.2</span>
+<span class="text-secondary font-bold">STABLE</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex items-start justify-between mb-2">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase tracking-wider">Inference Latency</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">speed</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">14.2</span>
+<span class="font-label-code text-label-code text-on-surface-variant">ms</span>
+</div>
+<div class="font-label-code text-label-code text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_down</span>
+            -1.4ms vs SLA budget (25ms)
+          </div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low px-2 py-1 rounded flex items-center justify-between font-label-caption text-label-caption text-on-surface-variant">
+<span>P99: 18.6ms</span>
+<span class="font-label-numeric text-label-numeric text-primary">60.2 FPS</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex items-start justify-between mb-2">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase tracking-wider">Detection Accuracy</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">target</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">97.4</span>
+<span class="font-label-code text-label-code text-on-surface-variant">%</span>
+</div>
+<div class="font-label-code text-label-code text-on-surface-variant">mAP@50 (Bounding Reticle)</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low px-2 py-1 rounded flex items-center justify-between font-label-caption text-label-caption text-on-surface-variant">
+<span>Logs: 48,210 parsed</span>
+<span class="text-secondary font-bold">+0.3% w/w</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex items-start justify-between mb-2">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase tracking-wider">Segmentation Quality</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">filter_center_focus</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">89.2</span>
+<span class="font-label-code text-label-code text-on-surface-variant">%</span>
+</div>
+<div class="font-label-code text-label-code text-on-surface-variant">mAP@50:95 (Mask Fidelity)</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low px-2 py-1 rounded flex items-center justify-between font-label-caption text-label-caption text-on-surface-variant">
+<span>Boundary IoU: 91.8%</span>
+<span class="text-secondary font-bold">OPTIMAL</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex items-start justify-between mb-2">
+<span class="font-label-caption text-label-caption text-on-surface-variant uppercase tracking-wider">Caliper Calibrated MAE</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">straighten</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">±1.4</span>
+<span class="font-label-code text-label-code text-on-surface-variant">mm</span>
+</div>
+<div class="font-label-code text-label-code text-secondary">Mean Absolute Error</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low px-2 py-1 rounded flex items-center justify-between font-label-caption text-label-caption text-on-surface-variant">
+<span>Loadcell Calipers</span>
+<span class="text-secondary font-bold">Δ 0.08mm drift</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<div>
+<h3 class="font-title-sm text-title-sm text-primary font-bold">24h Inference Latency &amp; FPS Load</h3>
+<p class="font-label-caption text-label-caption text-on-surface-variant">Throughput vs Batch Queue Depth</p>
+</div>
+<div class="flex items-center gap-1.5 font-label-code text-label-code">
+<span class="w-2.5 h-2.5 rounded bg-primary"></span>
+<span class="text-on-surface-variant">P90 (ms)</span>
+<span class="w-2.5 h-2.5 rounded bg-secondary-fixed-dim ml-2"></span>
+<span class="text-on-surface-variant">FPS</span>
+</div>
+</div>
+<div class="h-44 w-full relative flex items-end">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 160">
+<defs>
+<lineargradient id="gradPrimary" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#002920" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#002920" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<line stroke="#d6e6dd" stroke-dasharray="2 2" stroke-width="1" x1="0" x2="400" y1="40" y2="40"></line>
+<line stroke="#d6e6dd" stroke-dasharray="2 2" stroke-width="1" x1="0" x2="400" y1="80" y2="80"></line>
+<line stroke="#d6e6dd" stroke-dasharray="2 2" stroke-width="1" x1="0" x2="400" y1="120" y2="120"></line>
+<path d="M0,130 C30,128 60,110 90,112 C120,114 150,90 180,95 C210,100 240,70 270,72 C300,74 330,85 360,78 C380,72 400,76 400,76 L400,160 L0,160 Z" fill="url(#gradPrimary)"></path>
+<path d="M0,130 C30,128 60,110 90,112 C120,114 150,90 180,95 C210,100 240,70 270,72 C300,74 330,85 360,78 C380,72 400,76 400,76" fill="none" stroke="#002920" stroke-width="2.5"></path>
+<path d="M0,85 C40,90 80,65 120,70 C160,75 200,50 240,55 C280,60 320,40 360,45 C380,48 400,42 400,42" fill="none" stroke="#326855" stroke-dasharray="4 2" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex justify-between font-label-code text-label-code text-on-surface-variant pt-2">
+<span>00:00</span>
+<span>06:00</span>
+<span>12:00</span>
+<span>18:00</span>
+<span>Now (14.2ms @ 60fps)</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<div>
+<h3 class="font-title-sm text-title-sm text-primary font-bold">Precision-Recall Curve (PR-AUC)</h3>
+<p class="font-label-caption text-label-caption text-on-surface-variant">Log-End Instance Segmentation vs IoU 0.70</p>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-code text-label-code font-bold text-primary">AUC: 0.941</span>
+</div>
+<div class="h-44 w-full relative flex items-end">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 300 160">
+<line stroke="#414845" stroke-width="1" x1="20" x2="290" y1="140" y2="140"></line>
+<line stroke="#414845" stroke-width="1" x1="20" x2="20" y1="20" y2="140"></line>
+<line stroke="#d6e6dd" stroke-dasharray="2 2" stroke-width="1" x1="20" x2="290" y1="80" y2="80"></line>
+<line stroke="#d6e6dd" stroke-dasharray="2 2" stroke-width="1" x1="155" x2="155" y1="20" y2="140"></line>
+<!-- PR curve -->
+<path d="M20,25 C80,25 160,28 210,38 C240,46 260,65 270,110 C275,130 280,138 285,140" fill="none" stroke="#173f35" stroke-width="3"></path>
+<circle cx="210" cy="38" fill="#cbef90" r="4" stroke="#173f35" stroke-width="2"></circle>
+</svg>
+</div>
+<div class="flex justify-between font-label-code text-label-code text-on-surface-variant pt-2">
+<span>R: 0.0</span>
+<span>Optimal Operating Point (P:96.8%, R:93.4%)</span>
+<span>R: 1.0</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<div>
+<h3 class="font-title-sm text-title-sm text-primary font-bold">Diameter Error Distribution</h3>
+<p class="font-label-caption text-label-caption text-on-surface-variant">CV Mask vs Loadcell Caliper Ground Truth</p>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-code text-label-code text-secondary font-bold">σ = 0.82 mm</span>
+</div>
+<div class="h-44 w-full relative flex items-end">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 300 160">
+<line stroke="#ba1a1a" stroke-dasharray="2 2" stroke-width="1.5" x1="150" x2="150" y1="10" y2="140"></line>
+<!-- Histogram bars -->
+<rect fill="#d6e6dd" height="8" rx="1" width="18" x="40" y="132"></rect>
+<rect fill="#d6e6dd" height="15" rx="1" width="18" x="62" y="125"></rect>
+<rect fill="#b5efd7" height="35" rx="1" width="18" x="84" y="105"></rect>
+<rect fill="#b5efd7" height="75" rx="1" width="18" x="106" y="65"></rect>
+<rect fill="#173f35" height="108" rx="1" width="18" x="128" y="32"></rect>
+<rect fill="#173f35" height="115" rx="1" width="18" x="150" y="25"></rect>
+<rect fill="#173f35" height="102" rx="1" width="18" x="172" y="38"></rect>
+<rect fill="#b5efd7" height="70" rx="1" width="18" x="194" y="70"></rect>
+<rect fill="#b5efd7" height="32" rx="1" width="18" x="216" y="108"></rect>
+<rect fill="#d6e6dd" height="12" rx="1" width="18" x="238" y="128"></rect>
+<!-- Gaussian Fitted Line -->
+<path d="M40,136 C80,130 110,90 140,32 C150,22 165,22 175,32 C205,90 235,130 270,136" fill="none" stroke="#293f00" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex justify-between font-label-code text-label-code text-on-surface-variant pt-2">
+<span>-4.0 mm</span>
+<span class="text-primary font-bold">Center: 0.00 mm</span>
+<span>+4.0 mm</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between pb-space-sm gap-2">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-primary text-on-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Edge Inference Mesh &amp; GPU Node Matrix</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">4x NVIDIA L40S Nodes docked on Intake Conveyor Gantry #01 - #04</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-code text-label-code text-on-surface-variant bg-surface-container px-2.5 py-1 rounded">
+            SHA256: 8f9b...a12c4
+          </span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-bold">
+            ALL NODES SYNCHRONIZED
+          </span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter mt-3">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-title-sm text-title-sm font-bold text-primary">Node L40S-01</span>
+</div>
+<span class="font-label-code text-label-code text-secondary font-bold">ACTIVE</span>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-1">Truck Gantry Intake A (Overhead RGB-D)</p>
+<div class="mt-3 space-y-1 font-label-numeric text-label-numeric">
+<div class="flex justify-between text-on-surface-variant">
+<span>Core Temp:</span>
+<span class="text-primary font-semibold">51°C</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>VRAM Usage:</span>
+<span class="text-primary font-semibold">18.2 / 48 GB (38%)</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded h-1.5 overflow-hidden">
+<div class="bg-primary h-full" style="width: 38%"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-title-sm text-title-sm font-bold text-primary">Node L40S-02</span>
+</div>
+<span class="font-label-code text-label-code text-secondary font-bold">ACTIVE</span>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-1">Truck Gantry Intake B (Profile LiDAR Sync)</p>
+<div class="mt-3 space-y-1 font-label-numeric text-label-numeric">
+<div class="flex justify-between text-on-surface-variant">
+<span>Core Temp:</span>
+<span class="text-primary font-semibold">53°C</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>VRAM Usage:</span>
+<span class="text-primary font-semibold">19.1 / 48 GB (39%)</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded h-1.5 overflow-hidden">
+<div class="bg-primary h-full" style="width: 39%"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-title-sm text-title-sm font-bold text-primary">Node L40S-03</span>
+</div>
+<span class="font-label-code text-label-code text-secondary font-bold">ACTIVE</span>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-1">Debarking Infeed Conveyor (Spectral)</p>
+<div class="mt-3 space-y-1 font-label-numeric text-label-numeric">
+<div class="flex justify-between text-on-surface-variant">
+<span>Core Temp:</span>
+<span class="text-primary font-semibold">50°C</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>VRAM Usage:</span>
+<span class="text-primary font-semibold">17.8 / 48 GB (37%)</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded h-1.5 overflow-hidden">
+<div class="bg-primary h-full" style="width: 37%"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-title-sm text-title-sm font-bold text-primary">Node L40S-04</span>
+</div>
+<span class="font-label-code text-label-code text-secondary font-bold">STANDBY</span>
+</div>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-1">Shadow Evaluator &amp; Failover Mirror</p>
+<div class="mt-3 space-y-1 font-label-numeric text-label-numeric">
+<div class="flex justify-between text-on-surface-variant">
+<span>Core Temp:</span>
+<span class="text-primary font-semibold">44°C</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>VRAM Usage:</span>
+<span class="text-primary font-semibold">12.4 / 48 GB (25%)</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded h-1.5 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 25%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-gutter">
+<div class="xl:col-span-2 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-sm gap-2">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Model Comparison Matrix &amp; Candidate Promotion</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct benchmarking against Oulu Gold Standard validation split (12,500 scans)</p>
+</div>
+<span class="px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code font-bold">1 Candidate In Staging</span>
+</div>
+<div class="overflow-x-auto mt-2">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-dense text-label-dense uppercase">
+<th class="py-2.5 px-3">Model Tag</th>
+<th class="py-2.5 px-3">Stage</th>
+<th class="py-2.5 px-3 text-right">Det mAP@50</th>
+<th class="py-2.5 px-3 text-right">Seg mAP@50:95</th>
+<th class="py-2.5 px-3 text-right">Latency (P95)</th>
+<th class="py-2.5 px-3 text-right">Diameter MAE</th>
+<th class="py-2.5 px-3 text-center">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3">
+<div class="font-title-sm text-title-sm font-semibold text-primary">v4.2.1-prod</div>
+<div class="font-label-code text-label-code text-on-surface-variant">Weights: fp16-trt-int8</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-code text-label-code font-bold">PRODUCTION</span>
+</td>
+<td class="py-3 px-3 text-right font-label-numeric text-label-numeric font-bold text-primary">97.4%</td>
+<td class="py-3 px-3 text-right font-label-numeric text-label-numeric font-bold text-primary">89.2%</td>
+<td class="py-3 px-3 text-right font-label-numeric text-label-numeric">14.2 ms</td>
+<td class="py-3 px-3 text-right font-label-numeric text-label-numeric">±1.40 mm</td>
+<td class="py-3 px-3 text-center">
+<span class="font-label-caption text-label-caption text-secondary font-bold">Active Engine</span>
+</td>
+</tr>
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-3">
+<div class="font-title-sm text-title-sm font-semibold text-primary">v4.3.0-rc2</div>
+<div class="font-label-code text-label-code text-secondary">Weights: yolov8x-timber-v4.3</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-bold">CANDIDATE</span>
+</td>
+<td class="py-3 px-3 text-right font-label-numeric text-label-numeric font-bold text-secondary">
+                    98.0% <span class="font-label-caption text-label-caption text-secondary font-normal">(+0.6%)</span>
+</td>
+<td class="py-3 px-3 text-right font-label-numeric text-label-numeric font-bold text-secondary">
+                    90.5% <span class="font-label-caption text-label-caption text-secondary font-normal">(+1.3%)</span>
+</td>
+<td class="py-3 px-3 text-right font-label-numeric text-label-numeric font-bold text-secondary">
+                    12.4 ms <span class="font-label-caption text-label-caption text-secondary font-normal">(-1.8ms)</span>
+</td>
+<td class="py-3 px-3 text-right font-label-numeric text-label-numeric font-bold text-secondary">
+                    ±1.18 mm <span class="font-label-caption text-label-caption text-secondary font-normal">(-0.22)</span>
+</td>
+<td class="py-3 px-3 text-center">
+<button class="px-2.5 py-1 rounded bg-secondary text-on-secondary hover:bg-primary font-title-sm text-title-sm transition-colors shadow-sm" type="button">
+                      Promote to Live
+                    </button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3">
+<div class="font-title-sm text-title-sm font-semibold text-on-surface-variant">v4.1.8-legacy</div>
+<div class="font-label-code text-label-code text-on-surface-variant">Weights: base-trt-fp16</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-code text-label-code">ARCHIVED</span>
+</td>
+<td class="py-3 px-3 text-right font-label-numeric text-label-numeric text-on-surface-variant">96.1%</td>
+<td class="py-3 px-3 text-right font-label-numeric text-label-numeric text-on-surface-variant">87.0%</td>
+<td class="py-3 px-3 text-right font-label-numeric text-label-numeric text-on-surface-variant">17.8 ms</td>
+<td class="py-3 px-3 text-right font-label-numeric text-label-numeric text-on-surface-variant">±1.85 mm</td>
+<td class="py-3 px-3 text-center">
+<button class="font-label-caption text-label-caption text-primary hover:underline" type="button">
+                      Inspect Log
+                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="mt-4 p-space-sm bg-surface-container rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">science</span>
+<span class="font-body-sm text-body-sm text-on-surface">Candidate v4.3.0-rc2 passed 48-hour continuous dark shadow pipeline with 0 crashes.</span>
+</div>
+<button class="font-label-code text-label-code text-primary font-bold hover:underline" type="button">
+            Diff Architectures →
+          </button>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Curated Gold Datasets</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ground-Truth Verification Hub</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">folder_special</span>
+</div>
+<div class="space-y-space-xs mt-2">
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="font-title-sm text-title-sm text-primary font-semibold">Pine (Pinus Sylvestris)</div>
+<div class="font-label-caption text-label-caption text-on-surface-variant">Standard and heartwood annotations</div>
+</div>
+<div class="text-right">
+<span class="font-label-numeric text-label-numeric font-bold text-primary">68,400</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant block">instances</span>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="font-title-sm text-title-sm text-primary font-semibold">Spruce (Picea Abies)</div>
+<div class="font-label-caption text-label-caption text-on-surface-variant">Fresh-cut, rough bark, cross-peeled</div>
+</div>
+<div class="text-right">
+<span class="font-label-numeric text-label-numeric font-bold text-primary">54,120</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant block">instances</span>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="font-title-sm text-title-sm text-primary font-semibold">Birch (Betula Pendula)</div>
+<div class="font-label-caption text-label-caption text-on-surface-variant">Pulp grade &amp; papermill sorting sets</div>
+</div>
+<div class="text-right">
+<span class="font-label-numeric text-label-numeric font-bold text-primary">25,480</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant block">instances</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<div>
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface-variant block">Total Verified Logs</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">148,000 Verified</span>
+</div>
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-container transition-colors shadow-sm" type="button">
+            Sync S3 Bucket
+          </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-sm gap-2">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-error-container text-on-error-container flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">announcement</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Active Human-in-the-Loop Edge Case Ingestion</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Frames flagged by CV reticle confidence &lt; 85% or extreme weather obscuration</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-code text-label-code font-bold">14 Awaiting Review</span>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container transition-colors font-title-sm text-title-sm shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">draw</span>
+<span>Launch Label Studio</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-3">
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col justify-between">
+<div class="relative rounded overflow-hidden aspect-video bg-inverse-surface">
+<img class="w-full h-full object-cover" data-alt="Close-up industrial computer vision camera view of snow covered spruce log ends in an outdoor logging truck trailer, with bounding box overlays and confidence scores indicating poor visibility due to frost and snow buildup under cold northern Finnish winter overcast daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi4msOUzt1IZY02J2TNwMcSs6f7BUnXSQDNDqbw8a6fX7xWB7s9UbnPLhlFhH46Bz_Xi4XQmht9fO6VrIDi4Ucqo_ulwDSH2WhD0hYSm4H2OhE00zyqrtmlCX7ulwYZLV6TnSx00JNrRUS5VTfKA5qAePveiAcvE0HyZ_W02bAnSequkKXm4W7sk4TULz__pEku4FFmgDDgLfDTUneCtRZVnh10upD_pcpLhxkA3Gh"/>
+<div class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-primary-container/90 text-on-primary font-label-code text-label-code">
+              CLASS: SNOW_OBSCURATION
+            </div>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-error text-on-error font-label-code text-label-code">
+              CONF: 62.4%
+            </div>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<div>
+<span class="font-title-sm text-title-sm text-primary font-semibold block">Cam 02 • Truck #FI-882</span>
+<span class="font-label-code text-label-code text-on-surface-variant">Anomaly: Severe Snow Crust</span>
+</div>
+<button class="px-2 py-1 rounded bg-surface-container-highest text-primary font-label-code text-label-code hover:bg-surface-container-high transition-colors" type="button">
+              Annotate
+            </button>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col justify-between">
+<div class="relative rounded overflow-hidden aspect-video bg-inverse-surface">
+<img class="w-full h-full object-cover" data-alt="Industrial computer vision feed showing obliquely cut raw pine timber logs stacked unevenly on an automated mill conveyor gantry, laser lines projecting across angled wood cross-sections under harsh LED floodlights in an industrial sorting facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTxsLAmwBZp2loRGqXb3F163L8nBnTv6cs_tH8Oum6YsK2kP5qrP2BkZ59HluuKD-dJGbE7n1I_USgekXyUsfkprrk6WG8DlyuJIIS0qqhZPnfxG3x0TcszWXUe2SGJ6mQFZ5Qr74u1Qz8eUC4LqsBm8BaJ2eAzj_EERsUwXrouReSZFkqaZFWiGpqMS3mx70V8YHnkQkizRnidOENyS-QCZScGyyoCBnA2Tm-KKzx"/>
+<div class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-primary-container/90 text-on-primary font-label-code text-label-code">
+              CLASS: OBLIQUE_CROSS_CUT
+            </div>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-secondary text-on-secondary font-label-code text-label-code">
+              CONF: 74.8%
+            </div>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<div>
+<span class="font-title-sm text-title-sm text-primary font-semibold block">Cam 04 • Gantry Conveyor 3</span>
+<span class="font-label-code text-label-code text-on-surface-variant">Anomaly: Non-Perpendicular Saw Cut</span>
+</div>
+<button class="px-2 py-1 rounded bg-surface-container-highest text-primary font-label-code text-label-code hover:bg-surface-container-high transition-colors" type="button">
+              Annotate
+            </button>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col justify-between">
+<div class="relative rounded overflow-hidden aspect-video bg-inverse-surface">
+<img class="w-full h-full object-cover" data-alt="Computer vision inspection snapshot of multiple overlapping debarked birch logs tightly pressed against each other on a high-speed log handling rollcase, instance segmentation masks struggling at the inter-log contact boundaries in an automated timber processing plant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbeG2eCNilyExlI71QyTRWsvuP73uiChNBA4W69fRVO4n0yPCU-0x_V6m41q8hus7EAlx8kNv3COBjqbgfccjXq6ZYoPYLgEarw6MwD3w44I9xDFrwE20Kx6kwwLYrfYYl8VyjqNfBM-qjCGFCEF9YImISjfD9eZUarJz-gcI5PH-INTBw1hBZV5eV7fIeRQ0i33i4rEA4NrO7-OBbxp_VsI5afNnW8qB9bH15OQ7q"/>
+<div class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-primary-container/90 text-on-primary font-label-code text-label-code">
+              CLASS: BOUNDARY_OCCLUSION
+            </div>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-error text-on-error font-label-code text-label-code">
+              CONF: 58.1%
+            </div>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<div>
+<span class="font-title-sm text-title-sm text-primary font-semibold block">Cam 01 • Weighbridge Buffer</span>
+<span class="font-label-code text-label-code text-on-surface-variant">Anomaly: Tangent Edge Overlap</span>
+</div>
+<button class="px-2 py-1 rounded bg-surface-container-highest text-primary font-label-code text-label-code hover:bg-surface-container-high transition-colors" type="button">
+              Annotate
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
