@@ -111,10 +111,6 @@ The two real sample photos in `samples/` are only 512 px wide, so crack / rot ar
 
 Still simulated (seeded data, no real source): the 48 pre-loaded trucks.
 
-## TimberVision (best real-photo detector)
-
-[TimberVision](https://github.com/timbervision/timbervision) YOLOv8-L segmentation weights run as an optional worker (`analysis/timbervision/`, own venv, ~2–3 s per photo on CPU). Pick `timbervision-v1.0-seg` in the Analyze dialog. **Licence: CC BY-NC-SA 4.0 (non-commercial); ultralytics is AGPL-3.0.** Setup and notes: `analysis/timbervision/README.md`.
-
 ## Going further
 
 The two OpenCV profiles are classical and weak on real photos. A proper instance-segmentation network (YOLO-seg, Mask R-CNN, SAM 2 …) fine-tuned on it, would raise recall substantially. To plug one in
